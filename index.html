@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf7e2ba98b.js" crossorigin="anonymous"></script>
+    <style>
+        /* propiedades en css para los fondos */
+
+        .fondo1 {
+            background-image: url('fotos/fondo1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fondo2 {
+            background-image: url('fotos/fondo2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fondo3 {
+            background-image: url('fotos/fondo3.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fondo4 {
+            background-image: url('fotos/fondo4.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fondo5 {
+            background-image: url('fotos/fondo5.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* prevengo copy paste */
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body class="overflow-y-auto bg-black">
+
+    <!-- Header -->
+
+    <div id="header"
+        class="justify-between lg:justify-center flex lg:justify-between sticky top-0 bg-gradient-to-b from-black to-transparent">
+
+        <!-- Dropdown Menu para móvil -->
+
+        <div class="relative lg:hidden">
+
+            <button id="dropdownButton"
+                class="m-6 text-white text-xl self-center fa-solid fa-bars hover:text-gray-300"></button>
+
+            <div id="dropdownMenu"
+                class="absolute left-0 w-48 bg-gradient-to-b from-transparent to-black shadow-lg hidden">
+                <button id="btnhomemovil"
+                    class="w-full text-left text-white block px-4 py-2 hover:bg-black">Home</button>
+                <button id="btnaboutmovil"
+                    class="w-full text-left text-white block px-4 py-2 hover:bg-black">About</button>
+                <button id="btnhelpmovil"
+                    class="w-full text-left text-white block px-4 py-2 hover:bg-black mb-4">Help</button>
+                <hr>
+                <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
+                    class="text-white block ml-2 px-2 py-2 hover:bg-black mt-4 fa-brands fa-linkedin fa-beat"></a>
+                <a href="https://www.instagram.com/sofosbars"
+                    class="text-white block px-2 py-2 hover:bg-black mb-4 fa-brands fa-instagram fa-beat"></a>
+            </div>
+        </div>
+
+        <!-- Menú PC -->
+
+        <div class="self-center">
+            <a href="index.html" class="ml-2 lg:mt-0 lg:ml-8 text-white font-bold text-xl">S O F O S</a>
+        </div>
+        <div class="lg:hidden">
+            <span class="ml-16 text-transparent">.</span>
+        </div>
+        <div class="hidden lg:flex justify-between mt-8 mr-2">
+            <button id="btnhome" class="self-start mr-8 text-white text-lg hover:text-gray-200">Home</button>
+            <button id="btnabout" class="self-start mr-8 text-white text-lg hover:text-gray-200">About</button>
+            <button id="btnhelp" class="self-start mr-8 text-white text-lg hover:text-gray-200">Help</button>
+        </div>
+        <div class="hidden lg:flex justify-self-start mr-2 mb-8">
+            <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
+                class="mt-8 mr-6 text-white text-xl self-center fa-brands fa-linkedin fa-beat hover:text-gray-200"></a>
+            <a href="https://www.instagram.com/sofosbars/"
+                class="mt-8 mr-6 text-white text-xl self-center fa-brands fa-instagram fa-beat hover:text-gray-200"></a>
+        </div>
+
+    </div>
+
+    <!-- Contenido de fondo1 -->
+
+    <div class="fondo1 h-screen w-full">
+
+        <div class="h-2/3 flex flex-col justify-center items-center">
+            <img src="fotos/flor.png" alt="flor" class="w-40 mt-6">
+            <p class="mx-8 font-bold text-center">Conoce la historia de los navegadores y su evolución a lo largo de
+                los
+                años</p>
+            <br>
+            <p class="mx-12 font-bold text-center text-white">Descubre las principales diferencias entre el
+                Front-End y
+                el Back-End</p>
+        </div>
+
+
+        <div class="flex absolute bottom-0 justify-center w-full mb-10 lg:mb-12">
+            <button id="btnnavegadores"
+                class="py-4 px-6 lg:py-4 lg:px-12 mr-4 bg-black hover:bg-gray-900 text-white rounded-full">
+                Navegadores
+            </button>
+            <button id="btnfrontback"
+                class="py-4 px-6 lg:py-4 lg:px-12 ml-4 bg-white hover:bg-gray-200 text-black rounded-full">
+                Front y Back
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido de fondo2 -->
+
+    <div class="fondo2 min-h-screen w-full">
+
+        <div class="flex flex-col lg:flex-row justify-center items-center h-screen text-xs lg:text-base">
+
+            <!-- Botones navegadores -->
+
+            <div
+                class="w-full h-1/4 lg:w-2/5 flex flex-col justify-center items-center lg:h-3/5 lg:w-1/2 m-4 lg:ml-8 rounded-3xl">
+
+                <div class="flex flex-col w-full h-full justify-evenly">
+                    <div class="flex justify-evenly">
+                        <button id="botonchrome"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/chrome.png" alt="botón logo chrome"
+                                class="w-20 hover:w-24"></button>
+                        <button id="botonfirefox"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/firefox.png" alt="botón logo firefox" class="w-20"></button>
+                        <button id="botonopera"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/opera.png" alt="botón logo opera" class="w-20"></button>
+                    </div>
+                    <div class="flex justify-evenly">
+                        <button id="botonsafari"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/safari.png" alt="botón logo safari" class="w-20"></button>
+                        <button id="botonedge"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/edge.png" alt="botón logo edge" class="w-20"></button>
+                        <button id="botonnetscape"
+                            class="transition-all duration-300 hover:bg-opacity-10 focus:bg-opacity-20 bg-opacity-0 bg-white rounded-full p-2"><img
+                                src="fotos/navegadores/netscape.png" alt="botón logo netscape" class="w-20"></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Info navegadores -->
+
+            <div
+                class="h-2/4 w-full lg:w-3/5 flex flex-col justify-start lg:justify-center items-center lg:h-3/5 lg:w-1/2 m-6 mt-0 lg:mt-4 lg:mr-8 rounded-3xl">
+
+                <div id="scrollinfo"
+                    class="overflow-y-auto max-h-full bg-white w-5/6 lg:w-full h-full rounded-3xl p-8 lg:p-16 lg:pt-8 lg:mr-24 flex items-center justify-center text-center">
+                    <div id="infonavegador" class="max-h-full"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contenido de fondo3 -->
+
+    <div class="fondo3 min-h-screen w-full">
+        <div class="flex flex-col lg:flex-row justify-evenly h-screen text-xs lg:text-base">
+
+            <!-- Front End -->
+
+            <div
+                class="flex flex-col justify-end lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mb-2 lg:mb-4 lg:ml-8 rounded-3xl">
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mb-6 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>Llamamos front-end al lado del cliente del sitio web o aplicación, es decir, lo que el usuario ve
+                        en todo momento, a veces combinado con los datos extraídos del back-end.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl mr-4">
+                        Los
+                        desarrolladores front-end se encargan de diseñar y construir los elementos con los que el
+                        usuario
+                        tendrá contacto (botones, menús...).</p>
+                    <button id="botonaparecef"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-black hover:bg-gray-900 text-white rounded-full">Front<br>End</button>
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl ml-4">
+                        Se lleva a cabo
+                        por medio de una combinación de herramientas y marcos de trabajo (HTML, JavaScript, CSS,
+                        Angular, React...).</p>
+                </div>
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mt-6 mb-0 lg:m-8 lg:mt-16">
+                    <p>Los objetivos principales de un desarrollador de front-end son mejorar el rendimiento, la
+                        capacidad de respuesta y que funcione correctamente en todo tipo de dispositivos.</p>
+                </div>
+            </div>
+
+            <!-- Back End -->
+
+            <div
+                class="flex flex-col justify-start lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mt-2 lg:mt-4 lg:mr-8 rounded-3xl">
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black  bg-opacity-80 text-white rounded-xl mb-6 mt-0 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>El back-end se encarga de la gestión de datos de un proyecto web, especialmente en lo que se
+                        refiere al almacenamiento, la entrega y la organización de los datos.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl mr-4">
+                        La
+                        principal preocupación de un desarrollador back-end es crear aplicaciones que puedan encontrar y
+                        entregar la información.</p>
+                    <button id="botonapareceb"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-white hover:bg-gray-200 text-black rounded-full">Back<br>End</button>
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl ml-4">
+                        Existen varios lenguajes y frameworks utilizados para codificar la aplicación (Ruby, Java, C++,
+                        Python, PHP, Laravel...).</p>
+                </div>
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black bg-opacity-80 text-white rounded-xl mt-6 lg:m-8 lg:mt-16">
+                    <p>Las tareas adicionales, como la creación de bibliotecas y la escritura de APIs, también están
+                        vinculadas a la interfaz del back-end.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido de fondo4 -->
+
+    <div class="fondo4 min-h-screen w-full">
+        <div class="flex flex-col lg:flex-row justify-evenly h-screen text-xs lg:text-base">
+
+            <!-- Front End -->
+
+            <div
+                class="flex flex-col justify-end lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mb-2 lg:mb-4 lg:ml-8 rounded-3xl">
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mb-6 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>Llamamos front-end al lado del cliente del sitio web o aplicación, es decir, lo que el usuario ve
+                        en todo momento, a veces combinado con los datos extraídos del back-end.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl mr-4">
+                        Los
+                        desarrolladores front-end se encargan de diseñar y construir los elementos con los que el
+                        usuario
+                        tendrá contacto (botones, menús...).</p>
+                    <button id="botonaparecef"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-black hover:bg-gray-900 text-white rounded-full">Front<br>End</button>
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl ml-4">
+                        Se lleva a cabo
+                        por medio de una combinación de herramientas y marcos de trabajo (HTML, JavaScript, CSS,
+                        Angular, React...).</p>
+                </div>
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mt-6 mb-0 lg:m-8 lg:mt-16">
+                    <p>Los objetivos principales de un desarrollador de front-end son mejorar el rendimiento, la
+                        capacidad de respuesta y que funcione correctamente en todo tipo de dispositivos.</p>
+                </div>
+            </div>
+
+            <!-- Back End -->
+
+            <div
+                class="flex flex-col justify-start lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mt-2 lg:mt-4 lg:mr-8 rounded-3xl">
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black  bg-opacity-80 text-white rounded-xl mb-6 mt-0 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>El back-end se encarga de la gestión de datos de un proyecto web, especialmente en lo que se
+                        refiere al almacenamiento, la entrega y la organización de los datos.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl mr-4">
+                        La
+                        principal preocupación de un desarrollador back-end es crear aplicaciones que puedan encontrar y
+                        entregar la información.</p>
+                    <button id="botonapareceb"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-white hover:bg-gray-200 text-black rounded-full">Back<br>End</button>
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl ml-4">
+                        Existen varios lenguajes y frameworks utilizados para codificar la aplicación (Ruby, Java, C++,
+                        Python, PHP, Laravel...).</p>
+                </div>
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black bg-opacity-80 text-white rounded-xl mt-6 lg:m-8 lg:mt-16">
+                    <p>Las tareas adicionales, como la creación de bibliotecas y la escritura de APIs, también están
+                        vinculadas a la interfaz del back-end.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido de fondo5 -->
+
+    <div class="fondo5 min-h-screen w-full">
+        <div class="flex flex-col lg:flex-row justify-evenly h-screen text-xs lg:text-base">
+
+            <!-- Front End -->
+
+            <div
+                class="flex flex-col justify-end lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mb-2 lg:mb-4 lg:ml-8 rounded-3xl">
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mb-6 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>Llamamos front-end al lado del cliente del sitio web o aplicación, es decir, lo que el usuario ve
+                        en todo momento, a veces combinado con los datos extraídos del back-end.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl mr-4">
+                        Los
+                        desarrolladores front-end se encargan de diseñar y construir los elementos con los que el
+                        usuario
+                        tendrá contacto (botones, menús...).</p>
+                    <button id="botonaparecef"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-black hover:bg-gray-900 text-white rounded-full">Front<br>End</button>
+                    <p
+                        class="aparecef invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-white bg-opacity-80 rounded-xl ml-4">
+                        Se lleva a cabo
+                        por medio de una combinación de herramientas y marcos de trabajo (HTML, JavaScript, CSS,
+                        Angular, React...).</p>
+                </div>
+                <div
+                    class="aparecef invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-white bg-opacity-80 rounded-xl mt-6 mb-0 lg:m-8 lg:mt-16">
+                    <p>Los objetivos principales de un desarrollador de front-end son mejorar el rendimiento, la
+                        capacidad de respuesta y que funcione correctamente en todo tipo de dispositivos.</p>
+                </div>
+            </div>
+
+            <!-- Back End -->
+
+            <div
+                class="flex flex-col justify-start lg:justify-center items-center lg:mt-28 h-3/5 lg:w-1/2 m-4 mt-2 lg:mt-4 lg:mr-8 rounded-3xl">
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black  bg-opacity-80 text-white rounded-xl mb-6 mt-0 lg:m-8 lg:mt-32 lg:mb-16">
+                    <p>El back-end se encarga de la gestión de datos de un proyecto web, especialmente en lo que se
+                        refiere al almacenamiento, la entrega y la organización de los datos.</p>
+                </div>
+                <div class="h-1/3 flex items-center flex-row justify-evenly w-full text-center">
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl mr-4">
+                        La
+                        principal preocupación de un desarrollador back-end es crear aplicaciones que puedan encontrar y
+                        entregar la información.</p>
+                    <button id="botonapareceb"
+                        class="py-4 px-4 lg:py-6 lg:px-6 bg-white hover:bg-gray-200 text-black rounded-full">Back<br>End</button>
+                    <p
+                        class="apareceb invisible opacity-0 transition-opacity duration-500 w-2/5 p-2 lg:p-8 bg-black bg-opacity-80 text-white rounded-xl ml-4">
+                        Existen varios lenguajes y frameworks utilizados para codificar la aplicación (Ruby, Java, C++,
+                        Python, PHP, Laravel...).</p>
+                </div>
+                <div
+                    class="apareceb invisible opacity-0 transition-opacity duration-500 lg:h-1/3 flex items-center w-full p-2 lg:p-8 text-center bg-black bg-opacity-80 text-white rounded-xl mt-6 lg:m-8 lg:mt-16">
+                    <p>Las tareas adicionales, como la creación de bibliotecas y la escritura de APIs, también están
+                        vinculadas a la interfaz del back-end.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // RESTAURA SCROLL AL REFRESCAR
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+
+            // APARECE FRONT (cuando pulsas el botón de Front End aparece la información)
+
+            const elementosf = document.querySelectorAll('.aparecef');
+            const elementosb = document.querySelectorAll('.apareceb');
+
+            document.getElementById('botonaparecef').addEventListener('click', function () {
+                for (let el of elementosf) {
+                    if (getComputedStyle(el).visibility === 'visible' && getComputedStyle(el).opacity === '1') {
+                        el.style.visibility = 'invisible';
+                        el.style.opacity = '0';
+                    } else {
+                        el.style.visibility = 'visible';
+                        el.style.opacity = '1';
+                    }
+                }
+            });
+
+            // APARECE BACK (cuando pulsas el botón de Back End aparece la información)
+
+            document.getElementById('botonapareceb').addEventListener('click', function () {
+                for (let el of elementosb) {
+                    if (getComputedStyle(el).visibility === 'visible' && getComputedStyle(el).opacity === '1') {
+                        el.style.visibility = 'invisible';
+                        el.style.opacity = '0';
+                    } else {
+                        el.style.visibility = 'visible';
+                        el.style.opacity = '1';
+                    }
+                }
+            });
+
+            // NAVEGADORES (cuando pulsas un navegador se muestra su información; también se restaura el scroll a 0)
+
+            const browsers = ['chrome', 'firefox', 'opera', 'safari', 'edge', 'netscape'];
+            const infobrowsers = ['<div class="pb-8 text-center"><h1 class="font-bold text-xl">GOOGLE CHROME</h1><br><strong>Origen:</strong> En 2008, Google lanzó Chrome para mejorar la experiencia web. Su objetivo: un navegador rápido, seguro y estable para las aplicaciones web modernas.<br><br><strong>Historia:</strong> Anunciado en 2008, Chrome introdujo innovaciones como una arquitectura de procesos separados para pestañas y el motor V8 de JavaScript, potenciando la velocidad web. Su código fue liberado como "Chromium", permitiendo a desarrolladores contribuir y personalizarlo. <br><br><strong>Evolución: </strong> Chrome ha evolucionado constantemente. Incorporó la Chrome Web Store para extensiones, integración con Google Now y continuas mejoras de rendimiento y seguridad. Fue pionero en adoptar tecnologías como HTML5 y promovió estándares web. Se expandió a móviles y al sistema operativo Chrome OS para dispositivos como Chromebooks. <br><br>Desde su debut, Chrome ha influenciado la web con su enfoque en velocidad, seguridad y experiencia del usuario, convirtiéndose en una opción líder para navegar.</div>',
+                '<div class="pb-8 text-center"><h1 class="font-bold text-xl">MOZILLA FIREFOX</h1><br><strong>Origen:</strong> Firefox emergió del proyecto Mozilla, que inició en 1998 después de que Netscape liberara el código fuente de su navegador. El objetivo era desarrollar un navegador web libre y de código abierto.<br><br><strong>Historia:</strong> La primera versión oficial, llamada Firefox 1.0, se lanzó en 2004. Ofrecía una alternativa rápida y ligera frente a otros navegadores dominantes. Se destacó por su sistema de pestañas, búsqueda integrada y una arquitectura extensible mediante complementos.<br><br><strong>Evolución:</strong> Con el tiempo, Firefox se ha mantenido a la vanguardia, introduciendo características como navegación privada, sincronización entre dispositivos y una firme postura en pro de la privacidad y seguridad de los usuarios. En 2017, Mozilla lanzó Firefox Quantum, una actualización significativa que mejoró drásticamente su velocidad y eficiencia.<br><br>A lo largo de los años, Firefox ha promovido la web abierta, oponiéndose a estándares propietarios y apoyando tecnologías como HTML5. Ha sido clave en la lucha contra la monopolización de la web y en la protección de la privacidad de los usuarios.</div>',
+                '<div class="pb-8 text-center"><h1 class="font-bold text-xl">OPERA BROWSER</h1><br><strong>Origen:</strong> Opera fue fundado en 1995 en Noruega por Jon Stephenson von Tetzchner y Geir Ivarsøy. Originalmente fue un proyecto de investigación en Telenor, una de las principales compañías de telecomunicaciones de Noruega.<br><br><strong>Historia:</strong> El navegador debutó como un producto comercial, pero en 2005 adoptó un modelo gratuito sostenido con publicidad, eliminando la publicidad más tarde ese mismo año. Opera se destacó por ser innovador, introduciendo características que luego se generalizaron, como navegación por pestañas y búsqueda integrada.<br><br><strong>Evolución:</strong> A lo largo de los años, Opera ha lanzado varias innovaciones: Opera Mini, un navegador móvil centrado en la compresión de datos para velocidades más rápidas; y Opera Turbo, que acelera la navegación en conexiones lentas. En 2013, Opera decidió adoptar el motor de renderizado Blink, el mismo de Chrome, en lugar de su motor original, Presto.<br><br>Opera también ha mostrado interés en la integración de servicios: en 2019, incluyó una billetera criptográfica y más tarde, una VPN gratuita e integrada.</div>',
+                '<div class="pb-8 text-center"><h1 class="font-bold text-xl">APPLE SAFARI</h1><br><strong>Origen:</strong> Safari es el navegador web desarrollado por Apple, lanzado por primera vez en 2003 para su sistema operativo Mac OS X.<br><br><strong>Historia:</strong> Antes de Safari, Apple usaba el navegador Internet Explorer de Microsoft como predeterminado en Mac. Sin embargo, con el objetivo de tener mayor control sobre su software y mejorar la experiencia del usuario, Apple introdujo Safari. Fue aclamado por su diseño limpio y su velocidad superior a la competencia de la época.<br><br><strong>Evolución:</strong> En 2007, con el lanzamiento del iPhone, Safari se convirtió en el navegador principal para iOS, lo que amplió enormemente su base de usuarios. Con el tiempo, Apple ha añadido características como el modo de lectura, listas de lectura, y navegación privada. Una de sus mayores actualizaciones fue la adopción del motor de renderizado WebKit, que desde entonces ha influido en otros navegadores. Apple también ha enfocado Safari en la privacidad, introduciendo funciones como Intelligent Tracking Prevention para reducir el seguimiento de usuarios en la web.<br><br>A lo largo de los años, Safari ha sido sinónimo de integración y optimización con hardware y software de Apple, ofreciendo una experiencia fluida y centrada en la privacidad para sus usuarios.</div>',
+                '<div class="pb-8 text-center"><h1 class="font-bold text-xl">MICROSOFT EDGE</h1><br><strong>Origen:</strong> Edge es un navegador desarrollado por Microsoft, presentado en 2015 como sucesor del veterano Internet Explorer (IE). Fue creado para ser más competitivo ante navegadores modernos y para abordar las incompatibilidades y problemas de rendimiento de IE.<br><br><strong>Historia:</strong> Aunque Internet Explorer dominó el mercado durante años, su falta de adherencia a estándares y problemas de seguridad hicieron que perdiera terreno. Microsoft introdujo Edge con Windows 10, destacándolo por su velocidad, seguridad y compatibilidad con estándares modernos. Incorporó características como anotaciones en páginas web, modo de lectura y una integración profunda con el asistente Cortana.<br><br><strong>Evolución:</strong> A pesar de las mejoras, Edge no ganó tanto terreno como Microsoft esperaba. En un giro sorprendente, en 2019, Microsoft anunció que desarrollaría una nueva versión de Edge basada en Chromium, el proyecto de código abierto detrás de Google Chrome. Esta decisión permitió a Edge mejorar la compatibilidad con sitios web y expandirse a plataformas como macOS.<br><br>El Edge basado en Chromium incluyó características de privacidad mejoradas, como el bloqueo de rastreadores y un modo de navegación más seguro. Microsoft ha trabajado para integrarlo estrechamente con sus servicios y con Windows, buscando ofrecer una experiencia fluida y moderna. A través de los años, Edge ha evolucionado desde ser una respuesta a las limitaciones de IE hasta convertirse en un navegador competitivo y en línea con las demandas actuales de la web.</div>',
+                '<div class="pb-8 text-center"><h1 class="font-bold text-xl">NETSCAPE NAVIGATOR</h1><br><strong>Origen:</strong> Netscape Navigator, comúnmente conocido como Netscape, fue uno de los primeros navegadores web y se lanzó en 1994. Fue desarrollado por la compañía Netscape Communications, fundada por Marc Andreessen y Jim Clark.<br><br><strong>Historia:</strong> En la incipiente World Wide Web, Netscape rápidamente ganó popularidad por su fácil uso e innovaciones, como las "cookies" y JavaScript. Durante la mitad de la década de 1990, Netscape dominó el mercado de navegadores, convirtiéndose en el estándar de facto para la navegación web.<br><br><strong>Evolución:</strong> Sin embargo, la situación cambió con el surgimiento del navegador Internet Explorer (IE) de Microsoft. Lo que siguió fue la "Guerra de navegadores", donde Microsoft y Netscape compitieron intensamente por la supremacía del mercado. A pesar de las innovaciones de Netscape, IE, respaldado por la preeminencia de Windows, ganó terreno rápidamente.<br><br>En 1998, en medio de la competencia y las dificultades financieras, Netscape tomó una decisión histórica: liberó el código fuente de su navegador, dando origen al proyecto Mozilla y, eventualmente, a navegadores como Firefox.<br><br>Aunque Netscape fue adquirido por AOL en 1999 y lanzó algunas versiones adicionales, su relevancia en el mercado disminuyó. En 2008, AOL anunció el fin del soporte para Netscape. Netscape, más allá de su ocaso, dejó un legado duradero: estableció estándares web y cimentó la importancia de los navegadores en la experiencia de Internet.</div>'];
+            var scrollinfo = document.getElementById('scrollinfo');
+
+            for (let i = 0; i < browsers.length; i++) {
+                document.getElementById(`boton${browsers[i]}`).addEventListener('click', function () {
+                    document.getElementById('infonavegador').innerHTML = infobrowsers[i];
+                    scrollinfo.scrollTop = 0;
+                });
+            }
+
+            // RELLENO INFO NAVEGADOR (al cargar la página y al hacer click en Navegadores)
+
+            const contenidoNavegador = '<p class="pb-8 self-center">Un navegador web es un software diseñado para acceder y visualizar información en la World Wide Web (WWW). Funciona solicitando páginas web alojadas en servidores y mostrándolas al usuario. Los navegadores interpretan HTML, CSS y otros lenguajes web, transformando el código en contenido visual y audible.<br><br>La historia de los navegadores comienza con el "WorldWideWeb", desarrollado por Tim Berners-Lee en 1990. Este fue el precursor del conocido "Netscape Navigator", lanzado en 1994, que popularizó la web. Microsoft introdujo "Internet Explorer" en 1995, iniciando una "guerra de navegadores" con Netscape. Explorer dominó hasta que Mozilla Firefox (2004) y Google Chrome (2008) irrumpieron en el mercado. Chrome se destacó por su velocidad y minimalismo, y con el tiempo se convirtió en el líder del mercado. Safari (2003) y Opera también han sido actores clave.<br><br>A lo largo del tiempo, la evolución de los navegadores ha priorizado la seguridad, velocidad y adaptabilidad, siendo esenciales para la experiencia moderna en internet.</p>';
+
+            document.getElementById('infonavegador').innerHTML = contenidoNavegador;
+
+            document.getElementById('btnnavegadores').addEventListener('click', function () {
+                document.getElementById('infonavegador').innerHTML = contenidoNavegador;
+            });
+
+
+            // DROPDOWN (menú para móvil, on click aparece si estaba hidden y desaparece si no)
+
+            document.getElementById("dropdownButton").addEventListener("click", function (event) {
+                const menu = document.getElementById("dropdownMenu");
+                if (menu.classList.contains("hidden")) {
+                    menu.classList.remove("hidden");
+                } else {
+                    menu.classList.add("hidden");
+                }
+                event.stopPropagation();
+            });
+
+            // DROPDOWN (menú para móvil desaparece al hacer click en cualquier parte de fuera del menú)
+
+            document.addEventListener("click", function () {
+                const menu = document.getElementById("dropdownMenu");
+                if (!menu.classList.contains("hidden")) {
+                    menu.classList.add("hidden");
+                }
+            });
+
+            // DROPDOWN (para evitar que se propague el click anterior a otros eventos)
+
+            document.getElementById("dropdownMenu").addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+
+            // HOME (botón home te dirige a la página principal)
+
+            const btnHome = document.querySelector('#btnhome');
+            if (btnHome) {
+                btnHome.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                    scrollinfo.scrollTop = 0;
+                });
+            }
+
+            const btnHomeMovil = document.querySelector("#btnhomemovil");
+            if (btnHomeMovil) {
+                btnHomeMovil.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                    scrollinfo.scrollTop = 0;
+                });
+            }
+
+            // FONDOS
+
+            const fondo2 = document.querySelector('.fondo2');
+            const fondo3 = document.querySelector('.fondo3');
+            const fondo4 = document.querySelector('.fondo4');
+            const fondo5 = document.querySelector('.fondo5');
+
+            // ABOUT (botón about te dirige a fondo4)
+
+            const btnAbout = document.querySelector("#btnabout");
+            if (btnAbout) {
+                btnAbout.addEventListener("click", function () {
+                    if (fondo4) {
+                        window.scrollTo({
+                            top: fondo4.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            const btnAboutMovil = document.querySelector("#btnaboutmovil");
+            if (btnAboutMovil) {
+                btnAboutMovil.addEventListener("click", function () {
+                    if (fondo4) {
+                        window.scrollTo({
+                            top: fondo4.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            // HELP (botón about te dirige a fondo5)
+
+            const btnHelp = document.querySelector("#btnhelp");
+            if (btnHelp) {
+                btnHelp.addEventListener("click", function () {
+                    if (fondo5) {
+                        window.scrollTo({
+                            top: fondo5.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            const btnHelpMovil = document.querySelector("#btnhelpmovil");
+            if (btnHelpMovil) {
+                btnHelpMovil.addEventListener("click", function () {
+                    if (fondo5) {
+                        window.scrollTo({
+                            top: fondo5.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            // NAVEGADORES (fondo)
+
+            const navegadoresBtn = document.querySelector("#btnnavegadores");
+
+            navegadoresBtn.addEventListener("click", function () {
+                if (fondo2) {
+                    window.scrollTo({
+                        top: fondo2.offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+
+            // FRONT Y BACK (fondo)
+
+            const frontBackBtn = document.querySelector("#btnfrontback");
+            if (frontBackBtn) {
+                frontBackBtn.addEventListener("click", function () {
+                    if (fondo3) {
+                        window.scrollTo({
+                            top: fondo3.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            // DESAPARECEN FRONT Y BACK (cuando pulsas el botón de Home)
+
+            btnHome.addEventListener("click", function (e) {
+
+                // front
+
+                for (let el of elementosf) {
+                    el.style.visibility = 'invisible';
+                    el.style.opacity = '0';
+                }
+
+                //back
+
+                for (let el of elementosb) {
+                    el.style.visibility = 'invisible';
+                    el.style.opacity = '0';
+                }
+            });
+            
+        });
+
+    </script>
+
+</body>
+
+</html>
