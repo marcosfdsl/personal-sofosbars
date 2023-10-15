@@ -15,6 +15,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            position: relative;
         }
 
         .fondo2 {
@@ -61,7 +62,7 @@
     <!-- Header -->
 
     <div id="header"
-        class="justify-between lg:justify-center flex lg:justify-between sticky top-0 bg-gradient-to-b from-black to-transparent">
+        class="justify-between lg:justify-center flex lg:justify-between fixed top-0 bg-gradient-to-b from-black to-transparent w-full z-10">
 
         <!-- Dropdown Menu para móvil -->
 
@@ -110,11 +111,11 @@
 
     <!-- Contenido de fondo1 -->
 
-    <div class="fondo1 h-screen w-full">
+    <div class="fondo1 top-0 h-screen w-full z-0">
 
         <div class="h-2/3 flex flex-col justify-center items-center">
             <img src="fotos/flor.png" alt="flor" class="w-40 mt-6">
-            <p class="mx-8 font-bold text-center">Conoce la historia de los navegadores y su evolución a lo largo de
+            <p class="mx-8 font-bold text-center text-white">Conoce la historia de los navegadores y su evolución a lo largo de
                 los
                 años</p>
             <br>
@@ -617,7 +618,7 @@
                     el.style.opacity = '0';
                 }
             });
-            
+
         });
 
     </script>
