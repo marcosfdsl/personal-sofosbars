@@ -24,7 +24,7 @@
     }
 
     .fondo1 {
-        background-image: url('fotos/fondo1.jpg');
+        background-image: url('fotos/fondo1movil.jpg');
     }
 
     .fondo2 {
@@ -56,6 +56,10 @@
 
         .altura2 {
             height: 7%;
+        }
+
+        .fondo1 {
+            background-image: url('fotos/fondo1.jpg');
         }
     }
 
