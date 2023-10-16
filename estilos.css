@@ -1,0 +1,70 @@
+        /* esconde la barra de desplazamiento */
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* propiedades en css para los fondos */
+
+        .fondos {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            scroll-snap-align: start;
+        }
+
+        .fondo1 {
+            background-image: url('fotos/fondo1.jpg');
+        }
+
+        .fondo2 {
+            background-image: url('fotos/fondo2.jpg');
+        }
+
+        .fondo3 {
+            background-image: url('fotos/fondo3.jpg');
+        }
+
+        .fondo4 {
+            background-image: url('fotos/fondo3.jpg');
+        }
+
+        .fondo5 {
+            background-image: url('fotos/fondo3.jpg');
+        }
+
+        /* prevengo copy paste */
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: black;
+        }
+
+        /* scroll-snap */
+
+        .contenedor {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        /* menú */
+
+        #menu {
+            background: linear-gradient(to bottom, transparent 0%, black 100%);
+        }
+
+        /* media query */
+
+        @media (min-width: 1024px) {
+            .esconder {
+                display: none;
+            }
+
+            #menu {
+                background: transparent;
+            }
+        }
