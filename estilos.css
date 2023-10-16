@@ -53,10 +53,14 @@
         #menu {
             background: transparent;
         }
+
+        .altura2 {
+            height: 7%;
+        }
     }
 
 .altura1 {
-    height: 7%;
+    height: 3%;
 }
 
 .margenbot {
