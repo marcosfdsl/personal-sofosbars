@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOFOS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf7e2ba98b.js" crossorigin="anonymous"></script>
@@ -62,7 +61,7 @@
 
         <!-- Contenido de fondo1 -->
         <div class="fondo1 fondos h-screen w-full flex flex-col justify-center z-20">
-            <div class="altura1"></div>
+            <div class="altura1 altura2"></div>
             <div class="flex flex-col justify-center z-10">
                 <div class="flex justify-center margenbot">
                     <button class="w-8 lg:w-12"><img src="fotos/simbolos/desarrollo.png" alt=""></button>
@@ -75,7 +74,7 @@
                     <button class="w-8 lg:w-12"><img src="fotos/simbolos/musica.png" alt=""></button>
                 </div>
             </div>
-            <img id="rombos" class="z-0 absolute h-5/6 self-center" src="fotos/rombos.png" alt="">
+            <img id="rombos" class="absolute top-16 z-0 h-5/6 self-center" src="fotos/rombos.png" alt="">
         </div>
 
         <!-- Contenido de fondo2 -->
@@ -171,19 +170,33 @@
                 });
             }
 
-            const rombosImg = document.getElementById("rombos");
-    const hScreen = window.innerHeight;
+
+            const rombos = document.getElementById('rombos');
+    const fondo1 = document.querySelector('.fondo1');
 
     contenedor.addEventListener('scroll', function() {
-        if (contenedor.scrollTop >= hScreen) {
-            rombosImg.classList.remove('fade-in');
-            rombosImg.classList.add('fade-out');
+        const bottomOfFondo1 = fondo1.offsetTop + fondo1.offsetHeight;
+
+        if (contenedor.scrollTop >= bottomOfFondo1) {
+            rombos.style.opacity = '0';
+
+            rombos.addEventListener('transitionend', function callback() {
+                if (parseFloat(rombos.style.opacity) === 0) {
+                    rombos.style.display = 'none';
+                    rombos.removeEventListener('transitionend', callback);
+                }
+            });
         } else {
-            rombosImg.classList.remove('fade-out');
-            rombosImg.classList.add('fade-in');
+            if (rombos.style.display === 'none') {
+                rombos.style.display = 'block';
+                // Usar un pequeño timeout para asegurar que el cambio en `display` se haya procesado
+                setTimeout(() => {
+                    rombos.style.opacity = '1';
+                }, 10);
+            }
         }
     });
-
+    
         });
 
     </script>

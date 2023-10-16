@@ -47,38 +47,9 @@ body {
     height: 4%;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.2s forwards;
-}
-
-.fade-out {
-    animation: fadeOut 0.2s forwards;
-}
-
 #rombos {
     object-fit: cover;
+    transition: opacity 0.2s;
 }
 
 .margenbot {
