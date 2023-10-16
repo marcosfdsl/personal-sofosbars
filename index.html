@@ -25,9 +25,10 @@
             <div class="flex justify-between z-30">
                 <button id="boton"
                     class="m-6 self-center text-left text-white text-xl fa-solid fa-bars hover:text-gray-300 esconder"></button>
-                <h1
+                <button id="refrescar" href="index.html"
                     class="m-6 lg:w-40 lg:my-6 lg:mr-0 self-center text-center text-white font-bold text-xl lg:text-left">
-                    S O F O S</h1>
+                    <h1>S O F O S</h1>
+                </button>
                 <i class="m-6 text-xl fa-solid fa-bars invisible esconder"></i>
             </div>
 
@@ -85,6 +86,12 @@
         document.addEventListener("DOMContentLoaded", function () {
 
             const menu = document.getElementById("menu");
+
+            // REFRESCAR PÁGINA AL PULSAR SOFOS
+
+            document.getElementById("refrescar").addEventListener("click", function () {
+                window.location.reload();
+            });
 
             // DROPDOWN (menú para móvil, on click aparece si estaba hidden y desaparece si no)
 
