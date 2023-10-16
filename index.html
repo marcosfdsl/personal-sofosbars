@@ -62,18 +62,19 @@
         <!-- Contenido de fondo1 -->
         <div class="fondo1 fondos h-screen w-full flex flex-col justify-center z-20">
             <div class="altura1 altura2"></div>
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center z-10">
                 <div class="flex justify-center margenbot">
                     <button class="w-8 lg:w-12"><img src="fotos/simbolos/desarrollo.png" alt=""></button>
                 </div>
                 <div class="flex justify-center">
-                        <button class="w-8 lg:w-12 margenright"><img src="fotos/simbolos/hosteleria.png" alt=""></button>
-                        <button class="w-8 lg:w-12 margenleft"><img src="fotos/simbolos/genealogia.png" alt=""></button>
+                    <button class="w-8 lg:w-12 margenright"><img src="fotos/simbolos/hosteleria.png" alt=""></button>
+                    <button class="w-8 lg:w-12 margenleft"><img src="fotos/simbolos/genealogia.png" alt=""></button>
                 </div>
                 <div class="flex justify-center margentop">
                     <button class="w-8 lg:w-12"><img src="fotos/simbolos/musica.png" alt=""></button>
                 </div>
             </div>
+            <img id="rombos" class="z-0 absolute h-4/6 lg:h-full self-center" src="fotos/rombos.png" alt="">
         </div>
 
         <!-- Contenido de fondo2 -->
@@ -168,6 +169,19 @@
                     }
                 });
             }
+
+            const rombosImg = document.getElementById("rombos");
+    const hScreen = window.innerHeight;
+
+    contenedor.addEventListener('scroll', function() {
+        if (contenedor.scrollTop >= hScreen) {
+            rombosImg.classList.remove('fade-in');
+            rombosImg.classList.add('fade-out');
+        } else {
+            rombosImg.classList.remove('fade-out');
+            rombosImg.classList.add('fade-in');
+        }
+    });
 
         });
 

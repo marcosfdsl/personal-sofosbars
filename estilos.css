@@ -24,7 +24,7 @@
     }
 
     .fondo1 {
-        background-image: url('fotos/fondo1movil.jpg');
+        background-image: url('fotos/fondo1.jpg');
     }
 
     .fondo2 {
@@ -53,18 +53,10 @@
         #menu {
             background: transparent;
         }
-
-        .altura2 {
-            height: 7%;
-        }
-
-        .fondo1 {
-            background-image: url('fotos/fondo1.jpg');
-        }
     }
 
 .altura1 {
-    height: 0;
+    height: 4%;
 }
 
 .margenbot {
@@ -81,4 +73,36 @@
 
 .margenleft {
     margin-left: calc(7% + 1px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.2s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.2s forwards;
+}
+
+#rombos {
+    object-fit: cover;
 }
