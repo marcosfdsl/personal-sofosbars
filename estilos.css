@@ -54,3 +54,23 @@
             background: transparent;
         }
     }
+
+.altura1 {
+    height: 7%;
+}
+
+.margenbot {
+    margin-bottom: calc(6% + 1px);
+}
+
+.margentop {
+    margin-top: calc(6% + 1px);
+}
+
+.margenright {
+    margin-right: calc(7% + 1px);
+}
+
+.margenleft {
+    margin-left: calc(7% + 1px);
+}
