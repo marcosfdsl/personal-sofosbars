@@ -1,12 +1,17 @@
 /* prevengo copy paste */
 
-/* body {
+body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     background-color: black;
-} */
+
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
 
 /* esconde la barra de desplazamiento */
 
