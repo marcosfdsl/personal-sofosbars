@@ -354,7 +354,7 @@
                 let fondo2Position = fondo2.offsetTop;
                 let fondo2Height = fondo2.offsetHeight;
 
-                if (fondo2.style.display == 'block' && scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                if (fondo2.style.display == 'block' && scrollPosition <= fondo2Position) {
                     fondo2.style.display = 'block';
                 }
                 else {
