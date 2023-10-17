@@ -235,23 +235,23 @@ body {
 @media (orientation: landscape) and (min-width: 768px) {
 
     .altoRombos {
-        height: 70%;
+        height: 80%;
     }
 
     .anchoLogos {
-        width: 35%;
+        width: 30%;
     }
 
     .altoLogos {
-        height: 55%;
+        height: 65%;
     }
 
     .anchoHuecos {
-        width: 80%;
+        width: 60%;
     }
 
     .anchoFotos {
-        width: 45%;
+        width: 60%;
     }
 
 }
