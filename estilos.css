@@ -86,7 +86,11 @@ body {
 @media (orientation: landscape) {
 
     .horizontal {
-        width: 25%;
+        width: 30%;
+    }
+
+    .horizontal2 {
+        height: 30%;
     }
 
 }
