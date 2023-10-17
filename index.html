@@ -187,7 +187,7 @@
                     }, 100);
                 } else {
                     const distanceScrolledWithinFondo1 = scrollPosition - startOfFondo1;
-                    const scrollPercentage = distanceScrolledWithinFondo1 / fondo1.offsetHeight;
+                    const scrollPercentage = distanceScrolledWithinFondo1 / fondo1.offsetHeight + 0.7;
                     rombos.style.opacity = 1 - scrollPercentage;
                     if (rombos.style.display === 'none') {
                         rombos.style.display = 'block';
