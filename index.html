@@ -57,6 +57,8 @@
 
     </div>
 
+    <!-- Fondos 1, 2 y 3 -->
+
     <div class="contenedor">
 
         <!-- Contenido de fondo1 -->
@@ -322,6 +324,49 @@
 
         document.addEventListener("DOMContentLoaded", function () {
 
+            const fondo1 = document.querySelector('.fondo2');
+            const fondo2 = document.querySelector('.fondo2');
+            const fondo3 = document.querySelector('.fondo3');
+
+            document.getElementById('btnhome').addEventListener('click', function () {
+                let scrollPosition = document.querySelector('.contenedor').scrollTop;
+                let fondo2Position = fondo2.offsetTop;
+                let fondo2Height = fondo2.offsetHeight;
+
+                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                    fondo2.style.display = 'block';
+                }
+                else {
+                    fondo2.style.display = 'none';
+                }
+            });
+
+            document.getElementById('btnabout').addEventListener('click', function () {
+                let scrollPosition = document.querySelector('.contenedor').scrollTop;
+                let fondo2Position = fondo2.offsetTop;
+                let fondo2Height = fondo2.offsetHeight;
+
+                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                    fondo2.style.display = 'block';
+                }
+                else {
+                    fondo2.style.display = 'block';
+                }
+            });
+
+            document.getElementById('btnhelp').addEventListener('click', function () {
+                let scrollPosition = document.querySelector('.contenedor').scrollTop;
+                let fondo2Position = fondo2.offsetTop;
+                let fondo2Height = fondo2.offsetHeight;
+
+                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                    fondo2.style.display = 'block';
+                }
+                else {
+                    fondo2.style.display = 'none';
+                }
+            });
+
             // Función para obtener elementos
             const $ = selector => document.querySelector(selector);
 
@@ -341,7 +386,7 @@
 
             // Botones de navegación
             const actions = {
-                "#btnhome": 0,
+                "#btnhome": $('.fondo1').offsetTop,
                 "#btnabout": $('.fondo2').offsetTop,
                 "#btnhelp": $('.fondo3').offsetTop
             };
