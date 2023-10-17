@@ -83,7 +83,7 @@
             <!-- Info Música -->
             <div id="infomusica"
                 class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
-                <div
+                <div id="infomusica2"
                     class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
                     <div class="max-h-full flex justify-center">
                         <p>Aquí irá lo relativo a la música.</p>
@@ -98,7 +98,7 @@
             <!-- Info Hostelería -->
             <div id="infohosteleria"
                 class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
-                <div
+                <div id="infohosteleria2"
                     class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
                     <div class="max-h-full flex justify-center">
                         <p>Aquí irá lo relativo a la hostelería.</p>
@@ -113,7 +113,7 @@
             <!-- Info Genealogía -->
             <div id="infogenealogia"
                 class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
-                <div
+                <div id="infogenealogia2"
                     class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
                     <div class="max-h-full flex justify-center">
                         <p>Aquí irá lo relativo a la genealogía.</p>
@@ -128,7 +128,7 @@
             <!-- Info Desarrollo -->
             <div id="infodesarrollo"
                 class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
-                <div
+                <div id="infodesarrollo2"
                     class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
                     <div class="max-h-full flex justify-center">
                         <p>Aquí irá lo relativo al desarrollo web.</p>
@@ -145,7 +145,7 @@
         <!-- Contenido de fondo2 -->
         <div class="fondo2 fondos h-screen w-full">
             <div class="h-full flex flex-col justify-center items-center">
-                <div
+                <div id="infocv"
                     class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center">
                     <div class="max-h-full">
                         <!-- Encabezado -->
@@ -161,8 +161,8 @@
                                 <p>11/07/2001</p>
                                 <p class="text-xs font-bold">Maestro Cubiles 12, Torrelodones Madrid 28250</p>
                                 <p>+34 603330106</p>
-                                    <a class="mb-4 text-red-600 hover:text-sky-500"
-                                        href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
+                                <a class="mb-4 text-red-600 hover:text-sky-500"
+                                    href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
                             </div>
 
                         </header>
@@ -343,6 +343,14 @@
             const fondo1 = document.querySelector('.fondo1');
             const contenedor = document.querySelector('.contenedor');
 
+            const fondo2 = document.querySelector('.fondo2');
+            const fondo3 = document.querySelector('.fondo3');
+
+            const infomusica = document.querySelector("#infomusica");
+            const infohosteleria = document.querySelector("#infohosteleria");
+            const infogenealogia = document.querySelector("#infogenealogia");
+            const infodesarrollo = document.querySelector("#infodesarrollo");
+
             // REFRESCAR PÁGINA AL PULSAR SOFOS
             document.getElementById("refrescar").addEventListener("click", function () {
                 window.location.reload();
@@ -365,8 +373,25 @@
                 }
             });
 
-            const fondo2 = document.querySelector('.fondo2');
-            const fondo3 = document.querySelector('.fondo3');
+
+            const sections2 = ['infomusica', 'infohosteleria', 'infogenealogia', 'infodesarrollo'];
+
+            sections2.forEach(section => {
+                document.getElementById(section).addEventListener('click', function (event) {
+                    const relatedElement = document.getElementById(section + '2');
+                    if (!relatedElement.contains(event.target) && event.target !== relatedElement) {
+                        hideSection(section);
+                    }
+                });
+
+                boton.addEventListener('click', function (event) {
+                    const relatedElement = document.getElementById(section + '2');
+                    if (!relatedElement.contains(event.target) && event.target !== relatedElement) {
+                        hideSection(section);
+                    }
+                });
+
+            });
 
             // HOME (botón home te dirige a la página principal)
 
@@ -386,6 +411,9 @@
             const btnabout = document.querySelector("#btnabout");
             if (btnabout) {
                 btnabout.addEventListener("click", function () {
+                    const infocv = document.querySelector("#infocv");
+                    infocv.scrollTop = 0;  // Reiniciar el scroll de infocv
+
                     if (fondo2) {
                         contenedor.scrollTo({
                             top: fondo2.offsetTop,
@@ -395,11 +423,12 @@
                 });
             }
 
+
             // HELP (botón about te dirige a fondo5)
 
-            const btnbtnhelp = document.querySelector("#btnhelp");
-            if (btnbtnhelp) {
-                btnbtnhelp.addEventListener("click", function () {
+            const btnhelp = document.querySelector("#btnhelp");
+            if (btnhelp) {
+                btnhelp.addEventListener("click", function () {
                     if (fondo2) {
                         contenedor.scrollTo({
                             top: fondo3.offsetTop,
