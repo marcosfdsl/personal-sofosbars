@@ -1,12 +1,12 @@
 /* prevengo copy paste */
 
-body {
+/* body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     background-color: black;
-}
+} */
 
 /* esconde la barra de desplazamiento */
 
@@ -49,7 +49,7 @@ body {
 
 #rombos {
     object-fit: cover;
-    transition: opacity 0.2s;
+    transition: opacity 0.1s;
 }
 
 .margenbot {
@@ -75,15 +75,15 @@ body {
     .margenbot {
         margin-bottom: calc(10% + 1px);
     }
-    
+
     .margentop {
         margin-top: calc(10% + 1px);
     }
-    
+
     .margenright {
         margin-right: calc(12% + 1px);
     }
-    
+
     .margenleft {
         margin-left: calc(12% + 1px);
     }
@@ -94,15 +94,15 @@ body {
     .margenbot {
         margin-bottom: calc(8% + 1px);
     }
-    
+
     .margentop {
         margin-top: calc(8% + 1px);
     }
-    
+
     .margenright {
         margin-right: calc(10% + 1px);
     }
-    
+
     .margenleft {
         margin-left: calc(10% + 1px);
     }
@@ -120,15 +120,15 @@ body {
     .margenbot {
         margin-bottom: calc(6% + 1px);
     }
-    
+
     .margentop {
         margin-top: calc(6% + 1px);
     }
-    
+
     .margenright {
         margin-right: calc(8% + 1px);
     }
-    
+
     .margenleft {
         margin-left: calc(8% + 1px);
     }
@@ -146,15 +146,15 @@ body {
     .margenbot {
         margin-bottom: calc(4% + 1px);
     }
-    
+
     .margentop {
         margin-top: calc(4% + 1px);
     }
-    
+
     .margenright {
         margin-right: calc(5% + 1px);
     }
-    
+
     .margenleft {
         margin-left: calc(5% + 1px);
     }
