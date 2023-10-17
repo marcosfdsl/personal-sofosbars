@@ -38,19 +38,19 @@
                     <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min">.</div>
                     <div class="mb-4 lg:mb-0 lg:flex">
                         <button id="btnhome"
-                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 lg:w-1/3">Home</button>
+                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3">Home</button>
                         <button id="btnabout"
-                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 lg:w-1/3">About</button>
+                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3">About</button>
                         <button id="btnhelp"
-                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 lg:w-1/3">Help</button>
+                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3">Help</button>
                     </div>
                     <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min">.</div>
                 </div>
                 <div class="mb-4 ml-4 lg:mb-0 lg:ml-0 lg:mr-4 lg:flex lg:flex-row lg:w-44 justify-end">
                     <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
-                        class="text-white block p-2 hover:text-gray-300 mt-4 lg:mt-0 self-center fa-brands fa-linkedin fa-beat"></a>
+                        class="text-white block p-2 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent mt-4 lg:mt-0 self-center fa-brands fa-linkedin fa-beat"></a>
                     <a href="https://www.instagram.com/sofosbars"
-                        class="text-white block p-2 hover:text-blue-300 mb-4 lg:mb-0 self-center fa-brands fa-instagram fa-beat"></a>
+                        class="text-white block p-2 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent mb-4 lg:mb-0 self-center fa-brands fa-instagram fa-beat"></a>
                 </div>
             </div>
         </div>
@@ -123,6 +123,9 @@
                     menu.classList.add("hidden");
                 }
             });
+
+            const fondo2 = document.querySelector('.fondo2');
+            const fondo3 = document.querySelector('.fondo3');
 
             // HOME (botón home te dirige a la página principal)
 
