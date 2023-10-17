@@ -54,51 +54,6 @@ body {
     height: 100vh;
 }
 
-@media (min-width: 1024px) {
-    .contenedor {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
-
-    .esconder {
-        display: none;
-    }
-
-    #menu {
-        background: transparent;
-    }
-}
-
-@media (min-width: 1280px) {
-    .esconder {
-        display: none;
-    }
-
-    #menu {
-        background: transparent;
-    }
-}
-
-/* @media (orientation: landscape) and (min-width: 1024px) {
-
-} */
-
-@media (orientation: landscape) and (max-width: 1024px) {
-
-    .horizontal {
-        width: 30%;
-    }
-
-    .horizontal2 {
-        height: 50%;
-    }
-
-    .horizontal3 {
-        width: 30%;
-    }
-
-}
-
 .altura1 {
     height: 55%;
 }
@@ -108,8 +63,8 @@ body {
 @media (max-width: 639px) {
 
     .altoRombos {
-        height: 40%;
-        margin-top: 1%;
+        height: 50%;
+        margin-top: 16%;
     }
 
     .anchoLogos {
@@ -239,7 +194,7 @@ body {
     }
 
     .anchoLogos {
-        width: 30%;
+        width: 45%;
     }
 
     .altoLogos {
@@ -251,7 +206,7 @@ body {
     }
 
     .anchoFotos {
-        width: 60%;
+        width: 50%;
     }
 
 }
@@ -263,6 +218,19 @@ body {
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
+
+    .contenedor {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+
+    .esconder {
+        display: none;
+    }
+
+    #menu {
+        background: transparent;
+    }
 
     .altoRombos {
         height: 70%;
@@ -294,6 +262,14 @@ body {
 
 @media (orientation: landscape) and (min-width: 1024px) {
 
+    .esconder {
+        display: none;
+    }
+
+    #menu {
+        background: transparent;
+    }
+
     .altoRombos {
         height: 70%;
         margin-top: 1%;
@@ -316,3 +292,4 @@ body {
     }
     
 }
+
