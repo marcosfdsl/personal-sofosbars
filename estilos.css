@@ -38,8 +38,6 @@
 /* scroll-snap */
 
 .contenedor {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
 }
 
@@ -109,6 +107,11 @@
 }
 
 @media (min-width: 1024px) {
+    .contenedor {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+
     .esconder {
         display: none;
     }
