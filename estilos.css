@@ -1,314 +1,80 @@
-/* prevengo copy paste */
+/* Body */
 
 body {
+    /* Prevengo copy paste */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     background-color: black;
-
+    /* Esto arregla error de alto de pantalla */
     overflow: hidden;
     position: fixed;
-    width: 100%;
-    height: 100%;
 }
 
-/* esconde la barra de desplazamiento */
+/* Scroll deshabilitado */
+.contenedor {
+    overflow-y: hidden;
+    height: 100vh;
+}
 
+/* Esconde barra de scroll */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* propiedades en css para los fondos */
-
+/* Fondos */
 .fondos {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     scroll-snap-align: start;
 }
-
 .fondo1 {
     background-image: url('fotos/fondo1.jpg');
 }
-
 .fondo2 {
     background-image: url('fotos/fondo2.jpg');
 }
-
 .fondo3 {
     background-image: url('fotos/fondo3.jpg');
 }
 
-.altura1 {
-    height: 4%;
-}
-
-#rombos {
-    object-fit: cover;
-    transition: opacity 0.1s;
-}
-
-.contenedor {
-    overflow-y: hidden;
-    height: 100vh;
-}
-
-.altura1 {
-    height: 55%;
-}
-
-/* xs */
-
-@media (max-width: 639px) {
-
-    .altoRombos {
-        height: 40%;
-        margin-top: 2%;
-    }
-
-    .anchoLogos {
-        width: 60%;
-    }
-
-    .altoLogos {
-        height: 30%;
-    }
-
-    .anchoHuecos {
-        width: 50%;
-    }
-
-    .anchoFotos {
-        width: 100%;
-    }
-
-}
-
-@media (orientation: landscape) and (max-width: 639px) {
-
-    .altoRombos {
-        height: 75%;
-        margin-top: 2%;
-    }
-
-    .anchoLogos {
-        width: 35%;
-    }
-
-    .altoLogos {
-        height: 60%;
-    }
-
-    .anchoHuecos {
-        width: 80%;
-    }
-
-    .anchoFotos {
-        width: 50%;
-    }
-}
-
-/* sm */
-
-@media (min-width: 640px) {
-
-    .altoRombos {
-        height: 50%;
-    }
-
-    .anchoLogos {
-        width: 70%;
-    }
-
-    .altoLogos {
-        height: 35%;
-    }
-
-    .anchoHuecos {
-        width: 50%;
-    }
-
-    .anchoFotos {
-        width: 80%;
-    }
-
-}
-
-@media (orientation: landscape) and (min-width: 640px) {
-
-    .altoRombos {
-        height: 75%;
-        margin-top: 2%;
-    }
-
-    .anchoLogos {
-        width: 35%;
-    }
-
-    .altoLogos {
-        height: 60%;
-    }
-
-    .anchoHuecos {
-        width: 80%;
-    }
-
-    .anchoFotos {
-        width: 45%;
-    }
-
-}
-
-/* md */
-
-
-@media (min-width: 768px) {
-
-    .altoRombos {
-        height: 45%;
-    }
-
-    .anchoLogos {
-        width: 60%;
-    }
-
-    .altoLogos {
-        height: 35%;
-    }
-
-    .anchoHuecos {
-        width: 50%;
-    }
-
-    .anchoFotos {
-        width: 90%;
-    }
-
-}
-
-@media (orientation: landscape) and (min-width: 768px) {
-
-    .altoRombos {
-        height: 80%;
-    }
-
-    .anchoLogos {
-        width: 30%;
-    }
-
-    .altoLogos {
-        height: 65%;
-    }
-
-    .anchoHuecos {
-        width: 60%;
-    }
-
-    .anchoFotos {
-        width: 50%;
-    }
-
-}
-
-/* lg */
-
-@media (min-width: 1024px) {}
-
-@media (orientation: landscape) and (min-width: 1024px) {
-
-    .contenedor {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
-
-    .esconder {
-        display: none;
-    }
-
-    #menu {
-        background: transparent;
-    }
-
-    .altoRombos {
-        height: 70%;
-    }
-
-    .anchoLogos {
-        width: 25%;
-    }
-
-    .altoLogos {
-        height: 55%;
-    }
-
-    .anchoHuecos {
-        width: 80%;
-    }
-
-    .anchoFotos {
-        width: 45%;
-    }
-
-}
-
-/* xl */
-
-@media (min-width: 1024px) {}
-
-@media (orientation: landscape) and (min-width: 1024px) {
-
-    .esconder {
-        display: none;
-    }
-
-    #menu {
-        background: transparent;
-    }
-
-    .altoRombos {
-        height: 70%;
-        margin-top: 1%;
-    }
-
-    .anchoLogos {
-        width: 25%;
-    }
-
-    .altoLogos {
-        height: 55%;
-    }
-
-    .anchoHuecos {
-        width: 80%;
-    }
-
-    .anchoFotos {
-        width: 50%;
-    }
-
-}
-
+/*  Rotar y des-rotar */
 .rotar {
     transform: rotate(45deg);
 }
-
 .desrotar {
     transform: rotate(-45deg);
 }
 
+/* Hover Agrandar */
 .agrandar {
     transition: width 0.3s;
 }
-
 .agrandar:hover {
     width: 40%;
 }
 
+/* Hover Azul */
 .azuloscuro {
     transition: background-color 0.3s;
 }
-
 .azuloscuro:hover {
     background-color: #00131E;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+    /* Scroll habilitado */
+    .contenedor {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+    .esconder {
+        display: none;
+    }
+    #menu {
+        background: transparent;
+    }
 }
