@@ -124,6 +124,47 @@
                 }
             });
 
+            // HOME (botón home te dirige a la página principal)
+
+            const btnhome = document.querySelector("#btnhome");
+            if (btnhome) {
+                btnhome.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    contenedor.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            }
+
+            // ABOUT (botón about te dirige a fondo4)
+
+            const btnabout = document.querySelector("#btnabout");
+            if (btnabout) {
+                btnabout.addEventListener("click", function () {
+                    if (fondo2) {
+                        contenedor.scrollTo({
+                            top: fondo2.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
+            // HELP (botón about te dirige a fondo5)
+
+            const btnbtnhelp = document.querySelector("#btnhelp");
+            if (btnbtnhelp) {
+                btnbtnhelp.addEventListener("click", function () {
+                    if (fondo2) {
+                        contenedor.scrollTo({
+                            top: fondo3.offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+
             // ROMBOS
 
             contenedor.addEventListener('scroll', function () {
@@ -140,7 +181,7 @@
                         if (parseFloat(rombos.style.opacity) === 0) {
                             rombos.style.display = 'none';
                         }
-                    }, 200);  // Asume que la transición de opacidad es de 0.2s, como has definido en tu CSS.
+                    }, 100);
                 } else {
                     const distanceScrolledWithinFondo1 = scrollPosition - startOfFondo1;
                     const scrollPercentage = distanceScrolledWithinFondo1 / fondo1.offsetHeight;
