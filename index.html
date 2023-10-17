@@ -26,7 +26,7 @@
                 <button id="boton"
                     class="m-6 self-center text-left text-white text-xl fa-solid fa-bars hover:text-gray-300 esconder"></button>
                 <button id="refrescar"
-                    class="m-6 lg:w-40 lg:my-6 self-center text-center text-white font-bold text-xl lg:text-left">
+                    class="m-6 lg:w-40 lg:my-6 self-center text-center text-white font-bold text-xl lg:text-left hover:text-gray-300">
                     S O F O S
                 </button>
                 <i class="m-6 text-xl fa-solid fa-bars invisible esconder"></i>
@@ -63,44 +63,40 @@
         <div class="fondo1 fondos h-screen w-screen flex flex-col justify-center z-20">
 
 
-            <div class="flex justify-center w-full items-center z-10 h-full">
-                <div class="grid grid-cols-3 anchoLogos flex justify-center items-center altoLogos">
+            <div class="flex justify-center items-center z-10 w-full h-full">
+                <div class="grid grid-cols-3 justify-center items-center ">
                     <!-- Primera fila -->
                     <div class="invisible"></div>
-                    <div class="h-20 text-3xl text-white flex items-center justify-center">
-                        <button id="btnmusica" class="anchoHuecos flex items-center justify-center">
-                            <img src="fotos/simbolos/musica.png" class="anchoFotos" alt="">
+                    <div class="rotar flex items-center justify-center bg-white w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btnmusica" class="flex items-center justify-center bg-black azuloscuro h-full mt-1 ml-1">
+                            <img src="fotos/simbolos/musica.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
                     <div class="invisible"></div>
 
                     <!-- Segunda fila -->
-                    <div class="h-20 text-3xl text-white flex items-center justify-center">
-                        <button id="btnhosteleria" class="anchoHuecos flex items-center justify-center">
-                            <img src="fotos/simbolos/hosteleria.png" class="anchoFotos" alt="">
+                    <div class="rotar flex items-center justify-center bg-white w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btnhosteleria" class="flex items-center justify-center bg-black azuloscuro h-full mb-1 ml-1">
+                            <img src="fotos/simbolos/hosteleria.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
                     <div class="invisible"></div>
-                    <div class="h-20 text-3xl text-white flex items-center justify-center">
-                        <button id="btngenealogia" class="anchoHuecos flex items-center justify-center">
-                            <img src="fotos/simbolos/genealogia.png" class="anchoFotos" alt="">
+                    <div class="rotar flex items-center justify-center bg-white w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btngenealogia" class="flex items-center justify-center bg-black azuloscuro h-full mt-1 mr-1">
+                            <img src="fotos/simbolos/genealogia.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
 
                     <!-- Tercera fila -->
-                    <div class="invisible h-16"></div>
-                    <div class="h-20 text-3xl text-white flex items-center justify-center">
-                        <button id="btndesarrollo" class="anchoHuecos flex items-center justify-center">
-                            <img src="fotos/simbolos/desarrollo.png" class="anchoFotos" alt="">
+                    <div class="invisible"></div>
+                    <div class="rotar flex items-center justify-center bg-white w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col hover:bg-gray-300">
+                        <button id="btndesarrollo" class="flex items-center justify-center bg-black azuloscuro h-full mb-1 mr-1">
+                            <img src="fotos/simbolos/desarrollo.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
-                    <div class="invisible h-16"></div>
+                    <div class="invisible"></div>
                 </div>
             </div>
-
-
-            <div class="absolute altoRombos flex justify-center self-center z-0"><img id="rombos"
-                    src="fotos/rombos.png" alt=""></div>
 
             <!-- Info Música -->
             <div id="infomusica"
@@ -459,33 +455,6 @@
                     }
                 });
             }
-
-            // ROMBOS
-
-            contenedor.addEventListener('scroll', function () {
-                const startOfFondo1 = fondo1.offsetTop;
-                const endOfFondo1 = startOfFondo1 + fondo1.offsetHeight;
-                const scrollPosition = contenedor.scrollTop;
-
-                if (scrollPosition <= startOfFondo1) {
-                    rombos.style.opacity = 1;
-                    rombos.style.display = 'block';
-                } else if (scrollPosition >= endOfFondo1) {
-                    rombos.style.opacity = 0;
-                    setTimeout(() => {
-                        if (parseFloat(rombos.style.opacity) === 0) {
-                            rombos.style.display = 'none';
-                        }
-                    }, 100);
-                } else {
-                    const distanceScrolledWithinFondo1 = scrollPosition - startOfFondo1;
-                    const scrollPercentage = distanceScrolledWithinFondo1 / fondo1.offsetHeight + 0.7;
-                    rombos.style.opacity = 1 - scrollPercentage;
-                    if (rombos.style.display === 'none') {
-                        rombos.style.display = 'block';
-                    }
-                }
-            });
 
             // INFO FONDO1
 

@@ -136,7 +136,7 @@ body {
 }
 
 @media (orientation: landscape) and (min-width: 640px) {
-    
+
     .altoRombos {
         height: 75%;
         margin-top: 2%;
@@ -213,9 +213,7 @@ body {
 
 /* lg */
 
-@media (min-width: 1024px) {
-
-}
+@media (min-width: 1024px) {}
 
 @media (orientation: landscape) and (min-width: 1024px) {
 
@@ -256,9 +254,7 @@ body {
 
 /* xl */
 
-@media (min-width: 1024px) {
-
-}
+@media (min-width: 1024px) {}
 
 @media (orientation: landscape) and (min-width: 1024px) {
 
@@ -290,6 +286,29 @@ body {
     .anchoFotos {
         width: 50%;
     }
-    
+
 }
 
+.rotar {
+    transform: rotate(45deg);
+}
+
+.desrotar {
+    transform: rotate(-45deg);
+}
+
+.agrandar {
+    transition: width 0.3s;
+}
+
+.agrandar:hover {
+    width: 40%;
+}
+
+.azuloscuro {
+    transition: background-color 0.3s;
+}
+
+.azuloscuro:hover {
+    background-color: #00131E;
+}
