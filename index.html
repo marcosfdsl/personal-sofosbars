@@ -333,25 +333,20 @@
                 let fondo2Position = fondo2.offsetTop;
                 let fondo2Height = fondo2.offsetHeight;
 
-                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                if (fondo2.style.display == 'block' && scrollPosition <= fondo2Position) {
                     fondo2.style.display = 'block';
                 }
                 else {
                     fondo2.style.display = 'none';
                 }
+
+                // var res = scrollPosition + " y " + fondo2Position + " y " + fondo2Height + " Y " + fondo2.style.display;
+                // window.alert(res);
+
             });
 
             document.getElementById('btnabout').addEventListener('click', function () {
-                let scrollPosition = document.querySelector('.contenedor').scrollTop;
-                let fondo2Position = fondo2.offsetTop;
-                let fondo2Height = fondo2.offsetHeight;
-
-                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
-                    fondo2.style.display = 'block';
-                }
-                else {
-                    fondo2.style.display = 'block';
-                }
+                fondo2.style.display = 'block';
             });
 
             document.getElementById('btnhelp').addEventListener('click', function () {
@@ -359,7 +354,7 @@
                 let fondo2Position = fondo2.offsetTop;
                 let fondo2Height = fondo2.offsetHeight;
 
-                if (scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
+                if (fondo2.style.display == 'block' && scrollPosition >= fondo2Position && scrollPosition <= (fondo2Position + fondo2Height)) {
                     fondo2.style.display = 'block';
                 }
                 else {
@@ -440,6 +435,23 @@
                     document.getElementById("rellenar").innerHTML = texto;
                 });
             }
+
+            let scrollTimeout;  // para guardar el timeout
+            const contenedor2 = document.querySelector('.contenedor');
+
+            contenedor2.addEventListener('scroll', function () {
+                // Cuando se inicia el scroll
+                clearTimeout(scrollTimeout);
+
+                // Deshabilitar todos los botones
+                const buttons = document.querySelectorAll('button');
+                buttons.forEach(button => button.setAttribute('disabled', 'disabled'));
+
+                // Habilitar botones después de que se detenga el scroll (100ms en este caso)
+                scrollTimeout = setTimeout(function () {
+                    buttons.forEach(button => button.removeAttribute('disabled'));
+                }, 100);
+            });
 
         });
 
