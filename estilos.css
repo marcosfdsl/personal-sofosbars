@@ -49,62 +49,6 @@ body {
     transition: opacity 0.1s;
 }
 
-.margenbot {
-    margin-bottom: calc(14% + 1px);
-}
-
-.margentop {
-    margin-top: calc(14% + 1px);
-}
-
-.margenright {
-    margin-right: calc(18% + 1px);
-}
-
-.margenleft {
-    margin-left: calc(18% + 1px);
-}
-
-/* media query */
-
-@media (min-width: 640px) {
-
-    .margenbot {
-        margin-bottom: calc(10% + 1px);
-    }
-
-    .margentop {
-        margin-top: calc(10% + 1px);
-    }
-
-    .margenright {
-        margin-right: calc(12% + 1px);
-    }
-
-    .margenleft {
-        margin-left: calc(12% + 1px);
-    }
-}
-
-@media (min-width: 768px) {
-
-    .margenbot {
-        margin-bottom: calc(8% + 1px);
-    }
-
-    .margentop {
-        margin-top: calc(8% + 1px);
-    }
-
-    .margenright {
-        margin-right: calc(10% + 1px);
-    }
-
-    .margenleft {
-        margin-left: calc(10% + 1px);
-    }
-}
-
 .contenedor {
     overflow-y: hidden;
     height: 100vh;
@@ -123,22 +67,6 @@ body {
     #menu {
         background: transparent;
     }
-
-    .margenbot {
-        margin-bottom: calc(6% + 1px);
-    }
-
-    .margentop {
-        margin-top: calc(6% + 1px);
-    }
-
-    .margenright {
-        margin-right: calc(8% + 1px);
-    }
-
-    .margenleft {
-        margin-left: calc(8% + 1px);
-    }
 }
 
 @media (min-width: 1280px) {
@@ -148,21 +76,5 @@ body {
 
     #menu {
         background: transparent;
-    }
-
-    .margenbot {
-        margin-bottom: calc(4.5% + 1px);
-    }
-
-    .margentop {
-        margin-top: calc(4.5% + 1px);
-    }
-
-    .margenright {
-        margin-right: calc(5.5% + 1px);
-    }
-
-    .margenleft {
-        margin-left: calc(5.5% + 1px);
     }
 }
