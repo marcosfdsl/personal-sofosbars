@@ -146,18 +146,18 @@
     }
 
     .margenbot {
-        margin-bottom: calc(4% + 1px);
+        margin-bottom: calc(4.5% + 1px);
     }
 
     .margentop {
-        margin-top: calc(4% + 1px);
+        margin-top: calc(4.5% + 1px);
     }
 
     .margenright {
-        margin-right: calc(5% + 1px);
+        margin-right: calc(5.5% + 1px);
     }
 
     .margenleft {
-        margin-left: calc(5% + 1px);
+        margin-left: calc(5.5% + 1px);
     }
 }

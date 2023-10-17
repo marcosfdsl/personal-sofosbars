@@ -62,26 +62,91 @@
         <!-- Contenido de fondo1 -->
         <div class="fondo1 fondos h-screen w-full flex flex-col justify-center z-20">
             <div class="altura1 altura2"></div>
-            <div class="flex flex-col justify-center z-10">
+            <div class="flex flex-col justify-center z-10 mt-4">
                 <div class="flex justify-center margenbot">
-                    <button class="w-8 lg:w-12"><img src="fotos/simbolos/musica.png" alt=""></button>
+                    <button id="btnmusica" class="w-8 lg:w-12"><img src="fotos/simbolos/musica.png" alt=""></button>
                 </div>
                 <div class="flex justify-center">
-                    <button class="w-8 lg:w-12 margenright"><img src="fotos/simbolos/hosteleria.png" alt=""></button>
-                    <button class="w-8 lg:w-12 margenleft"><img src="fotos/simbolos/genealogia.png" alt=""></button>
+                    <button id="btnhosteleria" class="w-8 lg:w-12 margenright"><img src="fotos/simbolos/hosteleria.png"
+                            alt=""></button>
+                    <button id="btngenealogia" class="w-8 lg:w-12 margenleft"><img src="fotos/simbolos/genealogia.png"
+                            alt=""></button>
                 </div>
                 <div class="flex justify-center margentop">
-                    <button class="w-8 lg:w-12"><img src="fotos/simbolos/desarrollo.png" alt=""></button>
+                    <button id="btndesarrollo" class="w-8 lg:w-12"><img src="fotos/simbolos/desarrollo.png"
+                            alt=""></button>
                 </div>
             </div>
             <div class="absolute z-0 h-4/6 lg:h-5/6 flex justify-center self-center"><img id="rombos"
                     src="fotos/rombos.png" alt=""></div>
+
+            <!-- Info Música -->
+            <div id="infomusica"
+                class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
+                <div
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
+                    <div class="max-h-full flex justify-center">
+                        <p>Aquí irá lo relativo a la música.</p>
+                    </div>
+                    <div class="absolute flex justify-center bottom-0">
+                        <button id="btncerrarmusica"
+                            class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Hostelería -->
+            <div id="infohosteleria"
+                class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
+                <div
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
+                    <div class="max-h-full flex justify-center">
+                        <p>Aquí irá lo relativo a la hostelería.</p>
+                    </div>
+                    <div class="absolute flex justify-center bottom-0">
+                        <button id="btncerrarhosteleria"
+                            class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Genealogía -->
+            <div id="infogenealogia"
+                class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
+                <div
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
+                    <div class="max-h-full flex justify-center">
+                        <p>Aquí irá lo relativo a la genealogía.</p>
+                    </div>
+                    <div class="absolute flex justify-center bottom-0">
+                        <button id="btncerrargenealogia"
+                            class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Desarrollo -->
+            <div id="infodesarrollo"
+                class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
+                <div
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center relative">
+                    <div class="max-h-full flex justify-center">
+                        <p>Aquí irá lo relativo al desarrollo web.</p>
+                    </div>
+                    <div class="absolute flex justify-center bottom-0">
+                        <button id="btncerrardesarrollo"
+                            class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Contenido de fondo2 -->
         <div class="fondo2 fondos h-screen w-full">
             <div class="h-full flex flex-col justify-center items-center">
-                <div class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center">
+                <div
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 mt-8 rounded-3xl flex items-center justify-center text-center">
                     <div class="max-h-full">
                         <!-- Encabezado -->
                         <header class="px-4 pt-8 flex flex-col items-center">
@@ -370,6 +435,42 @@
                     }
                 }
             });
+
+            // INFO FONDO1
+
+            const sections = {
+                btnmusica: "infomusica",
+                btnhosteleria: "infohosteleria",
+                btngenealogia: "infogenealogia",
+                btndesarrollo: "infodesarrollo"
+            };
+
+            const showSection = (sectionId) => {
+                let section = document.getElementById(sectionId);
+                section.style.opacity = "1";
+                section.style.transform = "translateY(0)";
+            };
+
+            const hideSection = (sectionId) => {
+                let section = document.getElementById(sectionId);
+                section.style.opacity = "0";
+                section.style.transform = "translateY(100%)";
+            };
+
+            for (let btnId in sections) {
+                document.getElementById(btnId).addEventListener("click", () => showSection(sections[btnId]));
+            }
+
+            const closeButtons = {
+                btncerrarmusica: "infomusica",
+                btncerrarhosteleria: "infohosteleria",
+                btncerrargenealogia: "infogenealogia",
+                btncerrardesarrollo: "infodesarrollo"
+            };
+
+            for (let btnCloseId in closeButtons) {
+                document.getElementById(btnCloseId).addEventListener("click", () => hideSection(closeButtons[btnCloseId]));
+            }
 
         });
 
