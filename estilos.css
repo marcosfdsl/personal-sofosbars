@@ -1,5 +1,3 @@
-/* Body */
-
 body {
     /* Prevengo copy paste */
     -webkit-user-select: none;
@@ -8,13 +6,10 @@ body {
     user-select: none;
     background-color: black;
     /* Esto arregla error de alto de pantalla */
-    overflow: auto;
     position: fixed;
 }
 
-/* Scroll */
 .contenedor {
-    overflow-y: hidden;
     height: 100vh;
 }
 

@@ -449,6 +449,7 @@
             document.getElementById('btndesarrollo').addEventListener('click', function () {
                 document.getElementById('rellenar').innerHTML = desarrollo;
             });
+            
             let scrollTimeout;  // para guardar el timeout
 
             contenedor.addEventListener('scroll', function () {
@@ -462,16 +463,33 @@
                     if (button) button.setAttribute('disabled', 'disabled');
                 });
 
-                // Habilitar botones después de que se detenga el scroll (100ms en este caso)
-                let scrollTimeout = setTimeout(function () {
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
-                }, 100);
+                // Habilitar botones después de que se detenga el scroll
+                scrollTimeout = setTimeout(function () {
+                    const scrollPosition = contenedor.scrollTop;
+                    const tolerance = 50;  // una tolerancia en píxeles para considerar que hemos llegado al fondo
+
+                    const isNearToFondo = (fondo) => {
+                        const fondoPosition = fondo.offsetTop;
+                        return scrollPosition >= fondoPosition - tolerance && scrollPosition <= fondoPosition + tolerance;
+                    };
+
+                    if (isNearToFondo(document.querySelector('.fondo1')) ||
+                        isNearToFondo(document.querySelector('.fondo2')) ||
+                        isNearToFondo(document.querySelector('.fondo3'))) {
+
+                        // Aquí ya sabes que estás cerca de uno de los fondos después de que el desplazamiento se haya detenido
+
+                        buttonIDs.forEach(id => {
+                            const button = document.getElementById(id);
+                            if (button) button.removeAttribute('disabled');
+                        });
+                    }
+                }, 10);
             });
 
         });
+
+
 
     </script>
 
