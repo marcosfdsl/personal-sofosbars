@@ -18,68 +18,6 @@ body {
     height: 100vh;
 }
 
-/* Scroll CV */
-
-#infocv::-webkit-scrollbar,
-.scrolldentro::-webkit-scrollbar {
-    width: 5px;
-    /* Ancho de la scrollbar */
-}
-
-#infocv::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    /* Color de fondo de la barra */
-    border-radius: 5px;
-    /* Redondear las esquinas */
-}
-
-#infocv::-webkit-scrollbar-thumb {
-    background: #888;
-    /* Color del deslizador de la barra */
-    border-radius: 5px;
-    /* Redondear las esquinas */
-}
-
-#infocv::-webkit-scrollbar-thumb:hover {
-    background: #555;
-    /* Color del deslizador cuando el mouse pasa por encima */
-}
-
-.scrolldentro {
-    height: 100%;
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding-right: 5px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
-}
-
-.scrolldentro::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.scrolldentro::-webkit-scrollbar-thumb {
-    background-color: rgba(155, 155, 155, 0.7);
-    border-radius: 20px;
-}
-
-.scrolldentro2 {
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding-right: 5px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
-}
-
-.scrolldentro2::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.scrolldentro2::-webkit-scrollbar-thumb {
-    background-color: rgba(155, 155, 155, 0.7);
-    border-radius: 20px;
-}
-
 /* Fondos */
 .fondos {
     background-position: center;
