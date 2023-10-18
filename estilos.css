@@ -18,9 +18,49 @@ body {
     height: 100vh;
 }
 
-/* Esconde barra de scroll */
-::-webkit-scrollbar {
-    display: none;
+/* Scroll CV */
+
+#infocv::-webkit-scrollbar,
+.scrolldentro::-webkit-scrollbar {
+    width: 5px;
+    /* Ancho de la scrollbar */
+}
+
+#infocv::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo de la barra */
+    border-radius: 5px;
+    /* Redondear las esquinas */
+}
+
+#infocv::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color del deslizador de la barra */
+    border-radius: 5px;
+    /* Redondear las esquinas */
+}
+
+#infocv::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color del deslizador cuando el mouse pasa por encima */
+}
+
+.scrolldentro {
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-right: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+.scrolldentro::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrolldentro::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 20px;
 }
 
 /* Fondos */
@@ -30,12 +70,15 @@ body {
     background-size: cover;
     scroll-snap-align: start;
 }
+
 .fondo1 {
     background-image: url('fotos/fondo1.jpg');
 }
+
 .fondo2 {
     background-image: url('fotos/fondo2.jpg');
 }
+
 .fondo3 {
     background-image: url('fotos/fondo3.jpg');
 }
@@ -44,6 +87,7 @@ body {
 .rotar {
     transform: rotate(45deg);
 }
+
 .desrotar {
     transform: rotate(-45deg);
 }
@@ -52,6 +96,7 @@ body {
 .agrandar {
     transition: width 0.3s;
 }
+
 .agrandar:hover {
     width: 40%;
 }
@@ -60,20 +105,24 @@ body {
 .azuloscuro {
     transition: background-color 0.3s;
 }
+
 .azuloscuro:hover {
     background-color: #00131E;
 }
 
 /* Responsive */
 @media (min-width: 1024px) {
+
     /* Scroll habilitado */
     .contenedor {
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
     }
+
     .esconder {
         display: none;
     }
+
     #menu {
         background: transparent;
     }
