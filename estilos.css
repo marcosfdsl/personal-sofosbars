@@ -18,6 +18,11 @@ body {
     height: 100vh;
 }
 
+/* Oculta barra scroll */
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* Fondos */
 .fondos {
     background-position: center;
