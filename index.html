@@ -455,13 +455,19 @@
                 // Cuando se inicia el scroll
                 clearTimeout(scrollTimeout);
 
-                // Deshabilitar todos los botones
-                const buttons = document.querySelectorAll('button');
-                buttons.forEach(button => button.setAttribute('disabled', 'disabled'));
+                // Deshabilitar los botones específicos
+                const buttonIDs = ['btnhome', 'btnabout', 'btnhelp'];
+                buttonIDs.forEach(id => {
+                    const button = document.getElementById(id);
+                    if (button) button.setAttribute('disabled', 'disabled');
+                });
 
                 // Habilitar botones después de que se detenga el scroll (100ms en este caso)
-                scrollTimeout = setTimeout(function () {
-                    buttons.forEach(button => button.removeAttribute('disabled'));
+                let scrollTimeout = setTimeout(function () {
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
                 }, 100);
             });
 
