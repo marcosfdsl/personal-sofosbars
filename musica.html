@@ -112,14 +112,11 @@
             <div id="info"
                 class="absolute z-20 w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full">
                 <div id="infomusica2"
-                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
-                    <div class="scrolldentro2 flex items-center justify-center text-center">
-                        <div id="rellenar" class="flex flex-col justify-center pb-8">
-                            <!-- RELLENAR -->
-                        </div>
-                        <div class="absolute flex justify-center bottom-0">
-                            <button id="btncerrar" class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
-                        </div>
+                    class="overflow-y-auto bg-white h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8 rounded-3xl flex items-center justify-center text-center relative">
+                    <div id="rellenar" class="max-h-full flex justify-center">
+                    </div>
+                    <div class="absolute flex justify-center bottom-0">
+                        <button id="btncerrar" class="p-2 text-3xl fa-solid fa-xmark hover:text-gray-700"></button>
                     </div>
                 </div>
             </div>
@@ -128,30 +125,37 @@
         <!-- Contenido de fondo2 -->
         <div class="fondo2 fondos h-screen w-full">
             <div class="h-full flex flex-col justify-center items-center">
+
                 <div id="infocv" class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
                     <div class="scrolldentro flex items-center justify-center text-center">
                         <div class="max-h-full">
-                            <!-- Encabezado -->
+
+
+                <!-- AQUI -->
+
+
+                            <!-- Header -->
                             <header class="px-4 pt-8 flex flex-col items-center">
                                 <div class="w-32 h-32 flex-shrink-0 justify-center mb-4">
                                     <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
                                         target="_blank">
-                                        <img src="fotos/foto.png" alt="Foto"
+                                        <img src="fotos/flornegra.png" alt="Foto"
                                             class="w-full h-full object-cover rounded-full transform hover:scale-105 transition-transform duration-300">
                                     </a>
                                 </div>
-                                <div>
-                                    <h1 class="text-xl lg:text-2xl font-bold mb-4">Marcos Fernández de Salamanca López
-                                    </h1>
-                                    <p class="text-sm lg:text-base">
-                                        </pclass>11/07/2001</p>
-                                    <p class="text-xs lg:text-sm font-bold">Maestro Cubiles 12, Torrelodones Madrid
-                                        28250
-                                    </p>
-                                    <p class="mb-4 text-sm lg:text-base">+34 603330106</p>
-                                    <a class="text-sm text-red-600 hover:text-red-500"
-                                        href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
+
+                                <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40">
+                                    <h1 class="text-xl lg:text-2xl font-bold mb-4">Sofos</h1>
+                                    <p class="text-sm lg:text-base mb-2">Sofos es el nombre artístico de Marcos
+                                        Fernández de Salamanca, un rapero y productor español de la localidad
+                                        madrileña de Torrelodones, nacido el 11 de julio del año 2001.</p>
                                 </div>
+
+                                <iframe id="youtubeVideo" class="mt-4 w-full lg:w-5/6"
+                                    src="https://www.youtube.com/embed/1GqGpaHtKC4" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
                             </header>
                             <!-- Contenido principal -->
                             <main class="py-4 px-4">
@@ -251,37 +255,6 @@
                                         <p class="text-sm lg:text-base mb-1">(2013-2015).</p>
                                     </div>
                                 </section>
-                                <!-- Habilidades y conocimientos -->
-                                <section class="mb-8">
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">HABILIDADES Y CONOCIMIENTOS</h2>
-                                    <!-- Desarrollo Web -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Desarrollo Web Full Stack (front-end,
-                                            back-end y
-                                            base de datos)</h3>
-                                        <p class="text-sm lg:text-base mb-2">HTML, CSS, JavaScript, Java, MySQL...</p>
-                                    </div>
-                                    <!-- Ofimática -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Conocimientos en programas de
-                                            ofimática
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-2">Word, Excel, Access...</p>
-                                    </div>
-                                    <!-- IES -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <p class="text-sm lg:text-base mb-2">Facilidad para la organización y la
-                                            resolución
-                                            de
-                                            problemas.</p>
-                                    </div>
-                                    <!-- USA -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <p class="text-sm lg:text-base mb-2">Facilidad para la comunicación y el
-                                            asesoramiento a
-                                            clientes.</p>
-                                    </div>
-                                </section>
                                 <!-- Idiomas -->
                                 <section>
                                     <h2 class="text-xl lg:text-2xl font-bold mb-8">IDIOMAS</h2>
@@ -292,9 +265,16 @@
                                     </div>
                                 </section>
                             </main>
+
+
+                <!-- AQUI -->
+
+                
                         </div>
                     </div>
                 </div>
+
+                <!-- AQUI -->
 
             </div>
         </div>
@@ -414,41 +394,21 @@
                 $(`#${btnId}`).addEventListener("click", () => hideSection('info'));
             });
 
-            // BtnMusica
-            const musica = '<!-- Header --> <header class="px-4 pt-8 flex flex-col items-center"> <div class="w-32 h-32 flex-shrink-0 justify-center mb-4"> <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/" target="_blank"> <img src="fotos/flornegra.png" alt="Foto" class="w-full h-full object-cover rounded-full transform hover:scale-105 transition-transform duration-300"> </a> </div> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Sofos</h1> <p class="text-sm lg:text-base mb-2">Sofos es el nombre artístico de Marcos Fernández de Salamanca, un rapero y productor español de la localidad madrileña de Torrelodones, nacido el 11 de julio del año 2001.</p> </div> <iframe id="youtubeVideo" class="mt-4 w-full lg:w-5/6" src="https://www.youtube.com/embed/1GqGpaHtKC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </header> <!-- Contenido principal --> ';
+            // Mapeo de botones a textos
+            const botonesATextos = {
+                "btnmusica": "<p>musica</p>",
+                "btnhosteleria": "<p>hosteleria</p>",
+                "btngenealogia": "<p>genealogia</p>",
+                "btndesarrollo": "<p>desarrollo</p>"
+            };
 
-            document.getElementById('rellenar').innerHTML = musica;
+            // Añadimos un event listener a cada botón
+            for (let [btnId, texto] of Object.entries(botonesATextos)) {
+                document.getElementById(btnId).addEventListener("click", function () {
+                    document.getElementById("rellenar").innerHTML = texto;
+                });
+            }
 
-            document.getElementById('#btnmusica').addEventListener('click', function () {
-                document.getElementById('rellenar').innerHTML = musica;
-            });
-
-            // BtnHosteleria
-            const hosteleria = '<p class="pb-8 self-center">Un navegador web es un software diseñado para acceder y visualizar información en la World Wide Web (WWW). Funciona solicitando páginas web alojadas en servidores y mostrándolas al usuario. Los navegadores interpretan HTML, CSS y otros lenguajes web, transformando el código en contenido visual y audible.<br><br>La historia de los navegadores comienza con el "WorldWideWeb", desarrollado por Tim Berners-Lee en 1990. Este fue el precursor del conocido "Netscape Navigator", lanzado en 1994, que popularizó la web. Microsoft introdujo "Internet Explorer" en 1995, iniciando una "guerra de navegadores" con Netscape. Explorer dominó hasta que Mozilla Firefox (2004) y Google Chrome (2008) irrumpieron en el mercado. Chrome se destacó por su velocidad y minimalismo, y con el tiempo se convirtió en el líder del mercado. Safari (2003) y Opera también han sido actores clave.<br><br>A lo largo del tiempo, la evolución de los navegadores ha priorizado la seguridad, velocidad y adaptabilidad, siendo esenciales para la experiencia moderna en internet.</p>';
-
-            document.getElementById('rellenar').innerHTML = hosteleria;
-
-            document.getElementById('#btnhosteleria').addEventListener('click', function () {
-                document.getElementById('rellenar').innerHTML = hosteleria;
-            });
-
-            // BtnGenealogia
-            const genealogia = '<p class="pb-8 self-center">Un navegador web es un software diseñado para acceder y visualizar información en la World Wide Web (WWW). Funciona solicitando páginas web alojadas en servidores y mostrándolas al usuario. Los navegadores interpretan HTML, CSS y otros lenguajes web, transformando el código en contenido visual y audible.<br><br>La historia de los navegadores comienza con el "WorldWideWeb", desarrollado por Tim Berners-Lee en 1990. Este fue el precursor del conocido "Netscape Navigator", lanzado en 1994, que popularizó la web. Microsoft introdujo "Internet Explorer" en 1995, iniciando una "guerra de navegadores" con Netscape. Explorer dominó hasta que Mozilla Firefox (2004) y Google Chrome (2008) irrumpieron en el mercado. Chrome se destacó por su velocidad y minimalismo, y con el tiempo se convirtió en el líder del mercado. Safari (2003) y Opera también han sido actores clave.<br><br>A lo largo del tiempo, la evolución de los navegadores ha priorizado la seguridad, velocidad y adaptabilidad, siendo esenciales para la experiencia moderna en internet.</p>';
-
-            document.getElementById('rellenar').innerHTML = genealogia;
-
-            document.getElementById('#btngenealogia').addEventListener('click', function () {
-                document.getElementById('rellenar').innerHTML = genealogia;
-            });
-
-            // BtnDesarrollo
-            const desarrollo = '<p class="pb-8 self-center">Un navegador web es un software diseñado para acceder y visualizar información en la World Wide Web (WWW). Funciona solicitando páginas web alojadas en servidores y mostrándolas al usuario. Los navegadores interpretan HTML, CSS y otros lenguajes web, transformando el código en contenido visual y audible.<br><br>La historia de los navegadores comienza con el "WorldWideWeb", desarrollado por Tim Berners-Lee en 1990. Este fue el precursor del conocido "Netscape Navigator", lanzado en 1994, que popularizó la web. Microsoft introdujo "Internet Explorer" en 1995, iniciando una "guerra de navegadores" con Netscape. Explorer dominó hasta que Mozilla Firefox (2004) y Google Chrome (2008) irrumpieron en el mercado. Chrome se destacó por su velocidad y minimalismo, y con el tiempo se convirtió en el líder del mercado. Safari (2003) y Opera también han sido actores clave.<br><br>A lo largo del tiempo, la evolución de los navegadores ha priorizado la seguridad, velocidad y adaptabilidad, siendo esenciales para la experiencia moderna en internet.</p>';
-
-            document.getElementById('rellenar').innerHTML = desarrollo;
-
-            document.getElementById('#btngenealogia').addEventListener('click', function () {
-                document.getElementById('rellenar').innerHTML = desarrollo;
-            });
             let scrollTimeout;  // para guardar el timeout
 
             contenedor.addEventListener('scroll', function () {
@@ -464,6 +424,18 @@
                     buttons.forEach(button => button.removeAttribute('disabled'));
                 }, 100);
             });
+
+            function adjustVideoHeight() {
+                const videoIframe = document.getElementById('youtubeVideo');
+                const videoWidth = videoIframe.offsetWidth;
+                videoIframe.style.height = `${videoWidth / (16 / 7)}px`;
+            }
+
+            // Llamar a la función cuando se carga la página
+            adjustVideoHeight();
+
+            // Ajustar el alto nuevamente si el tamaño de la ventana cambia
+            window.addEventListener('resize', adjustVideoHeight);
 
         });
 
