@@ -57,6 +57,16 @@ body {
     width: 40%;
 }
 
+.agrandar2 {
+    transition: width 0.7s, height 0.7s;
+}
+
+.agrandar2:hover {
+    width: 56px;
+    height: 56px;
+}
+
+
 /* Hover Azul */
 .azuloscuro {
     transition: background-color 0.3s;
