@@ -75,10 +75,6 @@ body {
         overflow-y: scroll;
     }
 
-    .esconder {
-        display: none;
-    }
-
     #menu {
         background: transparent;
     }
