@@ -352,10 +352,10 @@
         document.getElementById('btnhome').addEventListener('click', function () {
 
             let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let cuerpoHeight = cuerpo.scrollHeight;
+            let scrollHeight = cuerpo.scrollHeight;
 
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height del contenedor, fondo2 se hace visible
-            if (scrollPosition >= cuerpoHeight / 3.5 && scrollPosition <= cuerpoHeight / 2.5) {
+            if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
                 fondo2.style.display = 'block';
 
             }
@@ -371,14 +371,12 @@
         });
 
         document.getElementById('btnabout').addEventListener('click', function () {
-
             fondo2.style.display = 'block';
         });
 
         document.getElementById('btnhelp').addEventListener('click', function () {
-
-            let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let cuerpoHeight = cuerpo.scrollHeight;
+            
+            let scrollHeight = cuerpo.scrollHeight;
 
             // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
             if (scrollPosition == 0) {
@@ -489,6 +487,7 @@
 
             // Habilitar botones después de que se detenga el scroll
             scrollTimeout = setTimeout(function () {
+
                 const scrollPosition = contenedor.scrollTop;
                 const tolerance = 50;  // una tolerancia en píxeles para considerar que hemos llegado al fondo
 

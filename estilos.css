@@ -153,7 +153,7 @@ body {
 }
 
 .aparecerrombosnegros {
-    animation: fadeInRombosNegros 0.5s forwards;
+    animation: fadeInRombosNegros 0.3s forwards;
 }
 
 @keyframes fadeInRombosBlancos {
@@ -171,7 +171,7 @@ body {
 /* Aparecer Rombos Blancos */
 
 .aparecerrombosblancos {
-    animation: fadeInRombosBlancos 1s forwards;
+    animation: fadeInRombosBlancos 0.6s forwards;
 }
 
 /* Desaparecer Rombos Negros */
