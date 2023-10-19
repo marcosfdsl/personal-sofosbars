@@ -340,7 +340,8 @@
             document.addEventListener("click", () => menu.classList.add("hidden"));
 
 
-            
+            let botonmenu = document.getElementById('boton');
+
             document.getElementById('btnhome').addEventListener('click', function () {
 
                 let scrollPosition = document.querySelector('.contenedor').scrollTop;
@@ -352,9 +353,12 @@
                 }
                 else {
                     fondo2.style.display = 'none';
-                    setTimeout(function () {
+
+                    if (getComputedStyle(elemento).display === 'none') {
+                        setTimeout(function () {
                         fondo2.style.display = 'block';
-                    }, 1500);
+                    }, 500);
+                    }
                 }
 
             });
@@ -371,9 +375,12 @@
                 // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
                 if (scrollPosition == 0) {
                     fondo2.style.display = 'none';
-                    setTimeout(function () {
+
+                    if (getComputedStyle(elemento).display === 'none') {
+                        setTimeout(function () {
                         fondo2.style.display = 'block';
                     }, 500);
+                    }
                 }
                 else {
                     fondo2.style.display = 'block';
