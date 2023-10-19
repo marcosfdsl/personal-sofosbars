@@ -50,20 +50,19 @@ body {
 
 /* Hover Agrandar */
 .agrandar {
-    transition: width 0.3s;
+    transition: all ease .55s;
 }
 
 .agrandar:hover {
-    width: 40%;
+    transform: scale(1.1);
 }
 
 .agrandar2 {
-    transition: width 0.7s, height 0.7s;
+    transition: all ease .55s;
 }
 
 .agrandar2:hover {
-    width: 56px;
-    height: 56px;
+    transform: scale(1.1);
 }
 
 
