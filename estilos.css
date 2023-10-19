@@ -39,7 +39,7 @@ body {
     background-image: url('fotos/fondo3.jpg');
 }
 
-/*  Rotar y des-rotar */
+/* Rotar y des-rotar */
 .rotar {
     transform: rotate(45deg);
 }
@@ -50,21 +50,27 @@ body {
 
 /* Hover Agrandar */
 .agrandar {
-    transition: all ease .55s;
+    transition: transform ease 0.5s;
+    /* Aquí especificamos solo transform */
 }
 
-.agrandar:hover {
-    transform: scale(1.1);
+.rotar.agrandar:hover {
+    transform: rotate(45deg) scale(1.2);
+    /* combinamos rotate y scale */
+}
+
+.desrotar.agrandar:hover {
+    transform: rotate(-45deg) scale(1.2);
+    /* combinamos rotate y scale */
 }
 
 .agrandar2 {
-    transition: all ease .55s;
+    transition: all ease 0.5s;
 }
 
 .agrandar2:hover {
     transform: scale(1.1);
 }
-
 
 /* Hover Azul */
 .azuloscuro {
@@ -102,6 +108,131 @@ body {
     transform-origin: left center;
     animation: fadeInUnderline 0.8s forwards;
 }
+
+/* Márgenes Rombos Negros */
+
+.margenrombotop {
+    margin-top: 4px;
+    margin-bottom: -1px;
+    margin-left: 4px;
+    margin-right: -1px;
+}
+
+.margenrombobot {
+    margin-top: -1px;
+    margin-bottom: 4px;
+    margin-left: -1px;
+    margin-right: 4px;
+}
+
+.margenromboleft {
+    margin-top: -1px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: -1px;
+}
+
+.margenromboright {
+    margin-top: 4px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    margin-right: 4px;
+}
+
+/* Aparecer Rombos Negros */
+@keyframes fadeInRombosNegros {
+    0% {
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: black;
+    }
+}
+
+.aparecerrombosnegros {
+    animation: fadeInRombosNegros 0.5s forwards;
+}
+
+@keyframes fadeInRombosBlancos {
+    0% {
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+}
+
+/* Aparecer Rombos Blancos */
+
+.aparecerrombosblancos {
+    animation: fadeInRombosBlancos 1s forwards;
+}
+
+/* Desaparecer Rombos Negros */
+@keyframes fadeOutRombosNegros {
+    0% {
+        opacity: 1;
+        background-color: black;
+    }
+
+    100% {
+        opacity: 0;
+        background-color: transparent;
+    }
+}
+
+.desaparecerrombosnegros {
+    animation: fadeOutRombosNegros 1.6s forwards;
+}
+
+@keyframes fadeInRombosBlancos {
+    0% {
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+}
+
+/* Desaparecer Rombos Blancos */
+@keyframes fadeOutRombosBlancos {
+    0% {
+        opacity: 1;
+        background-color: white;
+    }
+
+    100% {
+        opacity: 0;
+        background-color: transparent;
+    }
+}
+
+.desaparecerrombosblancos {
+    animation: fadeOutRombosBlancos 0.8s forwards;
+}
+
+@keyframes fadeOutRombosBlancos {
+    0% {
+        opacity: 1;
+        background-color: white;
+    }
+
+    100% {
+        opacity: 0;
+        background-color: transparent;
+    }
+}
+
+
 
 /* Responsive */
 @media (min-width: 1024px) {
