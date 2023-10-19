@@ -9,6 +9,93 @@
     <script src="https://kit.fontawesome.com/bf7e2ba98b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link rel="icon" href="fotos/flor.png">
+
+    <style>
+        body {
+            /* Prevengo copy paste */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: black;
+            /* Esto arregla error de alto de pantalla */
+            position: fixed;
+        }
+
+        .contenedor {
+            height: 100vh;
+        }
+
+        /* Oculta barra scroll */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Fondos */
+        .fondos {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            scroll-snap-align: start;
+        }
+
+        .fondo1 {
+            background-image: url('fotos/fondo1.jpg');
+        }
+
+        .fondo2 {
+            background-image: url('fotos/fondo2.jpg');
+        }
+
+        .fondo3 {
+            background-image: url('fotos/fondo3.jpg');
+        }
+
+        /*  Rotar y des-rotar */
+        .rotar {
+            transform: rotate(45deg);
+        }
+
+        .desrotar {
+            transform: rotate(-45deg);
+        }
+
+        /* Hover Agrandar */
+        .agrandar {
+            transition: width 0.3s;
+        }
+
+        .agrandar:hover {
+            width: 40%;
+        }
+
+        /* Hover Azul */
+        .azuloscuro {
+            transition: background-color 0.3s;
+        }
+
+        .azuloscuro:hover {
+            background-color: #00131E;
+        }
+
+        /* Responsive */
+        @media (min-width: 1024px) {
+
+            /* Scroll habilitado */
+            .contenedor {
+                scroll-snap-type: y mandatory;
+                overflow-y: scroll;
+            }
+
+            .esconder {
+                display: none;
+            }
+
+            #menu {
+                background: transparent;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -322,25 +409,6 @@
 
             const cuerpo = document.querySelector('.contenedor');
 
-            // Función para obtener elementos
-            const $ = selector => document.querySelector(selector);
-
-            const menu = $("#menu");
-            const contenedor = $('.contenedor');
-
-            // Refresca la página al pulsar S O F O S
-            $("#refrescar").addEventListener("click", () => window.location.reload());
-
-            // Dropdown oculto (menú para móvil)
-            const toggleMenu = (event) => {
-                menu.classList.toggle("hidden");
-                event.stopPropagation();
-            };
-            $("#boton").addEventListener("click", toggleMenu);
-            document.addEventListener("click", () => menu.classList.add("hidden"));
-
-
-            
             document.getElementById('btnhome').addEventListener('click', function () {
 
                 let scrollPosition = document.querySelector('.contenedor').scrollTop;
@@ -380,6 +448,23 @@
                 }
 
             });
+
+            // Función para obtener elementos
+            const $ = selector => document.querySelector(selector);
+
+            const menu = $("#menu");
+            const contenedor = $('.contenedor');
+
+            // Refresca la página al pulsar S O F O S
+            $("#refrescar").addEventListener("click", () => window.location.reload());
+
+            // Dropdown oculto (menú para móvil)
+            const toggleMenu = (event) => {
+                menu.classList.toggle("hidden");
+                event.stopPropagation();
+            };
+            $("#boton").addEventListener("click", toggleMenu);
+            document.addEventListener("click", () => menu.classList.add("hidden"));
 
             // Botones de navegación
             const actions = {
