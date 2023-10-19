@@ -38,7 +38,7 @@
                     <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min">.</div>
                     <div class="mb-4 lg:mb-0 lg:flex">
                         <button id="btnhome"
-                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3">Home</button>
+                            class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3 subrayado">Home</button>
                         <button id="btnabout"
                             class="w-full text-left text-white block px-6 py-2 lg:py-0 hover:text-gray-300 hover:bg-black lg:hover:bg-transparent lg:w-1/3">About</button>
                         <button id="btnhelp"
@@ -298,7 +298,9 @@
                     </div>
 
                     <div class="flex justify-center w-full mt-8 sticky bottom-4 z-40">
-                        <a href="https://drive.google.com/uc?export=download&id=1UpFAbqHcfETvPPIOx5A_C2wOHzq5LpDf" title="Descargar CV" class="flex justify-center items-center bg-black rounded-full w-12 h-12 hover:bg-gray-800 agrandar2">
+                        <a href="https://drive.google.com/uc?export=download&id=1UpFAbqHcfETvPPIOx5A_C2wOHzq5LpDf"
+                            title="Descargar CV"
+                            class="flex justify-center items-center bg-black rounded-full w-12 h-12 hover:bg-gray-800 agrandar2">
                             <i class="fa-solid fa-file-arrow-down text-white text-xl hover:text-2xl"></i>
                         </a>
                     </div>
@@ -356,9 +358,15 @@
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height del contenedor, fondo2 se hace visible
             if (scrollPosition >= cuerpoHeight / 3.5 && scrollPosition <= cuerpoHeight / 2.5) {
                 fondo2.style.display = 'block';
+                document.getElementById("btnhome").classList.add("subrayado");
+                document.getElementById("btnabout").classList.remove("subrayado");
+                document.getElementById("btnhelp").classList.remove("subrayado");
             }
             else {
                 fondo2.style.display = 'none';
+                document.getElementById("btnhome").classList.add("subrayado");
+                document.getElementById("btnabout").classList.remove("subrayado");
+                document.getElementById("btnhelp").classList.remove("subrayado");
 
                 if (window.innerWidth >= 1024) {
                     setTimeout(function () {
@@ -370,6 +378,9 @@
 
         document.getElementById('btnabout').addEventListener('click', function () {
             fondo2.style.display = 'block';
+            document.getElementById("btnhome").classList.remove("subrayado");
+            document.getElementById("btnabout").classList.add("subrayado");
+            document.getElementById("btnhelp").classList.remove("subrayado");
         });
 
         document.getElementById('btnhelp').addEventListener('click', function () {
@@ -380,6 +391,9 @@
             // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
             if (scrollPosition == 0) {
                 fondo2.style.display = 'none';
+                document.getElementById("btnhome").classList.remove("subrayado");
+                document.getElementById("btnabout").classList.remove("subrayado");
+                document.getElementById("btnhelp").classList.add("subrayado");
 
                 if (window.innerWidth >= 1024) {
                     setTimeout(function () {
@@ -389,6 +403,9 @@
             }
             else {
                 fondo2.style.display = 'block';
+                document.getElementById("btnhome").classList.remove("subrayado");
+                document.getElementById("btnabout").classList.remove("subrayado");
+                document.getElementById("btnhelp").classList.add("subrayado");
             }
 
         });
