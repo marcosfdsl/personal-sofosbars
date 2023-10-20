@@ -1,3 +1,9 @@
+/* Scroll habilitado */
+.contenedor {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
 body {
     /* Prevengo copy paste */
     -webkit-user-select: none;
@@ -227,12 +233,6 @@ body {
     transform-origin: left center;
     animation: fadeInUnderline 0.8s forwards;
 }
-
-    /* Scroll habilitado */
-    .contenedor {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
 
 /* Responsive */
 @media (min-width: 1024px) {
