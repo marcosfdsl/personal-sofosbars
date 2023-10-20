@@ -332,17 +332,15 @@
 
         const menu = document.querySelector("#menu");
 
-        // Función para obtener elementos
-        const $ = selector => document.querySelector(selector);
         // Refresca la página al pulsar S O F O S
-        $("#refrescar").addEventListener("click", () => window.location.reload());
+        document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
 
         // Dropdown oculto (menú para móvil)
         const toggleMenu = (event) => {
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
-        $("#boton").addEventListener("click", toggleMenu);
+        document.querySelector("#boton").addEventListener("click", toggleMenu);
         document.addEventListener("click", () => menu.classList.add("hidden"));
 
         let botonmenu = document.getElementById('boton');
@@ -395,14 +393,14 @@
 
         // Botones de navegación
         const actions = {
-            "#btnhome": $('.fondo1').offsetTop,
-            "#btnabout": $('.fondo2').offsetTop,
-            "#btnhelp": $('.fondo3').offsetTop
+            "#btnhome": document.querySelector('.fondo1').offsetTop,
+            "#btnabout": document.querySelector('.fondo2').offsetTop,
+            "#btnhelp": document.querySelector('.fondo3').offsetTop
         };
 
         for (let [btn, top] of Object.entries(actions)) {
-            if ($(btn)) {
-                $(btn).addEventListener("click", e => {
+            if (document.querySelector(btn)) {
+                document.querySelector(btn).addEventListener("click", e => {
                     e.preventDefault();
                     contenedor.scrollTo({
                         top: top,
@@ -414,26 +412,27 @@
 
         // Info fondo1
         const showSection = (sectionId) => {
-            let section = $(`#${sectionId}`);
+            let section = document.getElementById(sectionId);
             section.style.opacity = "1";
             section.style.transform = "translateY(0)";
         };
 
         const hideSection = (sectionId) => {
-            let section = $(`#${sectionId}`);
+            let section = document.getElementById(sectionId);
             section.style.opacity = "0";
             section.style.transform = "translateY(100%)";
         };
 
         // Show sections
         ["btnmusica", "btnhosteleria", "btngenealogia", "btndesarrollo"].forEach(btnId => {
-            $(`#${btnId}`).addEventListener("click", () => showSection('info'));
+            document.getElementById(btnId).addEventListener("click", () => showSection('info'));
         });
 
         // Close sections
         ["btncerrar", "info", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
-            $(`#${btnId}`).addEventListener("click", () => hideSection('info'));
+            document.getElementById(btnId).addEventListener("click", () => hideSection('info'));
         });
+
 
         // BtnMusica
         const musica = '<!-- Header --> <header class="px-4 pt-8 flex flex-col items-center"> <div class="w-32 h-32 flex-shrink-0 justify-center mb-8"> <img src="fotos/flornegra.png" alt="Foto" class="w-full h-full object-cover rounded-full transform hover:scale-105 transition-transform duration-300"> </div> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Sofos</h1> <p class="text-sm lg:text-base mb-2">Sofos es el nombre artístico de Marcos Fernández de Salamanca, un rapero y productor español de la localidad madrileña de Torrelodones, nacido el 11 de julio del año 2001.</p> </div> <iframe id="youtubeVideo" class="mt-4 w-full lg:w-5/6 h-auto" src="https://www.youtube.com/embed/1GqGpaHtKC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';

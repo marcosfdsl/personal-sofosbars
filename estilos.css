@@ -228,16 +228,16 @@ body {
     animation: fadeInUnderline 0.8s forwards;
 }
 
-
-
-/* Responsive */
-@media (min-width: 1024px) {
-
     /* Scroll habilitado */
     .contenedor {
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
     }
+
+/* Responsive */
+@media (min-width: 1024px) {
+
+
 
     .esconder {
         display: none;
