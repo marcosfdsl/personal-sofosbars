@@ -72,15 +72,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Hover Azul */
-.azuloscuro {
-    transition: background-color 0.3s;
-}
-
-.azuloscuro:hover {
-    background-color: #00131E;
-}
-
 /* Márgenes Rombos Negros */
 
 .margenrombotop {
@@ -202,6 +193,11 @@ body {
         opacity: 0;
         background-color: transparent;
     }
+}
+
+/* Hover Azul */
+.aparecerrombosnegros:hover {
+    background-color: #002032 !important;
 }
 
 /* Subrayados menú */

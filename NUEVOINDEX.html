@@ -328,12 +328,14 @@
         const fondo2 = document.querySelector('.fondo2');
         const fondo3 = document.querySelector('.fondo3');
 
-        const contenedor = document.querySelector('.contenedor');
-
-        const menu = document.querySelector("#menu");
+        const cuerpo = document.querySelector('.contenedor');
 
         // Función para obtener elementos
         const $ = selector => document.querySelector(selector);
+
+        const menu = $("#menu");
+        const contenedor = $('.contenedor');
+
         // Refresca la página al pulsar S O F O S
         $("#refrescar").addEventListener("click", () => window.location.reload());
 
@@ -347,10 +349,33 @@
 
         let botonmenu = document.getElementById('boton');
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function changeBackground() {
+            let contenedor = document.querySelector('.contenedor');
+            let scrollPosition = contenedor.scrollTop;
+            let scrollHeight = contenedor.scrollHeight;
+
+            if (scrollPosition <= ((scrollHeight / 3) * 0.9998136)) {
+                // fondo 1
+                window.alert("Fondo 1, " + scrollPosition + " de " + scrollHeight);
+            } else if (scrollPosition > ((scrollHeight / 3) * 0.9998136) && scrollPosition <= ((scrollHeight / 3) * 1.99962721)) {
+                // fondo 2
+                window.alert("Fondo 2, " + scrollPosition + " de " + scrollHeight);
+            } else if (scrollPosition > ((scrollHeight / 3) * 1.99962721)) {
+                // fondo 3
+                window.alert("Fondo 3, " + scrollPosition + " de " + scrollHeight);
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         document.getElementById('btnhome').addEventListener('click', function () {
 
+            changeBackground();
+
             let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let scrollHeight = contenedor.scrollHeight;
+            let scrollHeight = cuerpo.scrollHeight;
 
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height del contenedor, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
@@ -369,13 +394,18 @@
         });
 
         document.getElementById('btnabout').addEventListener('click', function () {
+
+            changeBackground();
+
             fondo2.style.display = 'block';
         });
 
         document.getElementById('btnhelp').addEventListener('click', function () {
 
+            changeBackground();
+
             let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let scrollHeight = contenedor.scrollHeight;
+            let scrollHeight = cuerpo.scrollHeight;
 
             // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
             if (scrollPosition == 0) {
@@ -564,6 +594,7 @@
                     });
                 }
             }, 10);
+
         });
 
     </script>
