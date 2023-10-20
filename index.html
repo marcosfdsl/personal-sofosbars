@@ -59,7 +59,7 @@
 
     <!-- Flecha decoración -->
 
-    <div class="flex justify-center items-center z-30"><i
+    <div id="flechacontenedor" class="flex justify-center items-center z-30"><i id="flecha"
             class="fixed bottom-4 text-white text-2xl hover:text-gray-300 fa-solid fa-arrow-down-long fa-beat-fade"></i>
     </div>
 
@@ -339,10 +339,8 @@
         const fondo3 = document.querySelector('.fondo3');
 
         const contenedor = document.querySelector('.contenedor');
-
         const menu = document.querySelector("#menu");
 
-        // Refresca la página al pulsar S O F O S
         document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
 
         // Dropdown oculto (menú para móvil)
@@ -507,6 +505,9 @@
 
                 if (isNearToFondo(document.querySelector('.fondo1'))) {
 
+                    document.getElementById("flechacontenedor").classList.add("aparecerrombosnegros");
+                    document.getElementById("flechacontenedor").classList.remove("desaparecerrombosnegros");
+
                     buttonIDs.forEach(id => {
                         const button = document.getElementById(id);
                         if (button) button.removeAttribute('disabled');
@@ -529,6 +530,9 @@
 
                 else if (isNearToFondo(document.querySelector('.fondo2'))) {
 
+                    document.getElementById("flechacontenedor").classList.add("aparecerrombosnegros");
+                    document.getElementById("flechacontenedor").classList.remove("desaparecerrombosnegros");
+
                     buttonIDs.forEach(id => {
                         const button = document.getElementById(id);
                         if (button) button.removeAttribute('disabled');
@@ -550,6 +554,9 @@
                 }
 
                 else if (isNearToFondo(document.querySelector('.fondo3'))) {
+
+                    document.getElementById("flechacontenedor").classList.remove("aparecerrombosnegros");
+                    document.getElementById("flechacontenedor").classList.add("desaparecerrombosnegros");
 
                     buttonIDs.forEach(id => {
                         const button = document.getElementById(id);

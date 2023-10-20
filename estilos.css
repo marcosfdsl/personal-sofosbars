@@ -121,6 +121,8 @@ body {
     animation: fadeInRombosNegros 0.3s forwards;
 }
 
+/* Aparecer Rombos Blancos */
+
 @keyframes fadeInRombosBlancos {
     0% {
         opacity: 0;
@@ -133,13 +135,12 @@ body {
     }
 }
 
-/* Aparecer Rombos Blancos */
-
 .aparecerrombosblancos {
     animation: fadeInRombosBlancos 0.6s forwards;
 }
 
 /* Desaparecer Rombos Negros */
+
 @keyframes fadeOutRombosNegros {
     0% {
         opacity: 1;
@@ -154,18 +155,6 @@ body {
 
 .desaparecerrombosnegros {
     animation: fadeOutRombosNegros 1.6s forwards;
-}
-
-@keyframes fadeInRombosBlancos {
-    0% {
-        opacity: 0;
-        background-color: transparent;
-    }
-
-    100% {
-        opacity: 1;
-        background-color: white;
-    }
 }
 
 /* Desaparecer Rombos Blancos */
@@ -183,18 +172,6 @@ body {
 
 .desaparecerrombosblancos {
     animation: fadeOutRombosBlancos 0.8s forwards;
-}
-
-@keyframes fadeOutRombosBlancos {
-    0% {
-        opacity: 1;
-        background-color: white;
-    }
-
-    100% {
-        opacity: 0;
-        background-color: transparent;
-    }
 }
 
 /* Hover Azul */
@@ -233,8 +210,6 @@ body {
 /* Responsive */
 @media (min-width: 1024px) {
 
-
-
     .esconder {
         display: none;
     }
@@ -253,22 +228,4 @@ body {
             width: 100%;
         }
     }
-
-    .subrayado {
-        position: relative;
-        display: inline-block;
-    }
-
-    .subrayado::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 16px;
-        height: 2px;
-        width: 10%;
-        background-color: rgba(255, 255, 255, 0.436);
-        transform-origin: left center;
-        animation: fadeInUnderline 0.8s forwards;
-    }
-
 }
