@@ -59,7 +59,7 @@
 
     <!-- Flecha decoración -->
 
-    <div id="flechacontenedor" class="flex justify-center items-center z-30"><i id="flecha"
+    <div id="flechacontenedor" class="flex justify-center items-center z-50"><i id="flecha"
             class="fixed bottom-4 text-white text-2xl hover:text-gray-300 fa-solid fa-arrow-down-long fa-beat-fade"></i>
     </div>
 
@@ -76,9 +76,9 @@
                     <!-- Primera fila -->
                     <div class="invisible"></div>
                     <div
-                        class="romboblanco aparecerrombosblancos rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
                         <button id="btnmusica"
-                            class="azuloscuro rombonegro aparecerrombosnegros flex items-center justify-center h-full margenrombotop">
+                            class="bg-black hoverazul flex items-center justify-center h-full margenrombotop">
                             <img src="fotos/simbolos/musica.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
@@ -86,17 +86,17 @@
 
                     <!-- Segunda fila -->
                     <div
-                        class="romboblanco aparecerrombosblancos rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
                         <button id="btnhosteleria"
-                            class="rombonegro aparecerrombosnegros flex items-center justify-center azuloscuro h-full margenromboleft">
+                            class="bg-black hoverazul flex items-center justify-center h-full margenromboleft">
                             <img src="fotos/simbolos/hosteleria.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
                     <div class="invisible"></div>
                     <div
-                        class="romboblanco aparecerrombosblancos rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
                         <button id="btngenealogia"
-                            class="rombonegro aparecerrombosnegros flex items-center justify-center azuloscuro h-full margenromboright">
+                            class="bg-black hoverazul flex items-center justify-center h-full margenromboright">
                             <img src="fotos/simbolos/genealogia.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
@@ -104,9 +104,9 @@
                     <!-- Tercera fila -->
                     <div class="invisible"></div>
                     <div
-                        class="romboblanco aparecerrombosblancos rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col hover:bg-gray-300">
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col hover:bg-gray-300">
                         <button id="btndesarrollo"
-                            class="rombonegro aparecerrombosnegros flex items-center justify-center azuloscuro h-full margenrombobot">
+                            class="bg-black hoverazul flex items-center justify-center h-full margenrombobot">
                             <img src="fotos/simbolos/desarrollo.png" class="desrotar w-1/3 agrandar" alt="">
                         </button>
                     </div>
@@ -348,11 +348,15 @@
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
+
         document.querySelector("#boton").addEventListener("click", toggleMenu);
         document.addEventListener("click", () => menu.classList.add("hidden"));
 
         let botonmenu = document.getElementById('boton');
 
+        // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
+
+        // A HOME
         document.getElementById('btnhome').addEventListener('click', function () {
 
             let scrollPosition = document.querySelector('.contenedor').scrollTop;
@@ -373,10 +377,12 @@
             }
         });
 
+        // A ABOUT
         document.getElementById('btnabout').addEventListener('click', function () {
             fondo2.style.display = 'block';
         });
 
+        // A HELP
         document.getElementById('btnhelp').addEventListener('click', function () {
 
             let scrollPosition = document.querySelector('.contenedor').scrollTop;
@@ -416,25 +422,22 @@
             }
         }
 
-        // Info fondo1
+        // Abrir info
         const showSection = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "1";
             section.style.transform = "translateY(0)";
         };
+        ["btnmusica", "btnhosteleria", "btngenealogia", "btndesarrollo"].forEach(btnId => {
+            document.getElementById(btnId).addEventListener("click", () => showSection('info'));
+        });
 
+        // Cerrar info
         const hideSection = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "0";
             section.style.transform = "translateY(100%)";
         };
-
-        // Show sections
-        ["btnmusica", "btnhosteleria", "btngenealogia", "btndesarrollo"].forEach(btnId => {
-            document.getElementById(btnId).addEventListener("click", () => showSection('info'));
-        });
-
-        // Close sections
         ["btncerrar", "info", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
             document.getElementById(btnId).addEventListener("click", () => hideSection('info'));
         });
@@ -500,9 +503,6 @@
                     return scrollPosition >= fondoPosition - tolerance && scrollPosition <= fondoPosition + tolerance;
                 };
 
-                let elementosRombosNegros = document.querySelectorAll('.rombonegro');
-                let elementosRombosBlancos = document.querySelectorAll('.romboblanco');
-
                 if (isNearToFondo(document.querySelector('.fondo1'))) {
 
                     document.getElementById("flechacontenedor").classList.add("aparecerrombosnegros");
@@ -516,16 +516,6 @@
                     document.getElementById("btnhome").classList.add("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
-
-                    elementosRombosNegros.forEach(elemento => {
-                        elemento.classList.add("aparecerrombosnegros");
-                        elemento.classList.remove("desaparecerrombosnegros");
-                    });
-
-                    elementosRombosBlancos.forEach(elemento => {
-                        elemento.classList.add("aparecerrombosblancos");
-                        elemento.classList.remove("desaparecerrombosblancos");
-                    });
                 }
 
                 else if (isNearToFondo(document.querySelector('.fondo2'))) {
@@ -541,16 +531,6 @@
                     document.getElementById("btnhome").classList.remove("subrayado");
                     document.getElementById("btnabout").classList.add("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
-
-                    elementosRombosNegros.forEach(elemento => {
-                        elemento.classList.add("desaparecerrombosnegros");
-                        elemento.classList.remove("aparecerrombosnegros");
-                    });
-
-                    elementosRombosBlancos.forEach(elemento => {
-                        elemento.classList.add("desaparecerrombosblancos");
-                        elemento.classList.remove("aparecerrombosblancos");
-                    });
                 }
 
                 else if (isNearToFondo(document.querySelector('.fondo3'))) {
@@ -566,18 +546,20 @@
                     document.getElementById("btnhome").classList.remove("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.add("subrayado");
-
-                    elementosRombosNegros.forEach(elemento => {
-                        elemento.classList.add("desaparecerrombosnegros");
-                        elemento.classList.remove("aparecerrombosnegros");
-                    });
-
-                    elementosRombosBlancos.forEach(elemento => {
-                        elemento.classList.add("desaparecerrombosblancos");
-                        elemento.classList.remove("aparecerrombosblancos");
-                    });
                 }
             }, 10);
+        });
+
+        // HOVER AZUL
+        var elementos = document.querySelectorAll('.hoverazul');
+        elementos.forEach(function (elemento) {
+            elemento.addEventListener('mouseenter', function () {
+                this.style.backgroundColor = '#001a29';
+            });
+
+            elemento.addEventListener('mouseleave', function () {
+                this.style.backgroundColor = '';  // Vuelve al color original o al definido en CSS
+            });
         });
 
     </script>
