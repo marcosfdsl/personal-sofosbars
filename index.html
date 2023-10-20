@@ -388,11 +388,10 @@
             if (scrollPosition == 0) {
                 fondo2.style.display = 'none';
 
-                if (window.innerWidth >= 1024) {
-                    setTimeout(function () {
-                        fondo2.style.display = 'block';
-                    }, 500);
-                }
+                setTimeout(function () {
+                    fondo2.style.display = 'block';
+                }, 500);
+
             }
             else {
                 fondo2.style.display = 'block';
