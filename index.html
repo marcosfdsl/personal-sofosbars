@@ -124,11 +124,11 @@
                             <!-- RELLENAR -->
                         </div>
 
-                            <button
-                                class="hidden fixed bottom-0 z-40 lg:flex justify-center items-center bg-black rounded-full w-12 h-12">
-                                <i id="btncerrar"
-                                    class="text-2xl fa-solid fa-xmark fa-beat-fade text-white hover:text-gray-300 agrandar2"></i>
-                            </button>
+                        <button
+                            class="hidden fixed bottom-0 z-40 lg:flex justify-center items-center bg-black rounded-full w-12 h-12">
+                            <i id="btncerrar"
+                                class="text-2xl fa-solid fa-xmark fa-beat-fade text-white hover:text-gray-300 agrandar2"></i>
+                        </button>
 
                     </div>
                 </div>
@@ -368,11 +368,10 @@
             else {
                 fondo2.style.display = 'none';
 
-                if (window.innerWidth >= 1024) {
-                    setTimeout(function () {
-                        fondo2.style.display = 'block';
-                    }, 500);
-                }
+                setTimeout(function () {
+                    fondo2.style.display = 'block';
+                }, 500);
+
             }
         });
 
