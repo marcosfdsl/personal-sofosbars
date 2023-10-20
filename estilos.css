@@ -5,7 +5,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     background-color: black;
-    /* Esto arregla error de alto de pantalla */
+    /* Esto arregla error de alto de pantalla ("info" aparece desde abajo, entonces ocupa un espacio debajo de "fondo1")*/
     position: fixed;
 }
 
@@ -41,44 +41,7 @@ body {
     background-image: url('fotos/fondo3.jpg');
 }
 
-/* Rotar y des-rotar */
-.rotar {
-    transform: rotate(45deg);
-}
-
-.desrotar {
-    transform: rotate(-45deg);
-}
-
-/* Hover azul */
-.hoverazul {
-    transition: background-color 0.3s;
-}
-
-/* Hover agrandar */
-.agrandar {
-    transition: transform ease 0.5s;
-    /* Aquí especificamos solo transform */
-}
-
-.rotar.agrandar:hover {
-    transform: rotate(45deg) scale(1.2);
-}
-
-.desrotar.agrandar:hover {
-    transform: rotate(-45deg) scale(1.2);
-}
-
-.agrandar2 {
-    transition: all ease 0.5s;
-}
-
-.agrandar2:hover {
-    transform: scale(1.1);
-}
-
 /* Márgenes Rombos Negros */
-
 .margenrombotop {
     margin-top: 4px;
     margin-bottom: -1px;
@@ -107,7 +70,48 @@ body {
     margin-right: 4px;
 }
 
-/* Subrayados menú */
+/* Rotar y des-rotar rombos e iconos" */
+.rotar {
+    transform: rotate(45deg);
+}
+
+.desrotar {
+    transform: rotate(-45deg);
+}
+
+/* Hover azul rombos negros */
+.hoverazul {
+    transition: background-color 0.3s;
+}
+
+/* Hover agrandar iconos */
+.agrandar {
+    transition: transform ease 0.5s;
+}
+
+.rotar.agrandar:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.desrotar.agrandar:hover {
+    transform: rotate(-45deg) scale(1.2);
+}
+
+/* Hover agrandar "btncerrar" y Descargar CV */
+.agrandar2 {
+    transition: all ease 0.5s;
+}
+
+.agrandar2:hover {
+    transform: scale(1.1);
+}
+
+/* Flecha transparencia */
+#flecha {
+    color: rgba(255, 255, 255, 0.452)
+}
+
+/* Subrayados menú móvil */
 @keyframes fadeInUnderline {
     0% {
         width: 0;
@@ -135,9 +139,8 @@ body {
     animation: fadeInUnderline 0.8s forwards;
 }
 
-/* Responsive */
+/* Responsive (PC) */
 @media (min-width: 1024px) {
-
     .esconder {
         display: none;
     }
@@ -146,7 +149,7 @@ body {
         background: transparent;
     }
 
-    /* Subrayados menú */
+    /* Subrayados menú PC */
     @keyframes fadeInUnderline {
         0% {
             width: 0;
@@ -156,8 +159,4 @@ body {
             width: 100%;
         }
     }
-}
-
-#flecha {
-    color: rgba(255, 255, 255, 0.452)
 }
