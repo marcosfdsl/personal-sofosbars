@@ -81,34 +81,6 @@ body {
     background-color: #00131E;
 }
 
-/* Subrayados menú */
-@keyframes fadeInUnderline {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-.subrayado {
-    position: relative;
-    display: inline-block;
-}
-
-.subrayado::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 16px;
-    height: 2px;
-    width: 10%;
-    background-color: rgba(255, 255, 255, 0.436);
-    transform-origin: left center;
-    animation: fadeInUnderline 0.8s forwards;
-}
-
 /* Márgenes Rombos Negros */
 
 .margenrombotop {
@@ -232,6 +204,34 @@ body {
     }
 }
 
+/* Subrayados menú */
+@keyframes fadeInUnderline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.subrayado {
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 2px;
+    width: 10%;
+    background-color: rgba(255, 255, 255, 0.436);
+    transform-origin: left center;
+    animation: fadeInUnderline 0.8s forwards;
+}
+
 
 
 /* Responsive */
@@ -250,4 +250,33 @@ body {
     #menu {
         background: transparent;
     }
+
+    /* Subrayados menú */
+    @keyframes fadeInUnderline {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    .subrayado {
+        position: relative;
+        display: inline-block;
+    }
+
+    .subrayado::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        height: 2px;
+        width: 10%;
+        background-color: rgba(255, 255, 255, 0.436);
+        transform-origin: left center;
+        animation: fadeInUnderline 0.8s forwards;
+    }
+
 }
