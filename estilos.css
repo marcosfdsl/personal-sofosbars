@@ -107,8 +107,17 @@ body {
 }
 
 /* Flecha transparencia */
-#flecha {
+.flechatransparencia {
     color: rgba(255, 255, 255, 0.452)
+}
+
+/* Girar Flecha */
+.animaciongirarflecha {
+    transition: transform 0.5s;
+}
+
+.girarflecha {
+    transform: rotate(180deg);
 }
 
 /* Subrayados menú móvil */
