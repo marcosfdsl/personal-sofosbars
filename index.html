@@ -357,6 +357,17 @@
 
         document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
 
+        // Dropdown oculto (menú para móvil)
+        const toggleMenu = (event) => {
+            menu.classList.toggle("hidden");
+            event.stopPropagation();
+        };
+
+        document.querySelector("#boton").addEventListener("click", toggleMenu);
+        document.addEventListener("click", () => menu.classList.add("hidden"));
+
+        let botonmenu = document.getElementById('boton');
+
         // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
 
         // A HOME
