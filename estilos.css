@@ -129,7 +129,7 @@ body {
     transform: rotate(180deg);
 }
 
-/* Subrayados menú móvil */
+/* Subrayados menú */
 @keyframes fadeInUnderline {
     0% {
         width: 0;
@@ -158,7 +158,6 @@ body {
 }
 
 /* Video YouTube */
-
 .videocontenedor {
     position: relative;
     width: 100%;
@@ -177,37 +176,20 @@ body {
 
 /* Responsive PC */
 @media (min-width: 1024px) {
+
+    /* Oculta botón menú móvil en PC */
     .esconder {
         display: none;
     }
 
+    /* Hace fondo menú transparente */
     #menu {
         background: transparent;
     }
 
-    /* Subrayados menú PC */
-    @keyframes fadeInUnderline {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 100%;
-        }
-    }
-
     /* Video YouTube PC */
     .videocontenedor {
-        position: relative;
         width: 80%;
         padding-top: 40%;
-    }
-    
-    .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
     }
 }
