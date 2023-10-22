@@ -348,82 +348,24 @@
 
     <script>
 
-        const fondo1 = document.querySelector('.fondo2');
-        const fondo2 = document.querySelector('.fondo2');
-        const fondo3 = document.querySelector('.fondo3');
-
-        const contenedorfondos = document.querySelector('.contenedorfondos');
-        const menu = document.querySelector("#menu");
-
+        // Refresca la página al pulsar S O F O S
         document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
 
         // Dropdown oculto (menú para móvil)
+        const menu = document.querySelector("#menu");
         const toggleMenu = (event) => {
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
-
         document.querySelector("#boton").addEventListener("click", toggleMenu);
         document.addEventListener("click", () => menu.classList.add("hidden"));
 
-        let botonmenu = document.getElementById('boton');
-
-        // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
-
-        // A HOME
-        document.getElementById('btnhome').addEventListener('click', function () {
-
-            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
-            let scrollHeight = contenedorfondos.scrollHeight;
-
-            // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height de contenedorfondos, fondo2 se hace visible
-            if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
-                fondo2.style.display = 'flex';
-
-            }
-            else {
-                fondo2.style.display = 'none';
-
-                setTimeout(function () {
-                    fondo2.style.display = 'flex';
-                }, 500);
-
-            }
-        });
-
-        // A ABOUT
-        document.getElementById('btnabout').addEventListener('click', function () {
-            fondo2.style.display = 'flex';
-        });
-
-        // A HELP
-        document.getElementById('btnhelp').addEventListener('click', function () {
-
-            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
-            let scrollHeight = contenedorfondos.scrollHeight;
-
-            // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
-            if (scrollPosition == 0) {
-                fondo2.style.display = 'none';
-
-                setTimeout(function () {
-                    fondo2.style.display = 'flex';
-                }, 500);
-
-            }
-            else {
-                fondo2.style.display = 'flex';
-            }
-
-        });
-
-        // Botones de navegación
+        // Botones de navegación entre fondos
         const actions = {
             "#btnhome": document.querySelector('.fondo1').offsetTop,
             "#btnabout": document.querySelector('.fondo2').offsetTop,
             "#btnhelp": document.querySelector('.fondo3').offsetTop
         };
-
         for (let [btn, top] of Object.entries(actions)) {
             if (document.querySelector(btn)) {
                 document.querySelector(btn).addEventListener("click", e => {
@@ -436,7 +378,54 @@
             }
         }
 
-        // Abrir info
+        // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
+        const fondo1 = document.querySelector('.fondo2');
+        const fondo2 = document.querySelector('.fondo2');
+        const fondo3 = document.querySelector('.fondo3');
+        const contenedorfondos = document.querySelector('.contenedorfondos');
+
+        // A Home
+        document.getElementById('btnhome').addEventListener('click', function () {
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
+            // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del scrollHeight de contenedorfondos, fondo2 se hace visible
+            if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
+                fondo2.style.display = 'flex';
+            }
+            // En caso contrario fondo2 se hace invisible y vuelve a ser visible a los 500ms
+            else {
+                fondo2.style.display = 'none';
+                setTimeout(function () {
+                    fondo2.style.display = 'flex';
+                }, 500);
+            }
+        });
+
+        // A About
+        document.getElementById('btnabout').addEventListener('click', function () {
+            // fondo2 se hace visible
+            fondo2.style.display = 'flex';
+        });
+
+        // A Help
+        document.getElementById('btnhelp').addEventListener('click', function () {
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
+            // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible y vuelve a ser visible a los 500ms
+            if (scrollPosition == 0) {
+                fondo2.style.display = 'none';
+                setTimeout(function () {
+                    fondo2.style.display = 'flex';
+                }, 500);
+            }
+            // En caso contrario fondo2 se hace visible
+            else {
+                fondo2.style.display = 'flex';
+            }
+
+        });
+
+        // Abrir info fondo1 al pulsar "btnmusica", "btnhosteleria", "btngenealogia" o "btndesarrollo"
         const showSection = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "1";
@@ -446,7 +435,7 @@
             document.getElementById(btnId).addEventListener("click", () => showSection('info'));
         });
 
-        // Cerrar info
+        // Cerrar info fondo1 al pulsar "btncerrar", "info", "boton", "btnhome", "btnabout" o "btnhelp"
         const hideSection = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "0";
@@ -455,126 +444,108 @@
         ["btncerrar", "info", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
             document.getElementById(btnId).addEventListener("click", () => {
                 hideSection('info');
-
+                // Elimino atributo src para que el vídeo se pause
                 document.getElementById("video").removeAttribute("src");
             });
         });
 
+        // RELLENO INFO SEGÚN BOTÓN
 
         // BtnMusica
         const musica = '<!-- Header --> <header class="px-4 pt-8 flex flex-col items-center"> <div class="w-32 h-32 flex-shrink-0 justify-center mb-8"> <img src="fotos/flornegra.png" alt="Foto" class="w-full h-full object-cover rounded-full transform hover:scale-105 transition-transform duration-300"> </div> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Sofos</h1> <p class="text-sm lg:text-base mb-2">Sofos es el nombre artístico de Marcos Fernández de Salamanca, un rapero y productor español de la localidad madrileña de Torrelodones, nacido el 11 de julio del año 2001.</p> </div> <div class="videocontenedor z-50"> <iframe id="video" class="video" src="https://www.youtube.com/embed/1GqGpaHtKC4" frameborder="0" allow="accelerometer" allowfullscreen> </iframe> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
-
         document.getElementById('rellenar').innerHTML = musica;
-
         document.getElementById('btnmusica').addEventListener('click', function () {
             document.getElementById('rellenar').innerHTML = musica;
         });
-
         // BtnHosteleria
         const hosteleria = ' <!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Hostelería</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de hostelería.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
-
         document.getElementById('rellenar').innerHTML = hosteleria;
-
         document.getElementById('btnhosteleria').addEventListener('click', function () {
             document.getElementById('rellenar').innerHTML = hosteleria;
         });
-
         // BtnGenealogia
         const genealogia = ' <!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Genealogía</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de genealogía.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
-
         document.getElementById('rellenar').innerHTML = genealogia;
-
         document.getElementById('btngenealogia').addEventListener('click', function () {
             document.getElementById('rellenar').innerHTML = genealogia;
         });
-
         // BtnDesarrollo
         const desarrollo = '<!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Desarrollo</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de desarrollo.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
-
         document.getElementById('rellenar').innerHTML = desarrollo;
-
         document.getElementById('btndesarrollo').addEventListener('click', function () {
             document.getElementById('rellenar').innerHTML = desarrollo;
         });
 
-        let scrollTimeout;  // para guardar el timeout
-
-        contenedorfondos.addEventListener('scroll', function () {
-            // Cuando se inicia el scroll
-            clearTimeout(scrollTimeout);
-
-            // Deshabilitar los botones específicos
-            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp', 'btnmusica', 'btnhosteleria', 'btngenealogia', 'btndesarrollo'];
-            buttonIDs.forEach(id => {
-                const button = document.getElementById(id);
-                if (button) button.setAttribute('disabled', 'disabled');
-            });
-
-            // Habilitar botones después de que se detenga el scroll
-            scrollTimeout = setTimeout(function () {
-
-                const scrollPosition = contenedorfondos.scrollTop;
-                const tolerance = 50;  // una tolerancia en píxeles para considerar que hemos llegado al fondo
-
-                const isNearToFondo = (fondo) => {
-                    const fondoPosition = fondo.offsetTop;
-                    return scrollPosition >= fondoPosition - tolerance && scrollPosition <= fondoPosition + tolerance;
-                };
-
-                if (isNearToFondo(document.querySelector('.fondo1'))) {
-
-                    document.getElementById("flecha").classList.remove("girarflecha");
-
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
-
-                    document.getElementById("btnhome").classList.add("subrayado");
-                    document.getElementById("btnabout").classList.remove("subrayado");
-                    document.getElementById("btnhelp").classList.remove("subrayado");
-                }
-
-                else if (isNearToFondo(document.querySelector('.fondo2'))) {
-
-                    document.getElementById("flecha").classList.remove("girarflecha");
-
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
-
-                    document.getElementById("btnhome").classList.remove("subrayado");
-                    document.getElementById("btnabout").classList.add("subrayado");
-                    document.getElementById("btnhelp").classList.remove("subrayado");
-                }
-
-                else if (isNearToFondo(document.querySelector('.fondo3'))) {
-
-                    document.getElementById("flecha").classList.add("girarflecha");
-
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
-
-                    document.getElementById("btnhome").classList.remove("subrayado");
-                    document.getElementById("btnabout").classList.remove("subrayado");
-                    document.getElementById("btnhelp").classList.add("subrayado");
-                }
-            }, 10);
-        });
-
-        // HOVER AZUL
+        // Hover azul rombos fondo1
         var elementos = document.querySelectorAll('.hoverazul');
         elementos.forEach(function (elemento) {
             elemento.addEventListener('mouseenter', function () {
                 this.style.backgroundColor = '#001a29';
             });
-
             elemento.addEventListener('mouseleave', function () {
-                this.style.backgroundColor = '';  // Vuelve al color original o al definido en CSS
+                this.style.backgroundColor = '';
             });
+        });
+
+        // Mientras se hace scroll
+        contenedorfondos.addEventListener('scroll', function () {
+            let scrollTimeout;
+            clearTimeout(scrollTimeout);
+            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp', 'btnmusica', 'btnhosteleria', 'btngenealogia', 'btndesarrollo'];
+            buttonIDs.forEach(id => {
+                const button = document.getElementById(id);
+                if (button) button.setAttribute('disabled', 'disabled');
+            });
+            // Al acabar scroll
+            scrollTimeout = setTimeout(function () {
+                const scrollPosition = contenedorfondos.scrollTop;
+                const estaCerca = (fondo) => {
+                    const fondoPosition = fondo.offsetTop;
+                    return scrollPosition >= fondoPosition - margen && scrollPosition <= fondoPosition + margen;
+                };
+                // Si se está en fondo1
+                if (estaCerca(document.querySelector('.fondo1'))) {
+                    // Flecha no girada
+                    document.getElementById("flecha").classList.remove("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya Home
+                    document.getElementById("btnhome").classList.add("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
+                }
+                // Si se está en fondo2
+                else if (estaCerca(document.querySelector('.fondo2'))) {
+                    // Flecha no girada
+                    document.getElementById("flecha").classList.remove("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya About
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.add("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
+                }
+                // Si se está en fondo3
+                else if (estaCerca(document.querySelector('.fondo3'))) {
+                    // Flecha girada
+                    document.getElementById("flecha").classList.add("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya Help
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.add("subrayado");
+                }
+            }, 10);
         });
 
     </script>
