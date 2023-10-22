@@ -148,7 +148,25 @@ body {
     animation: fadeInUnderline 0.8s forwards;
 }
 
-/* Responsive (PC) */
+/* Video YouTube */
+
+.videocontenedor {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive PC */
 @media (min-width: 1024px) {
     .esconder {
         display: none;
@@ -168,18 +186,19 @@ body {
             width: 100%;
         }
     }
-}
 
-.videocontenedor {
-    position: relative;
-    width: 90%;
-    padding-top: 50%
-}
-
-.video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    /* Video YouTube PC */
+    .videocontenedor {
+        position: relative;
+        width: 80%;
+        padding-top: 40%;
+    }
+    
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
