@@ -357,17 +357,6 @@
 
         document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
 
-        // Dropdown oculto (menú para móvil)
-        const toggleMenu = (event) => {
-            menu.classList.toggle("hidden");
-            event.stopPropagation();
-        };
-
-        document.querySelector("#boton").addEventListener("click", toggleMenu);
-        document.addEventListener("click", () => menu.classList.add("hidden"));
-
-        let botonmenu = document.getElementById('boton');
-
         // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
 
         // A HOME
@@ -378,14 +367,14 @@
 
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height de contenedorfondos, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
-                fondo2.style.display = 'block';
+                fondo2.style.display = 'flex';
 
             }
             else {
                 fondo2.style.display = 'none';
 
                 setTimeout(function () {
-                    fondo2.style.display = 'block';
+                    fondo2.style.display = 'flex';
                 }, 500);
 
             }
@@ -393,7 +382,7 @@
 
         // A ABOUT
         document.getElementById('btnabout').addEventListener('click', function () {
-            fondo2.style.display = 'block';
+            fondo2.style.display = 'flex';
         });
 
         // A HELP
@@ -407,12 +396,12 @@
                 fondo2.style.display = 'none';
 
                 setTimeout(function () {
-                    fondo2.style.display = 'block';
+                    fondo2.style.display = 'flex';
                 }, 500);
 
             }
             else {
-                fondo2.style.display = 'block';
+                fondo2.style.display = 'flex';
             }
 
         });
