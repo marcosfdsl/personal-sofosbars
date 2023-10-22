@@ -14,11 +14,9 @@
 <body class="flex justify-center">
 
     <!-- Header -->
-
     <div class="flex justify-between fixed top-0 w-full bg-gradient-to-b from-black to-transparent z-50">
 
         <!-- Dropdown Menu para móvil -->
-
         <div class="flex flex-col lg:flex-row w-full">
 
             <div class="flex justify-between z-50">
@@ -32,46 +30,45 @@
             </div>
 
             <div id="menu"
-                class="absolute left-0 top-0 pt-12 lg:pt-0 w-1/2 hidden lg:relative lg:w-max lg:flex lg:flex-grow lg:top-0 bg-gradient-to-b from-black to-transparent z-40">
+                class="hidden lg:flex lg:flex-grow w-1/2 lg:w-max absolute left-0 top-0 pt-12 lg:pt-0 lg:relative bg-gradient-to-b from-black to-transparent z-40">
                 <div class="lg:flex lg:flex-grow lg:justify-center mt-6 lg:mt-0">
                     <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min"></div>
-                    <div class="mb-4 lg:mb-0 lg:flex">
+                    <div class="lg:flex mb-4 lg:mb-0">
                         <button id="btnhome"
-                            class="w-full text-left text-white hover:text-gray-300 transition duration-300 ease-in-out px-6 py-2 lg:py-0 hover:bg-black lg:hover:bg-transparent lg:w-1/3 subrayado">Home</button>
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent subrayado">Home</button>
                         <button id="btnabout"
-                            class="w-full text-left text-white hover:text-gray-300 transition duration-300 ease-in-out px-6 py-2 lg:py-0 hover:bg-black lg:hover:bg-transparent lg:w-1/3">About</button>
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent">About</button>
                         <button id="btnhelp"
-                            class="w-full text-left text-white hover:text-gray-300 transition duration-300 ease-in-out px-6 py-2 lg:py-0 hover:bg-black lg:hover:bg-transparent lg:w-1/3">Help</button>
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent">Help</button>
                     </div>
                     <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min"></div>
                 </div>
-                <div class="justify-end lg:w-44 mt-2 mb-4 ml-4 lg:mt-0 lg:mb-0 lg:ml-6 lg:mr-4 lg:flex">
+                <div class="lg:flex justify-end lg:w-44 mt-2 mb-4 ml-4 lg:mt-0 lg:mb-0 lg:ml-6 lg:mr-4">
                     <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
                         class="self-center p-2 text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent fa-brands fa-linkedin"></a>
                     <a href="https://www.instagram.com/sofosbars"
                         class="self-center p-2 text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent fa-brands fa-instagram"></a>
                 </div>
             </div>
+
         </div>
 
     </div>
 
     <!-- Flecha decoración -->
-
     <div id="flecha" class="fixed bottom-4 animaciongirarflecha">
-        <i class="flechatransparencia text-xl fa-solid fa-arrow-down-long fa-beat-fade z-50"></i>
+        <i class="text-xl fa-solid fa-arrow-down-long fa-beat-fade flechatransparencia z-50"></i>
     </div>
 
     <!-- Fondos 1, 2 y 3 -->
+    <div class="contenedorfondos">
 
-    <div class="contenedor">
+        <!-- Contenido de fondo1 (PORTFOLIO) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo1">
 
-        <!-- Contenido de fondo1 -->
-        <div class="fondo1 fondos h-screen w-screen flex flex-col justify-center z-20">
-
-
-            <div class="flex justify-center items-center z-10 w-full h-full">
+            <div class="flex justify-center items-center w-full h-full z-10">
                 <div class="grid grid-cols-3 justify-center items-center mb-8">
+
                     <!-- Primera fila -->
                     <div class="invisible"></div>
                     <div
@@ -124,7 +121,7 @@
                         </div>
 
                         <button
-                            class="hidden fixed bottom-0 z-40 lg:flex justify-center items-center bg-black rounded-full w-12 h-12">
+                            class="hidden fixed bottom-0 lg:flex justify-center items-center bg-black rounded-full w-12 h-12 z-40">
                             <i id="btncerrar"
                                 class="text-xl fa-solid fa-xmark fa-beat-fade agrandar2 flechatransparencia"></i>
                         </button>
@@ -134,192 +131,211 @@
             </div>
         </div>
 
-        <!-- Contenido de fondo2 -->
-        <div class="fondo2 fondos h-screen w-full">
-            <div class="h-full flex flex-col justify-center items-center">
-                <div id="infocv"
-                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8 relative">
+        <!-- Contenido de fondo2 (CURRÍCULUM) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo2">
 
-                    <div class="flex items-center justify-center text-center">
-                        <div class="max-h-full">
-                            <!-- Encabezado -->
-                            <header class="px-4 pt-8 flex flex-col items-center">
-                                <div class="w-32 h-32 flex-shrink-0 justify-center mb-4">
-                                    <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
-                                        target="_blank">
-                                        <img src="fotos/foto.png" alt="Foto"
-                                            class="w-full h-full object-cover rounded-full transform hover:scale-105 transition-transform duration-300">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h1 class="text-xl lg:text-2xl font-bold mb-4">Marcos Fernández de Salamanca López
-                                    </h1>
-                                    <p class="text-sm lg:text-base">
-                                        </pclass>11/07/2001</p>
-                                    <p class="text-xs lg:text-sm font-bold">Maestro Cubiles 12, Torrelodones Madrid
-                                        28250
-                                    </p>
-                                    <p class="mb-4 text-sm lg:text-base">+34 603330106</p>
-                                    <a class="text-sm text-red-600 hover:text-red-500"
-                                        href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
-                                </div>
-                            </header>
-                            <!-- Contenido principal -->
-                            <main class="pt-4 px-4">
-                                <!-- Títulos académicos -->
-                                <section class="mb-8">
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8 mt-2">TÍTULOS ACADÉMICOS</h2>
-                                    <!-- U-Tad -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">U-Tad, Las Rozas de Madrid (CURSANDO
-                                            ACTUALMENTE)</h3>
-                                        <p class="text-sm lg:text-base mb-2">Grado superior en Desarrollo de
-                                            Aplicaciones
-                                            Web.</p>
-                                    </div>
-                                    <!-- SAE -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">SAE Institute Spain, Madrid (MAYO
-                                            2022)
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-2">Programa en producción de música urbana.
-                                        </p>
-                                    </div>
-                                    <!-- IES -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">I.E.S. Diego Velázquez, Torrelodones,
-                                            Madrid (JUNIO
-                                            2020)</h3>
-                                        <p class="text-sm lg:text-base mb-2">Bachillerato Social.</p>
-                                    </div>
-                                    <!-- USA -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Paisley School, Oregon, EEUU (MAYO
-                                            2017)
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-2">Educación Secundaria Obligatoria.</p>
-                                    </div>
-                                </section>
-                                <!-- Experiencia -->
-                                <section class="mb-8">
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">EXPERIENCIA</h2>
-                                    <!-- Camarero en Aperitoche -->
-                                    <div class="bg-gray-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Camarero en Aperitoche, Las Rozas
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-1">Funciones en las áreas de barra y sala
-                                            (marzo
-                                            2023-presente).</p>
-                                    </div>
-                                    <!-- Roboticlab -->
-                                    <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Talleres y actividades en RoboticLab
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-1">Dando clases particulares y talleres de
-                                            programación a grupos de
-                                            niños jóvenes (2022-2023).</p>
-                                    </div>
-                                    <!-- Primer encargado y jefe de sala en Anubis Shisha Lounge Heron City -->
-                                    <div class="bg-gray-300 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Primer encargado y jefe de sala en
-                                            Anubis
-                                            Shisha
-                                            Lounge Heron City</h3>
-                                        <p class="text-sm lg:text-base mb-1">Estrategia del manejo de personal, gestión
-                                            administrativa y de seguridad,
-                                            contabilidad,
-                                            registro y facturación, control de productos y proveedores (febrero-junio
-                                            2021).</p>
-                                    </div>
-                                    <!-- Camarero en Anubis Shisha Lounge Xanadú -->
-                                    <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Camarero en Anubis Shisha Lounge
-                                            Xanadú
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-1">Funciones en las áreas de barra y cachimbas
-                                            (enero 2021).
-                                        </p>
-                                    </div>
-                                    <!-- Año de estudios en Oregón, EEUU -->
-                                    <div class="bg-gray-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Año de estudios en Oregón, EEUU</h3>
-                                        <p class="text-sm lg:text-base mb-1">Realizando trabajos de campo y actividades
-                                            de
-                                            hostelería
-                                            (2016-2017).</p>
-                                    </div>
-                                    <!-- Realización de un voluntariado en la India -->
-                                    <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Realización de un voluntariado en la
-                                            India</h3>
-                                        <p class="text-sm lg:text-base mb-1">(junio-julio 2014).</p>
-                                    </div>
-                                    <!-- Organización de eventos juveniles en Torreforum, Torrelodones -->
-                                    <div class="bg-gray-300 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Organización de eventos juveniles en
-                                            Torreforum,
-                                            Torrelodones</h3>
-                                        <p class="text-sm lg:text-base mb-1">(2013-2015).</p>
-                                    </div>
-                                </section>
-                                <!-- Habilidades y conocimientos -->
-                                <section class="mb-8">
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">HABILIDADES Y CONOCIMIENTOS</h2>
-                                    <!-- Desarrollo Web -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Desarrollo Web Full Stack (front-end,
-                                            back-end y
-                                            base de datos)</h3>
-                                        <p class="text-sm lg:text-base mb-2">HTML, CSS, JavaScript, Java, MySQL...</p>
-                                    </div>
-                                    <!-- Ofimática -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Conocimientos en programas de
-                                            ofimática
-                                        </h3>
-                                        <p class="text-sm lg:text-base mb-2">Word, Excel, Access...</p>
-                                    </div>
-                                    <!-- IES -->
-                                    <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
-                                        <p class="text-sm lg:text-base mb-2">Facilidad para la organización y la
-                                            resolución
-                                            de
-                                            problemas.</p>
-                                    </div>
-                                    <!-- USA -->
-                                    <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
-                                        <p class="text-sm lg:text-base mb-2">Facilidad para la comunicación y el
-                                            asesoramiento a
-                                            clientes.</p>
-                                    </div>
-                                </section>
-                                <!-- Idiomas -->
-                                <section>
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">IDIOMAS</h2>
-                                    <!-- Inglés -->
-                                    <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
-                                        <h3 class="text-sm lg:text-base font-bold">Inglés avanzado C1..</h3>
-                                        <p class="text-sm lg:text-base mb-2">CAE (Certificate in Advanced English).</p>
-                                    </div>
-                                </section>
-                            </main>
-                        </div>
-                    </div>
+            <div id="infocv"
+                class="overflow-y-auto w-5/6 lg:w-2/3 h-2/3 lg:h-3/4 self-center relative lg:mt-8 bg-white rounded-3xl">
 
-                    <div class="flex justify-center w-full mt-8 sticky bottom-4 z-40">
-                        <a href="https://drive.google.com/uc?export=download&id=1UpFAbqHcfETvPPIOx5A_C2wOHzq5LpDf"
-                            title="Descargar CV"
-                            class="flex justify-center items-center bg-black rounded-full w-12 h-12 hover:bg-gray-800 agrandar2">
-                            <i class="fa-solid fa-file-arrow-down text-white text-xl hover:text-2xl"></i>
+                <div class="flex justify-center items-center text-center">
+
+                    <!-- Encabezado -->
+                    <header class="flex flex-col items-center pt-8 px-4">
+
+                        <!-- Foto Marcos -->
+                        <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/" target="_blank">
+                            <img src="fotos/foto.png" alt="Foto Marcos"
+                                class="justify-center w-28 h-28 mb-4 object-cover rounded-full agrandar3">
                         </a>
-                    </div>
+
+                        <!-- Info Marcos -->
+                        <div>
+                            <h1 class="mb-4 text-xl lg:text-2xl font-bold">Marcos Fernández de Salamanca López</h1>
+                            <p class="text-sm lg:text-base">11/07/2001</p>
+                            <p class="text-xs lg:text-sm font-bold">Maestro Cubiles 12, Torrelodones Madrid, 28250</p>
+                            <p class="mb-4 text-sm lg:text-base">603 330 106</p>
+                            <a class="text-sm text-red-600 hover:text-red-500 transition duration-300 ease-in-out"
+                                href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
+                        </div>
+
+                    </header>
+
+                    <!-- Contenido principal -->
+                    <main class="pt-4 px-4">
+
+                        <!-- Títulos académicos -->
+                        <section class="mb-8">
+                            <h2 class="text-xl lg:text-2xl font-bold mb-8 mt-2">TÍTULOS ACADÉMICOS</h2>
+                            <!-- U-Tad -->
+                            <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">U-Tad, Las Rozas de Madrid (CURSANDO
+                                    ACTUALMENTE)</h3>
+                                <p class="text-sm lg:text-base mb-2">Grado superior en Desarrollo de
+                                    Aplicaciones
+                                    Web.</p>
+                            </div>
+
+                            <!-- SAE -->
+                            <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">SAE Institute Spain, Madrid (MAYO
+                                    2022)
+                                </h3>
+                                <p class="text-sm lg:text-base mb-2">Programa en producción de música urbana.
+                                </p>
+                            </div>
+
+                            <!-- IES -->
+                            <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">I.E.S. Diego Velázquez, Torrelodones,
+                                    Madrid (JUNIO
+                                    2020)</h3>
+                                <p class="text-sm lg:text-base mb-2">Bachillerato Social.</p>
+                            </div>
+
+                            <!-- USA -->
+                            <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Paisley School, Oregon, EEUU (MAYO
+                                    2017)
+                                </h3>
+                                <p class="text-sm lg:text-base mb-2">Educación Secundaria Obligatoria.</p>
+                            </div>
+                        </section>
+
+                        <!-- Experiencia -->
+                        <section class="mb-8">
+                            <h2 class="text-xl lg:text-2xl font-bold mb-8">EXPERIENCIA</h2>
+
+                            <!-- Camarero en Aperitoche -->
+                            <div class="bg-gray-100 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Camarero en Aperitoche, Las Rozas
+                                </h3>
+                                <p class="text-sm lg:text-base mb-1">Funciones en las áreas de barra y sala
+                                    (marzo
+                                    2023-presente).</p>
+                            </div>
+
+                            <!-- Roboticlab -->
+                            <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Talleres y actividades en RoboticLab
+                                </h3>
+                                <p class="text-sm lg:text-base mb-1">Dando clases particulares y talleres de
+                                    programación a grupos de
+                                    niños jóvenes (2022-2023).</p>
+                            </div>
+
+                            <!-- Primer encargado y jefe de sala en Anubis Shisha Lounge Heron City -->
+                            <div class="bg-gray-300 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Primer encargado y jefe de sala en
+                                    Anubis
+                                    Shisha
+                                    Lounge Heron City</h3>
+                                <p class="text-sm lg:text-base mb-1">Estrategia del manejo de personal, gestión
+                                    administrativa y de seguridad,
+                                    contabilidad,
+                                    registro y facturación, control de productos y proveedores (febrero-junio
+                                    2021).</p>
+                            </div>
+
+                            <!-- Camarero en Anubis Shisha Lounge Xanadú -->
+                            <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Camarero en Anubis Shisha Lounge
+                                    Xanadú
+                                </h3>
+                                <p class="text-sm lg:text-base mb-1">Funciones en las áreas de barra y cachimbas
+                                    (enero 2021).
+                                </p>
+                            </div>
+
+                            <!-- Año de estudios en Oregón, EEUU -->
+                            <div class="bg-gray-100 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Año de estudios en Oregón, EEUU</h3>
+                                <p class="text-sm lg:text-base mb-1">Realizando trabajos de campo y actividades
+                                    de
+                                    hostelería
+                                    (2016-2017).</p>
+                            </div>
+
+                            <!-- Realización de un voluntariado en la India -->
+                            <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Realización de un voluntariado en la
+                                    India</h3>
+                                <p class="text-sm lg:text-base mb-1">(junio-julio 2014).</p>
+                            </div>
+
+                            <!-- Organización de eventos juveniles en Torreforum, Torrelodones -->
+                            <div class="bg-gray-300 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Organización de eventos juveniles en
+                                    Torreforum,
+                                    Torrelodones</h3>
+                                <p class="text-sm lg:text-base mb-1">(2013-2015).</p>
+                            </div>
+                        </section>
+
+                        <!-- Habilidades y conocimientos -->
+                        <section class="mb-8">
+                            <h2 class="text-xl lg:text-2xl font-bold mb-8">HABILIDADES Y CONOCIMIENTOS</h2>
+
+                            <!-- Desarrollo Web -->
+                            <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Desarrollo Web Full Stack (front-end,
+                                    back-end y
+                                    base de datos)</h3>
+                                <p class="text-sm lg:text-base mb-2">HTML, CSS, JavaScript, Java, MySQL...</p>
+                            </div>
+
+                            <!-- Ofimática -->
+                            <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Conocimientos en programas de
+                                    ofimática
+                                </h3>
+                                <p class="text-sm lg:text-base mb-2">Word, Excel, Access...</p>
+                            </div>
+
+                            <!-- IES -->
+                            <div class="bg-red-100 rounded p-4 mb-4 lg:px-64">
+                                <p class="text-sm lg:text-base mb-2">Facilidad para la organización y la
+                                    resolución
+                                    de
+                                    problemas.</p>
+                            </div>
+
+                            <!-- USA -->
+                            <div class="bg-red-200 rounded p-4 mb-4 lg:px-64">
+                                <p class="text-sm lg:text-base mb-2">Facilidad para la comunicación y el
+                                    asesoramiento a
+                                    clientes.</p>
+                            </div>
+                        </section>
+
+                        <!-- Idiomas -->
+                        <section>
+                            <h2 class="text-xl lg:text-2xl font-bold mb-8">IDIOMAS</h2>
+
+                            <!-- Inglés -->
+                            <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64">
+                                <h3 class="text-sm lg:text-base font-bold">Inglés avanzado C1..</h3>
+                                <p class="text-sm lg:text-base mb-2">CAE (Certificate in Advanced English).</p>
+                            </div>
+
+                        </section>
+
+                    </main>
+
                 </div>
 
+                <div class="flex justify-center w-full mt-8 sticky bottom-4 z-40">
+                    <a href="https://drive.google.com/uc?export=download&id=1UpFAbqHcfETvPPIOx5A_C2wOHzq5LpDf"
+                        title="Descargar CV"
+                        class="flex justify-center items-center bg-black rounded-full w-12 h-12 hover:bg-gray-800 agrandar2">
+                        <i class="fa-solid fa-file-arrow-down text-white text-xl hover:text-2xl"></i>
+                    </a>
+                </div>
             </div>
+
         </div>
 
-        <!-- Contenido de fondo3 -->
-        <div class="fondo3 fondos h-screen w-full">
+        <!-- Contenido de fondo3 (AYUDA) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo3">
             <div class="h-full flex flex-col justify-center items-center">
                 <p class="m-8 text-center text-white">Este es el portfolio de Marcos Fernández de Salamanca (Sofos), un
                     joven de 22 años de la localidad de Torrelodones, Madrid.</p>
@@ -337,7 +353,7 @@
         const fondo2 = document.querySelector('.fondo2');
         const fondo3 = document.querySelector('.fondo3');
 
-        const contenedor = document.querySelector('.contenedor');
+        const contenedorfondos = document.querySelector('.contenedorfondos');
         const menu = document.querySelector("#menu");
 
         document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
@@ -358,10 +374,10 @@
         // A HOME
         document.getElementById('btnhome').addEventListener('click', function () {
 
-            let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let scrollHeight = contenedor.scrollHeight;
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
 
-            // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height del contenedor, fondo2 se hace visible
+            // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del height de contenedorfondos, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
                 fondo2.style.display = 'block';
 
@@ -384,8 +400,8 @@
         // A HELP
         document.getElementById('btnhelp').addEventListener('click', function () {
 
-            let scrollPosition = document.querySelector('.contenedor').scrollTop;
-            let scrollHeight = contenedor.scrollHeight;
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
 
             // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible
             if (scrollPosition == 0) {
@@ -413,7 +429,7 @@
             if (document.querySelector(btn)) {
                 document.querySelector(btn).addEventListener("click", e => {
                     e.preventDefault();
-                    contenedor.scrollTo({
+                    contenedorfondos.scrollTo({
                         top: top,
                         behavior: "smooth"
                     });
@@ -484,7 +500,7 @@
 
         let scrollTimeout;  // para guardar el timeout
 
-        contenedor.addEventListener('scroll', function () {
+        contenedorfondos.addEventListener('scroll', function () {
             // Cuando se inicia el scroll
             clearTimeout(scrollTimeout);
 
@@ -498,7 +514,7 @@
             // Habilitar botones después de que se detenga el scroll
             scrollTimeout = setTimeout(function () {
 
-                const scrollPosition = contenedor.scrollTop;
+                const scrollPosition = contenedorfondos.scrollTop;
                 const tolerance = 50;  // una tolerancia en píxeles para considerar que hemos llegado al fondo
 
                 const isNearToFondo = (fondo) => {
