@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bf7e2ba98b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="icon" href="fotos/flor.png">
+</head>
+
+<body class="flex justify-center">
+
+    <!-- Header -->
+    <div class="flex justify-between fixed top-0 w-full bg-gradient-to-b from-black to-transparent z-50">
+
+        <!-- Dropdown Menu para móvil -->
+        <div class="flex flex-col lg:flex-row w-full">
+
+            <div class="flex justify-between z-50">
+                <button id="boton"
+                    class="m-6 text-left text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out fa-solid fa-bars esconder"></button>
+                <button id="refrescar"
+                    class="m-6 lg:w-40 lg:my-6 lg:text-left text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out font-bold">
+                    S O F O S
+                </button>
+                <i class="m-6 text-xl fa-solid fa-bars invisible esconder"></i>
+            </div>
+
+            <div id="menu"
+                class="hidden lg:flex lg:flex-grow w-1/2 lg:w-max absolute left-0 top-0 pt-12 lg:pt-0 lg:relative bg-gradient-to-b from-black to-transparent z-40">
+                <div class="lg:flex lg:flex-grow lg:justify-center mt-6 lg:mt-0">
+                    <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min"></div>
+                    <div class="lg:flex mb-4 lg:mb-0">
+                        <button id="btnhome"
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent subrayado">Home</button>
+                        <button id="btnabout"
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent">About</button>
+                        <button id="btnhelp"
+                            class="w-full lg:w-1/3 px-6 py-2 lg:py-0 text-left text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent">Help</button>
+                    </div>
+                    <div class="invisible lg:flex lg:w-1/3 h-0 lg:h-min"></div>
+                </div>
+                <div class="lg:flex justify-end lg:w-44 mt-2 mb-4 ml-4 lg:mt-0 lg:mb-0 lg:ml-6 lg:mr-4">
+                    <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/"
+                        class="self-center p-2 text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent fa-brands fa-linkedin"></a>
+                    <a href="https://www.instagram.com/sofosbars"
+                        class="self-center p-2 text-xl text-white hover:text-gray-300 transition duration-300 ease-in-out hover:bg-black lg:hover:bg-transparent fa-brands fa-instagram"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Flecha decoración -->
+    <div id="flecha" class="fixed bottom-4 animaciongirarflecha">
+        <i class="text-xl fa-solid fa-arrow-down-long fa-beat-fade transparencia z-50"></i>
+    </div>
+
+    <!-- Fondos 1, 2 y 3 -->
+    <div class="contenedorfondos">
+
+        <!-- Contenido de fondo1 (PORTFOLIO) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo1">
+
+            <div class="flex justify-center items-center w-full h-full z-10">
+                <div class="grid grid-cols-3 justify-center items-center mb-8">
+
+                    <!-- Primera fila -->
+                    <div class="invisible"></div>
+                    <div
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btnmusica"
+                            class="bg-black hoverazul flex items-center justify-center h-full margenrombotop">
+                            <img src="fotos/simbolos/musica.png" class="desrotar w-1/3 agrandar" alt="">
+                        </button>
+                    </div>
+                    <div class="invisible"></div>
+
+                    <!-- Segunda fila -->
+                    <div
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btnhosteleria"
+                            class="bg-black hoverazul flex items-center justify-center h-full margenromboleft">
+                            <img src="fotos/simbolos/hosteleria.png" class="desrotar w-1/3 agrandar" alt="">
+                        </button>
+                    </div>
+                    <div class="invisible"></div>
+                    <div
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col">
+                        <button id="btngenealogia"
+                            class="bg-black hoverazul flex items-center justify-center h-full margenromboright">
+                            <img src="fotos/simbolos/genealogia.png" class="desrotar w-1/3 agrandar" alt="">
+                        </button>
+                    </div>
+
+                    <!-- Tercera fila -->
+                    <div class="invisible"></div>
+                    <div
+                        class="bg-white rotar flex items-center justify-center w-20 sm:w-32 lg:w-24 2xl:w-32 h-20 sm:h-32 lg:h-24 2xl:h-32 flex-col hover:bg-gray-300">
+                        <button id="btndesarrollo"
+                            class="bg-black hoverazul flex items-center justify-center h-full margenrombobot">
+                            <img src="fotos/simbolos/desarrollo.png" class="desrotar w-1/3 agrandar" alt="">
+                        </button>
+                    </div>
+                    <div class="invisible"></div>
+                </div>
+            </div>
+
+            <!-- Info General -->
+            <div id="info"
+                class="absolute w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full z-20">
+                <div id="infomusica2"
+                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
+                    <div class="flex flex-col items-center justify-center text-center relative">
+                        <div class="flex flex-col justify-center pb-4 z-20">
+
+
+
+                            <!-- Header -->
+                            <header class="flex flex-col items-center pt-8 px-4">
+                                <img src="fotos/flornegra.png" alt="Logo Sofos flor negra"
+                                    class="justify-center w-28 h-28 mb-6 object-cover agrandar3">
+                                <div class="p-4 lg:px-44 bg-sky-100 rounded">
+                                    <h1 class="mb-4 text-xl lg:text-2xl font-bold">Sofos</h1>
+                                    <p class="mb-8 text-sm lg:text-base">Sofos es el nombre artístico de Marcos
+                                        Fernández de Salamanca, un rapero y
+                                        productor español de la localidad madrileña de Torrelodones, nacido el 11 de
+                                        julio del año 2001.</p>
+                                </div>
+                                <div class="videocontenedor z-50"> <embed id="video" class="video"
+                                        src="https://www.youtube.com/embed/1GqGpaHtKC4" allowfullscreen> </embed> </div>
+                            </header>
+                            <!-- Contenido principal -->
+                            <main class="py-4 px-4">
+                                <!-- Biografía -->
+                                <section>
+                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">BIOGRAFÍA</h2>
+                                    <!-- 2009 -->
+                                    <div class="mb-4 p-4 lg:px-44 bg-gray-100 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">2009 - 2015</h3>
+                                        <p class="text-sm lg:text-base">Marcos empezó a interesarse por el rap en 2009,
+                                            llegando a escribir sus propias canciones con tan solo 10 años. Como ya
+                                            tocaba algún instrumento, le fue fácil aprender a producir instrumentales en
+                                            FL Studio, las cuales aún se pueden encontrar en <a class="azul font-bold"
+                                                href="https://soundcloud.com/sofosmusic">SoundCloud</a> bajo el nombre
+                                            de Mark.</p><br>
+                                        <p class="text-sm lg:text-base">En el año 2013 pudo grabar sus primeras
+                                            canciones, entre ellas Ácido, Vocablos o Sangre Fría. Para 2015 ya había
+                                            grabado al menos 10 canciones, a pesar de no tener un micrófono de calidad y
+                                            carecer de conocimientos de mezcla. Desgraciadamente ninguno de estos
+                                            trabajos se encuentran en la red, aunque curiosamente hay un vídeo publicado
+                                            en YouTube titulado <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=6Avoe6kf-3M&ab_channel=Mark%26Jota">Sofos
+                                                | Cómo hago mis bases</a>, a pesar de conservar el
+                                            nombre de Mark hasta 2019.</p>
+                                    </div>
+                                    <!-- 2016 -->
+                                    <div class="mb-4 p-4 lg:px-32 bg-gray-200 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">2016 - 2018</h3>
+                                        <p class="text-sm lg:text-base">Marcos se fue a estudiar a Oregón (Estados
+                                            Unidos) durante un año en septiembre de 2016, lo cual pudo haber sido un
+                                            retroceso en la creación de su música, pero resultó ser todo lo contrario.
+                                            Tuvo tiempo libre de sobra para poder trabajar en su primer disco <a
+                                                class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=uvwsaQ5sGkk&list=PLnKYAXIwmuVldqPzyBZnBqng1EgFowmpp&ab_channel=Mark">Anhelo</a>,
+                                            compuesto por 11 canciones y un skit, el cual pudo grabar gracias a un
+                                            estudio de radio en el que trabajó. Este disco se puede encontrar todavía en
+                                            YouTube bajo el nombre de Mark.</p><br>
+                                        <p class="text-sm lg:text-base">Ya de vuelta en España siguió grabando canciones
+                                            a medida que las iba escribiendo, cuyas letras cada vez eran más complejas y
+                                            trataban sobre temas más profundos. Es el caso de temas como <a
+                                                class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=Z5-etrzNWv0&ab_channel=Mark">Conciencia</a>,
+                                            <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=ob_kV9oVr_c&ab_channel=Mark">Solipsismo</a>,
+                                            <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=7l_ycTL_KWI&ab_channel=Mark">Concepción</a>
+                                            o <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=jKsgOpalJzo&ab_channel=Mark">Sofía</a>.
+                                            También experimentó con temas agresivos como
+                                            <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=_cv0YgRMlAQ&ab_channel=Mark">Orden</a>
+                                            o <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=mLg95sQFm_w&ab_channel=Mark">Diálogos</a>,
+                                            lo que fue decisivo posteriormente en su acercamiento al
+                                            drill. Sin embargo, esta agresividad se limita al sonido y no al
+                                            contenido
+                                            de las letras, manteniendo así su esencia.
+                                        </p>
+                                    </div>
+                                    <!-- 2019 -->
+                                    <div class="mb-4 p-4 lg:px-32 bg-gray-300 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">2019 - 2020</h3>
+                                        <p class="text-sm lg:text-base">Se podría decir que en 2019 se configuró el
+                                            estilo propio de Marcos, ahora bajo el nombre de Sofos. Además, por primera
+                                            vez dio el paso a grabar en un estudio profesional, el cual aún sigue
+                                            visitando. En BKK Estudios grabó el tema <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=930ojD-Yvxw&ab_channel=Sofos">Andrómeda</a>,
+                                            que pudo cantar en el
+                                            Tour Music Festival de 2019. Durante este año también tuvo la oportunidad de
+                                            participar en la famosa serie <a class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=Th5zRhVQP0U&ab_channel=RETINA">Madrid
+                                                Live Oneshot</a>, aún bajo el sobrenombre
+                                            de Mark.</p><br>
+                                        <p class="text-sm lg:text-base">En 2020 Sofos despegó con su famoso tema <a
+                                                class="azul font-bold"
+                                                href="https://open.spotify.com/intl-es/album/6j7RpfebSqddVbV1mi2Anl?si=JGDc18teQHWYfh7dNkkusA">Bars
+                                                I</a>,
+                                            que a día de hoy cuenta con más de 800.000 reproducciones en Spotify, al
+                                            cual más tarde se sumó Last Good Kid on Earth en <a class="azul font-bold"
+                                                href="https://open.spotify.com/album/2O1Xm2GLWQi3zemUvVteTh?si=x4bYQCVqQGCFA3ZQEomZ1w">Bars
+                                                II</a>. Se grabó un
+                                            videoclip a esta segunda versión, pero por algún motivo a día de hoy no se
+                                            puede encontrar en YouTube. Con este mismo artista lanzó <a
+                                                class="azul font-bold"
+                                                href="https://open.spotify.com/album/5aABeWBlp2Bar1SN6uRJPf?si=l6p64nFjSBC8R_wc9-JWyg">Flesh</a>,
+                                            esta vez
+                                            sobre una instrumental de drill. También se grabó un videoclip que a día de
+                                            hoy no se puede encontrar en YouTube. Además de estos últimos, también
+                                            salieron temas como <a class="azul font-bold"
+                                                href="https://open.spotify.com/album/058M3CmWNyNzy8oVcLlwxi?si=8kKcXpl5Q6aJVamM6Vqngg">Hábitat</a>
+                                            (grabado
+                                            por Dawiz) o <a class="azul font-bold" href="">Síndrome</a> (grabado por
+                                            Hilton), que cuenta además con su propio oneshot en el canal de <a
+                                                class="azul font-bold"
+                                                href="https://www.youtube.com/watch?v=nxowckFWYpE&ab_channel=BigWingsMusic">Big
+                                                Wings Music</a>.</p>
+                                    </div>
+                                    <!-- 2021 -->
+                                    <div class="mb-4 p-4 lg:px-32 bg-gray-200 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">2021 - 2022</h3>
+                                        <p class="text-sm lg:text-base">El trabajo que consolidó la carrera de Sofos fue
+                                            su penúltimo disco, <a class="azul font-bold"
+                                                href="https://open.spotify.com/intl-es/album/7bGBD8MKF51C5KiUSMfkeK?si=4Bqr5W3wRZWu0yYi9cw1fQ">BIG
+                                                FISH</a>,
+                                            compuesto por 12 canciones de distintos
+                                            estilos dentro del género urbano en los cuales colaboran artistas como
+                                            Zehache 07, Kaii Tropicc o Last Good Kid on Earth. Lanzado el 11 de enero de
+                                            2022, actualmente cuenta con más de 600.000 reproducciones en Spotify y se
+                                            puede encontrar una recopilación del disco en vídeo en <a
+                                                class="azul font-bold"
+                                                href="https://youtu.be/1GqGpaHtKC4?feature=shared">YouTube</a>.</p><br>
+                                        <p class="text-sm lg:text-base">Además de BIG FISH, Sofos comenzó a preparar su
+                                            próximo disco <a class="azul font-bold"
+                                                href="https://open.spotify.com/intl-es/album/4ogQPJOoJHF1E3qnMS6uyO?si=8shL3l7cRm6yhcYsvystOA">AÚN
+                                                DICEN QUE EL PESCADO ES
+                                                CARO</a> (del que hablaremos más
+                                            adelante) sacando distintos trabajos que formarían parte de este, entre
+                                            ellos <a class="azul font-bold"
+                                                href="https://youtu.be/GNSyBZzmjNo?si=KJRoP4vsU_WF7EKG">Algoritmo</a>,
+                                            <a class="azul font-bold"
+                                                href="https://youtu.be/-UbAbsH06VQ?si=uWA6Dl6LaKTcWwSc">Kiddo</a> o <a
+                                                class="azul font-bold"
+                                                href="https://youtu.be/z2s7rEYKB-s?si=fJWD1rVL0utVWpBI">Lo Entiendo</a>.
+                                            También publicó
+                                            singles independientes
+                                            como <a class="azul font-bold"
+                                                href="https://youtu.be/hyhFmpc874s?si=pxZvSuDoZxA768o-">No Es Serio</a>
+                                            o <a class="azul font-bold"
+                                                href="https://youtu.be/UDUoyWXcA_c?si=VTaenH4J_PoHK-9D">Baklavas</a>.
+                                        </p>
+                                    </div>
+                                    <!-- 2023 -->
+                                    <div class="mb-8 p-4 lg:px-32 bg-gray-100 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">2023</h3>
+                                        <p class="text-sm lg:text-base">A principios de 2023 Sofos terminó de construir
+                                            su último disco, AÚN DICEN QUE EL PESCADO ES CARO o ADQEPEC, que fue
+                                            publicado el 20 de abril después de haber sacado los últimos temas antes de
+                                            su lanzamiento, <a class="azul font-bold"
+                                                href="https://youtu.be/nQVSbhg_SwQ?si=V8XDjCgMJtfaEmhk">Reseteo</a> y <a
+                                                class="azul font-bold"
+                                                href="https://youtu.be/SnUiFG4BFio?si=OBVPOpa5OEK2-gkc">Pausa</a>.
+                                            Además, el famoso estudio de
+                                            grabación
+                                            madrileño BKK Estudios decidió comenzar a hacer una serie de colaboraciones
+                                            con diferentes artistas, siendo el primero el mismo Sofos. De esta
+                                            colaboración nació <a class="azul font-bold"
+                                                href="https://youtu.be/sasg0KvITpA?si=K7KWWjz0IrH-NPfa">Barotrauma</a>,
+                                            que fue
+                                            grabado, producido, mezclado y
+                                            masterizado en el mismo estudio.</p><br>
+                                        <p class="text-sm lg:text-base">En la actualidad se encuentra trabajando en
+                                            nuevos singles y colaboraciones con otros artistas de la escena. Además, se
+                                            ha anunciado ya la fecha del próximo álbum PAROLES PERTINENTES (4/4/24), que
+                                            incluye temas como <a class="azul font-bold"
+                                                href="https://youtu.be/evMr-qPoiXc?si=RvZTEgdaxLQXTK7K">Ancelotti</a>,
+                                            <a class="azul font-bold"
+                                                href="https://youtu.be/IeWh_T3a4WI?si=o-6Nu5byz0WVKomj">Target</a> o <a
+                                                class="azul font-bold"
+                                                href="https://youtu.be/bA-xW1BSfiI?si=OZEsNttwI7MPhXmo">Post Mortem</a>,
+                                            por lo que muy
+                                            pronto
+                                            veremos más de Sofos.
+                                        </p>
+                                    </div>
+                                </section>
+                                <!-- Alias -->
+                                <section>
+                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">ALIAS</h2>
+                                    <div class="mb-8 p-4 lg:px-44 bg-sky-100 rounded">
+                                        <p class="text-sm lg:text-base">Marcos comenzó a utilizar el alias de Sofos a
+                                            partir de 2019, que nació a raíz su afán por la filosofía griega. Aunque se
+                                            trató de una transición progresiva, se podría decir que su última canción
+                                            como Mark fue <a class="azul font-bold"
+                                                href="https://youtu.be/8-A7WfpH0YE?si=zBy5nB6UZWH0E9SQ">Serotón</a>. Él
+                                            nos dice: “Sofos es la suma de paradigmas y
+                                            vivencias atemporales que el yo de un momento determinado nunca será capaz
+                                            de reunir”.</p><br>
+                                        <p class="text-sm lg:text-base">Una curiosidad es que se trata de un palíndromo,
+                                            es decir, que se lee igual tanto de izquierda a derecha como de derecha a
+                                            izquierda.</p>
+                                    </div>
+                                </section>
+                                <!-- Discografía -->
+                                <section>
+                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">DISCOGRAFÍA</h2>
+                                    <!-- Solitario -->
+                                    <div class="mb-4 p-4 lg:px-4 bg-gray-100 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-4">En solitario</h3>
+
+                                        <div id="main" class="grid grid-cols-6 justify-evenly">  
+                                            <div class="flex flex-col justify-center h-8 bg-sky-100 font-bold">2013 - 2015</div>  
+                                            <div class="col-span-2 flex flex-col justify-center h-8 bg-sky-200 font-bold">2016 - 2018</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-sky-100 font-bold">2019 - 2020</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-sky-200 font-bold">2021 - 2022</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-sky-100 font-bold">2023</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Ácido</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300 font-bold">Anhelo (Álbum)</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Solipsismo</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Serotón</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300 font-bold">Big Fish (Álbum)</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Vocablos</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Anhelo</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Pedazos</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Andrómeda</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Big Fish</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Me sobran palabras</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Puede Ser</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Altruismo</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Hábitat</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Suerte</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Sangre Fría</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Esperanza</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Virtud</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Síndrome</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Conflicto</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Untitled</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Indecentes</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Conciencia</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Bars I</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Cáncer</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Música</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Chispas</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Sofía</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Enfants</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Lejano</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Etéreo</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Bio</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Index</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">Cátalo</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Avaricia</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Diss Track</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Apnea</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Musicalia</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Huella</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+                                            
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Enseñanza</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Martirio</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300 font-bold">Singles</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+                                            
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Tiempo</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Concepción</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Sin Filtro</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Skit</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Criminal</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">No Es Serio</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200">5</div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Relativo</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Evadido</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Baklavas</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Lichtung</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>
+                                            
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300 font-bold">Singles</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Deep</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>
+
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Chica de Artes</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Orden</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>
+                                            
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Demacre</div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300">Diálogos</div> 
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-300"></div>  
+                                            <div class="flex flex-col justify-center h-8 bg-gray-200"></div>
+                                        </div>  
+
+                                    </div>
+                                    <!-- Colaboraciones -->
+                                    <div class="mb-4 p-4 lg:px-44 bg-gray-100 rounded">
+                                        <h3 class="text-sm lg:text-base font-bold mb-2">Colaboraciones</h3>
+                                        <ul>
+                                            <li class="text-sm lg:text-base"></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </main>
+
+
+
+
+                        </div>
+
+                        <button
+                            class="hidden fixed bottom-0 lg:flex justify-center items-center bg-black rounded-full w-12 h-12 z-40">
+                            <i id="btncerrar" class="text-xl fa-solid fa-xmark fa-beat-fade transparencia"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de fondo2 (CURRÍCULUM) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo2">
+
+            <div id="infocv"
+                class="overflow-y-auto w-5/6 lg:w-2/3 h-2/3 lg:h-3/4 self-center relative lg:mt-8 bg-white rounded-3xl">
+
+                <div class="text-center">
+
+                    <!-- Encabezado -->
+                    <header class="flex flex-col items-center pt-8 px-4">
+
+                        <!-- Foto Marcos -->
+                        <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/" target="_blank">
+                            <img src="fotos/foto.png" alt="Foto Marcos"
+                                class="justify-center w-28 h-28 mb-4 object-cover rounded-full agrandar3">
+                        </a>
+
+                        <!-- Info Marcos -->
+                        <div>
+                            <h1 class="mb-4 text-xl lg:text-2xl font-bold">Marcos Fernández de Salamanca López</h1>
+                            <p class="text-sm lg:text-base">11/07/2001</p>
+                            <p class="text-xs lg:text-sm font-bold">Maestro Cubiles 12, Torrelodones Madrid, 28250</p>
+                            <p class="mb-4 text-sm lg:text-base">603 330 106</p>
+                            <a class="text-sm text-red-600 hover:text-red-500 transition duration-300 ease-in-out"
+                                href="mailto:mark.musicteam@hotmail.com">mark.musicteam@hotmail.com</a>
+                        </div>
+
+                    </header>
+
+                    <!-- Contenido principal -->
+                    <main class="pt-4 px-4">
+
+                        <!-- Títulos académicos -->
+                        <section>
+
+                            <h2 class="mt-2 mb-8 text-xl lg:text-2xl font-bold">TÍTULOS ACADÉMICOS</h2>
+
+                            <!-- U-Tad -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-100 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">U-Tad, Las Rozas de Madrid (CURSANDO
+                                    ACTUALMENTE)</h3>
+                                <p class="text-sm lg:text-base">Grado superior en Desarrollo de Aplicaciones Web.</p>
+                            </div>
+
+                            <!-- SAE -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">SAE Institute Spain, Madrid (MAYO 2022)
+                                </h3>
+                                <p class="text-sm lg:text-base">Programa en producción de música urbana.
+                                </p>
+                            </div>
+
+                            <!-- IES -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-100 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">I.E.S. Diego Velázquez, Torrelodones, Madrid
+                                    (JUNIO 2020)</h3>
+                                <p class="text-sm lg:text-base">Bachillerato Social.</p>
+                            </div>
+
+                            <!-- USA -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Paisley School, Oregon, EEUU (MAYO 2017)
+                                </h3>
+                                <p class="text-sm lg:text-base">Educación Secundaria Obligatoria.</p>
+                            </div>
+
+                        </section>
+
+                        <!-- Experiencia -->
+                        <section>
+
+                            <h2 class="my-8 text-xl lg:text-2xl font-bold">EXPERIENCIA</h2>
+
+                            <!-- Camarero en Aperitoche -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-100 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Camarero en Aperitoche, Las Rozas
+                                </h3>
+                                <p class="text-sm lg:text-base">Funciones en las áreas de barra y sala (marzo
+                                    2023-presente).</p>
+                            </div>
+
+                            <!-- Roboticlab -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Talleres y actividades en RoboticLab
+                                </h3>
+                                <p class="text-sm lg:text-base">Dando clases particulares y talleres de programación a
+                                    grupos de niños jóvenes (2022-2023).</p>
+                            </div>
+
+                            <!-- Primer encargado y jefe de sala en Anubis Shisha Lounge Heron City -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-300 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Primer encargado y jefe de sala en Anubis
+                                    Shisha Lounge Heron City</h3>
+                                <p class="text-sm lg:text-base">Estrategia del manejo de personal, gestión
+                                    administrativa y de seguridad, contabilidad,
+                                    registro y facturación, control de productos y proveedores (febrero-junio 2021).</p>
+                            </div>
+
+                            <!-- Camarero en Anubis Shisha Lounge Xanadú -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Camarero en Anubis Shisha Lounge
+                                    Xanadú
+                                </h3>
+                                <p class="text-sm lg:text-base">Funciones en las áreas de barra y cachimbas
+                                    (enero 2021).
+                                </p>
+                            </div>
+
+                            <!-- Año de estudios en Oregón, EEUU -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-100 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Año de estudios en Oregón, EEUU</h3>
+                                <p class="text-sm lg:text-base">Realizando trabajos de campo y actividades
+                                    de
+                                    hostelería
+                                    (2016-2017).</p>
+                            </div>
+
+                            <!-- Realización de un voluntariado en la India -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Realización de un voluntariado en la
+                                    India</h3>
+                                <p class="text-sm lg:text-base">(junio-julio 2014).</p>
+                            </div>
+
+                            <!-- Organización de eventos juveniles en Torreforum, Torrelodones -->
+                            <div class="mb-4 p-4 lg:px-64 bg-gray-300 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Organización de eventos juveniles en
+                                    Torreforum,
+                                    Torrelodones</h3>
+                                <p class="text-sm lg:text-base">(2013-2015).</p>
+                            </div>
+
+                        </section>
+
+                        <!-- Habilidades y conocimientos -->
+                        <section>
+
+                            <h2 class="my-8 text-xl lg:text-2xl font-bold">HABILIDADES Y CONOCIMIENTOS</h2>
+
+                            <!-- Desarrollo Web -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-100 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Desarrollo Web Full Stack (front-end,
+                                    back-end y
+                                    base de datos)</h3>
+                                <p class="text-sm lg:text-base">HTML, CSS, JavaScript, Java, MySQL...</p>
+                            </div>
+
+                            <!-- Ofimática -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Conocimientos en programas de
+                                    ofimática
+                                </h3>
+                                <p class="text-sm lg:text-base">Word, Excel, Access...</p>
+                            </div>
+
+                            <!-- IES -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-100 rounded">
+                                <p class="text-sm lg:text-base">Facilidad para la organización y la
+                                    resolución
+                                    de
+                                    problemas.</p>
+                            </div>
+
+                            <!-- USA -->
+                            <div class="mb-4 p-4 lg:px-64 bg-red-200 rounded">
+                                <p class="text-sm lg:text-base">Facilidad para la comunicación y el
+                                    asesoramiento a
+                                    clientes.</p>
+                            </div>
+
+                        </section>
+
+                        <!-- Idiomas -->
+                        <section>
+
+                            <h2 class="my-8 text-xl lg:text-2xl font-bold">IDIOMAS</h2>
+
+                            <!-- Inglés -->
+                            <div class="mb-12 p-4 lg:px-64 bg-gray-200 rounded">
+                                <h3 class="text-sm lg:text-base font-bold">Inglés avanzado C1</h3>
+                                <p class="text-sm lg:text-base">CAE (Certificate in Advanced English).</p>
+                            </div>
+
+                        </section>
+
+                    </main>
+
+                </div>
+
+                <!-- Descargar CV -->
+                <div class="flex justify-center w-full mt-8 sticky bottom-4 z-40">
+                    <a href="https://drive.google.com/uc?export=download&id=1UpFAbqHcfETvPPIOx5A_C2wOHzq5LpDf"
+                        title="Descargar CV"
+                        class="flex justify-center items-center bg-black rounded-full w-12 h-12 hover:bg-gray-800 agrandar2">
+                        <i class="fa-solid fa-file-arrow-down text-white text-xl"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Contenido de fondo3 (AYUDA) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo3">
+            <div class="h-full flex flex-col justify-center items-center">
+                <p class="m-8 text-center text-white">Este es el portfolio de Marcos Fernández de Salamanca (Sofos), un
+                    joven de 22 años de la localidad de Torrelodones, Madrid.</p>
+                <p class="m-8 text-center text-white">Para desplazarse en dispositivos móviles, utilice el botón de la
+                    esquina superior izquierda para desplegar el menú.</p>
+                <p class="m-8 text-center text-white">Para desplazarse en escritorios, utilice la rueda de
+                    desplazamiento del ratón o pulse los botones del menú superior.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Refresca la página al pulsar S O F O S
+        document.querySelector("#refrescar").addEventListener("click", () => window.location.reload());
+
+        // Dropdown oculto (menú para móvil)
+        const menu = document.querySelector("#menu");
+        const toggleMenu = (event) => {
+            menu.classList.toggle("hidden");
+            event.stopPropagation();
+        };
+        document.querySelector("#boton").addEventListener("click", toggleMenu);
+        document.addEventListener("click", () => menu.classList.add("hidden"));
+
+        // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
+        const fondo1 = document.querySelector('.fondo2');
+        const fondo2 = document.querySelector('.fondo2');
+        const fondo3 = document.querySelector('.fondo3');
+        const contenedorfondos = document.querySelector('.contenedorfondos');
+
+        // A Home
+        document.getElementById('btnhome').addEventListener('click', function () {
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
+            // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del scrollHeight de contenedorfondos, fondo2 se hace visible
+            if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
+                fondo2.style.display = 'flex';
+            }
+            // En caso contrario fondo2 se hace invisible y vuelve a ser visible a los 500ms
+            else {
+                fondo2.style.display = 'none';
+                setTimeout(function () {
+                    fondo2.style.display = 'flex';
+                }, 500);
+            }
+        });
+
+        // A About
+        document.getElementById('btnabout').addEventListener('click', function () {
+            // fondo2 se hace visible
+            fondo2.style.display = 'flex';
+        });
+
+        // A Help
+        document.getElementById('btnhelp').addEventListener('click', function () {
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+            let scrollHeight = contenedorfondos.scrollHeight;
+            // Cuando se quiere ir a fondo3 desde fondo1 (scrollPosition 0), fondo2 se hace invisible y vuelve a ser visible a los 500ms
+            if (scrollPosition == 0) {
+                fondo2.style.display = 'none';
+                setTimeout(function () {
+                    fondo2.style.display = 'flex';
+                }, 500);
+            }
+            // En caso contrario fondo2 se hace visible
+            else {
+                fondo2.style.display = 'flex';
+            }
+
+        });
+
+        // Botones de navegación entre fondos
+        const actions = {
+            "#btnhome": document.querySelector('.fondo1').offsetTop,
+            "#btnabout": document.querySelector('.fondo2').offsetTop,
+            "#btnhelp": document.querySelector('.fondo3').offsetTop
+        };
+        for (let [btn, top] of Object.entries(actions)) {
+            if (document.querySelector(btn)) {
+                document.querySelector(btn).addEventListener("click", e => {
+                    e.preventDefault();
+                    contenedorfondos.scrollTo({
+                        top: top,
+                        behavior: "smooth"
+                    });
+                });
+            }
+        }
+
+        // Abrir info fondo1 al pulsar "btnmusica", "btnhosteleria", "btngenealogia" o "btndesarrollo"
+        const showSection = (sectionId) => {
+            let section = document.getElementById(sectionId);
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
+        };
+        ["btnmusica", "btnhosteleria", "btngenealogia", "btndesarrollo"].forEach(btnId => {
+            document.getElementById(btnId).addEventListener("click", () => showSection('info'));
+        });
+
+        // Cerrar info fondo1 al pulsar "btncerrar", "info", "boton", "btnhome", "btnabout" o "btnhelp"
+        const hideSection = (sectionId) => {
+            let section = document.getElementById(sectionId);
+            section.style.opacity = "0";
+            section.style.transform = "translateY(100%)";
+        };
+        ["btncerrar", "info", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
+            document.getElementById(btnId).addEventListener("click", () => {
+                hideSection('info');
+                // Elimino atributo src para que el vídeo se pause (buscar otra manera más eficiente)
+                document.getElementById("video").removeAttribute("src");
+            });
+        });
+
+        // RELLENO INFO SEGÚN BOTÓN
+
+        // BtnMusica
+        const musica = '<!-- Header --> <header class="px-4 pt-8 flex flex-col items-center"> <div class="w-32 h-32 flex-shrink-0 justify-center mb-8"> <img src="fotos/flornegra.png" alt="Foto" class="w-full h-full object-cover rounded-full agrandar3"> </div> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Sofos</h1> <p class="text-sm lg:text-base mb-2">Sofos es el nombre artístico de Marcos Fernández de Salamanca, un rapero y productor español de la localidad madrileña de Torrelodones, nacido el 11 de julio del año 2001.</p> </div> <div class="videocontenedor z-50"> <iframe id="video" class="video" src="https://www.youtube.com/embed/1GqGpaHtKC4" frameborder="0" allow="accelerometer" allowfullscreen> </iframe> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
+        document.getElementById('rellenar').innerHTML = musica;
+        document.getElementById('btnmusica').addEventListener('click', function () {
+            document.getElementById('rellenar').innerHTML = musica;
+        });
+        // BtnHosteleria
+        const hosteleria = ' <!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Hostelería</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de hostelería.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
+        document.getElementById('rellenar').innerHTML = hosteleria;
+        document.getElementById('btnhosteleria').addEventListener('click', function () {
+            document.getElementById('rellenar').innerHTML = hosteleria;
+        });
+        // BtnGenealogia
+        const genealogia = ' <!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Genealogía</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de genealogía.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
+        document.getElementById('rellenar').innerHTML = genealogia;
+        document.getElementById('btngenealogia').addEventListener('click', function () {
+            document.getElementById('rellenar').innerHTML = genealogia;
+        });
+        // BtnDesarrollo
+        const desarrollo = '<!-- Header --> <header class="px-4 pt-12 flex flex-col items-center"> <div class="bg-gray-100 rounded p-4 mb-4 lg:px-40"> <h1 class="text-xl lg:text-2xl font-bold mb-4">Desarrollo</h1> <p class="text-sm lg:text-base mb-2">Aquí irá mi portfolio de desarrollo.</p> </div> </header> <!-- Contenido principal --> <main class="py-4 px-4"> <!-- Idiomas --> <section> <h2 class="text-xl lg:text-2xl font-bold mb-8">EJEMPLO SECCIÓN h2</h2> <!-- Inglés --> <div class="bg-gray-200 rounded p-4 mb-4 lg:px-64"> <h3 class="text-sm lg:text-base font-bold">Ejemplo sección h3.</h3> <p class="text-sm lg:text-base mb-2">Ejemplo sección p.</p> </div> </section> </main>';
+        document.getElementById('rellenar').innerHTML = desarrollo;
+        document.getElementById('btndesarrollo').addEventListener('click', function () {
+            document.getElementById('rellenar').innerHTML = desarrollo;
+        });
+
+        // Hover azul rombos fondo1
+        var elementos = document.querySelectorAll('.hoverazul');
+        elementos.forEach(function (elemento) {
+            elemento.addEventListener('mouseenter', function () {
+                this.style.backgroundColor = '#001a29';
+            });
+            elemento.addEventListener('mouseleave', function () {
+                this.style.backgroundColor = '';
+            });
+        });
+
+        // Mientras se hace scroll
+        contenedorfondos.addEventListener('scroll', function () {
+            let scrollTimeout;
+            clearTimeout(scrollTimeout);
+            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp', 'btnmusica', 'btnhosteleria', 'btngenealogia', 'btndesarrollo'];
+            buttonIDs.forEach(id => {
+                const button = document.getElementById(id);
+                if (button) button.setAttribute('disabled', 'disabled');
+            });
+            // Al acabar scroll
+            scrollTimeout = setTimeout(function () {
+                const margen = 50;
+                const scrollPosition = contenedorfondos.scrollTop;
+                const estaCerca = (fondo) => {
+                    const fondoPosition = fondo.offsetTop;
+                    return scrollPosition >= fondoPosition - margen && scrollPosition <= fondoPosition + margen;
+                };
+                // Si se está en fondo1
+                if (estaCerca(document.querySelector('.fondo1'))) {
+                    // Flecha no girada
+                    document.getElementById("flecha").classList.remove("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya Home
+                    document.getElementById("btnhome").classList.add("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
+                    // Reinicia scroll CV
+                    infocv.scrollTo(0, 0);
+                }
+                // Si se está en fondo2
+                else if (estaCerca(document.querySelector('.fondo2'))) {
+                    // Flecha no girada
+                    document.getElementById("flecha").classList.remove("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya About
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.add("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
+                }
+                // Si se está en fondo3
+                else if (estaCerca(document.querySelector('.fondo3'))) {
+                    // Flecha girada
+                    document.getElementById("flecha").classList.add("girarflecha");
+                    // Deshabilita botones hasta completar scroll
+                    buttonIDs.forEach(id => {
+                        const button = document.getElementById(id);
+                        if (button) button.removeAttribute('disabled');
+                    });
+                    // Subraya Help
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.add("subrayado");
+                    // Reinicia scroll CV
+                    infocv.scrollTo(0, 0);
+                }
+            }, 10);
+        });
+
+    </script>
+
+</body>
+
+</html>
