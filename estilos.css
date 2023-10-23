@@ -9,14 +9,6 @@ body {
     position: fixed;
 }
 
-.letra {
-    font-size: 14px;
-}
-
-.letra2 {
-    font-size: 11px;
-}
-
 /* Scroll contenedorfondos */
 .contenedorfondos {
     scroll-snap-type: y mandatory;
@@ -215,5 +207,16 @@ body {
     .videocontenedor {
         width: 80%;
         padding-top: 40%;
+    }
+}
+
+/* Responsive móvil */
+@media (max-width: 1024px) {
+    .letra {
+        font-size: 14px;
+    }
+    
+    .letra2 {
+        font-size: 11px;
     }
 }
