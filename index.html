@@ -517,6 +517,8 @@
                     document.getElementById("btnhome").classList.add("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
+                    // Reinicia scroll CV
+                    infocv.scrollTo(0, 0);
                 }
                 // Si se está en fondo2
                 else if (estaCerca(document.querySelector('.fondo2'))) {
@@ -545,6 +547,8 @@
                     document.getElementById("btnhome").classList.remove("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.add("subrayado");
+                    // Reinicia scroll CV
+                    infocv.scrollTo(0, 0);
                 }
             }, 10);
         });
