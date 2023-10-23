@@ -9,6 +9,10 @@ body {
     position: fixed;
 }
 
+.letra {
+    font-size: 11px;
+}
+
 /* Scroll contenedorfondos */
 .contenedorfondos {
     scroll-snap-type: y mandatory;
@@ -84,15 +88,20 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Color fondo azul info */
+.fondoazul {
+    background-color: #0d91c93a;
+}
+
 /* Azul links */
 .azul {
-    color: #006faf;
+    color: #0778a8;
+    transition: color 0.3s;
 }
 
 /* Hover azul links */
 .azul:hover {
-    color: #004c77;
-    transition: color 0.3s;
+    color: #055f86;
 }
 
 /* Hover agrandar iconos rombos */
