@@ -10,6 +10,10 @@ body {
 }
 
 .letra {
+    font-size: 12px;
+}
+
+.letra2 {
     font-size: 11px;
 }
 
