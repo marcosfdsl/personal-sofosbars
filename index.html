@@ -744,7 +744,7 @@
                             <!-- Contenido principal -->
                             <main class="py-4 px-4">
                                 <section>
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">LORE IPSUM</h2>
+                                    <h2 class="text-xl lg:text-2xl font-bold mt-4 mb-8">LORE IPSUM</h2>
                                     <div class="mb-4 p-4 lg:px-44 bg-gray-100 rounded">
                                         <h3 class="text-sm lg:text-base font-bold mb-2">Lore Ipsum</h3>
                                         <p class="text-sm lg:text-base">Lore Ipsum.</p>
@@ -772,7 +772,7 @@
                             <!-- Contenido principal -->
                             <main class="py-4 px-4">
                                 <section>
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">LORE IPSUM</h2>
+                                    <h2 class="text-xl lg:text-2xl font-bold mt-4 mb-8">LORE IPSUM</h2>
                                     <div class="mb-4 p-4 lg:px-44 bg-gray-100 rounded">
                                         <h3 class="text-sm lg:text-base font-bold mb-2">Lore Ipsum</h3>
                                         <p class="text-sm lg:text-base">Lore Ipsum.</p>
@@ -800,7 +800,7 @@
                             <!-- Contenido principal -->
                             <main class="py-4 px-4">
                                 <section>
-                                    <h2 class="text-xl lg:text-2xl font-bold mb-8">LORE IPSUM</h2>
+                                    <h2 class="text-xl lg:text-2xl font-bold mt-4 mb-8">LORE IPSUM</h2>
                                     <div class="mb-4 p-4 lg:px-44 bg-gray-100 rounded">
                                         <h3 class="text-sm lg:text-base font-bold mb-2">Lore Ipsum</h3>
                                         <p class="text-sm lg:text-base">Lore Ipsum.</p>
@@ -1108,7 +1108,7 @@
         }
 
         // Abrir info en fondo1 al pulsar "btnmusica", "btnhosteleria", "btngenealogia" o "btndesarrollo"
-        const showSection = (sectionId) => {
+        const mostrarinfo = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "1";
             section.style.transform = "translateY(0)";
@@ -1122,7 +1122,7 @@
         };
 
         for (const [btnId, sectionId] of Object.entries(btnToSectionMapping)) {
-            document.getElementById(btnId).addEventListener("click", () => showSection(sectionId));
+            document.getElementById(btnId).addEventListener("click", () => mostrarinfo(sectionId));
         }
 
 
@@ -1131,7 +1131,7 @@
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('video');
         }
-        const hideSection = (sectionId) => {
+        const esconderinfo = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "0";
             section.style.transform = "translateY(100%)";
@@ -1141,10 +1141,14 @@
         };
         ["infomusica", "infohosteleria", "infogenealogia", "infodesarrollo", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
             document.getElementById(btnId).addEventListener("click", () => {
-                hideSection('infomusica');
-                hideSection('infohosteleria');
-                hideSection('infogenealogia');
-                hideSection('infodesarrollo');
+                esconderinfo('infomusica');
+                esconderinfo('infohosteleria');
+                esconderinfo('infogenealogia');
+                esconderinfo('infodesarrollo');
+                infomusica.scrollTo(0, 0);
+                infohosteleria.scrollTo(0, 0);
+                infogenealogia.scrollTo(0, 0);
+                infodesarrollo.scrollTo(0, 0);
             });
         });
 
@@ -1189,8 +1193,12 @@
                     document.getElementById("btnhome").classList.add("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
-                    // Reinicia scroll CV
+                    // Reinicia scrolls
                     infocv.scrollTo(0, 0);
+                    infomusica.scrollTo(0, 0);
+                    infohosteleria.scrollTo(0, 0);
+                    infogenealogia.scrollTo(0, 0);
+                    infodesarrollo.scrollTo(0, 0);
                 }
                 // Si se está en fondo2
                 else if (estaCerca(document.querySelector('.fondo2'))) {
@@ -1219,8 +1227,12 @@
                     document.getElementById("btnhome").classList.remove("subrayado");
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.add("subrayado");
-                    // Reinicia scroll CV
+                    // Reinicia scrolls
                     infocv.scrollTo(0, 0);
+                    infomusica.scrollTo(0, 0);
+                    infohosteleria.scrollTo(0, 0);
+                    infogenealogia.scrollTo(0, 0);
+                    infodesarrollo.scrollTo(0, 0);
                 }
             }, 10);
         });
