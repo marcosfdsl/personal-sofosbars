@@ -114,7 +114,8 @@
             <!-- Info Música -->
             <div id="infomusica"
                 class="absolute w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full z-20">
-                <div class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
+                <div id="scrollmusica"
+                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
                     <div class="flex flex-col items-center justify-center text-center relative">
                         <div class="flex flex-col justify-center pb-4 z-20">
                             <!-- Header -->
@@ -731,7 +732,8 @@
             <!-- Info Hostelería -->
             <div id="infohosteleria"
                 class="absolute w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full z-20">
-                <div class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
+                <div id="scrollhosteleria"
+                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
                     <div class="flex flex-col items-center justify-center text-center relative">
                         <div class="flex flex-col justify-center pb-4 z-20">
                             <!-- Header -->
@@ -759,7 +761,8 @@
             <!-- Info Genealogía -->
             <div id="infogenealogia"
                 class="absolute w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full z-20">
-                <div class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
+                <div id="scrollgenealogia"
+                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
                     <div class="flex flex-col items-center justify-center text-center relative">
                         <div class="flex flex-col justify-center pb-4 z-20">
                             <!-- Header -->
@@ -787,7 +790,8 @@
             <!-- Info Desarrollo -->
             <div id="infodesarrollo"
                 class="absolute w-full h-full flex flex-col justify-center items-center transition-all duration-500 transform opacity-0 translate-y-full z-20">
-                <div class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
+                <div id="scrolldesarrollo"
+                    class="overflow-y-auto bg-white rounded-3xl h-2/3 lg:h-3/4 w-5/6 lg:w-2/3 lg:mt-8">
                     <div class="flex flex-col items-center justify-center text-center relative">
                         <div class="flex flex-col justify-center pb-4 z-20">
                             <!-- Header -->
@@ -1145,10 +1149,14 @@
                 esconderinfo('infohosteleria');
                 esconderinfo('infogenealogia');
                 esconderinfo('infodesarrollo');
-                infomusica.scrollTo(0, 0);
-                infohosteleria.scrollTo(0, 0);
-                infogenealogia.scrollTo(0, 0);
-                infodesarrollo.scrollTo(0, 0);
+
+                // Reinicia scroll info
+                setTimeout(() => {
+                    scrollmusica.scrollTo(0, 0);
+                    scrollhosteleria.scrollTo(0, 0);
+                    scrollgenealogia.scrollTo(0, 0);
+                    scrolldesarrollo.scrollTo(0, 0);
+                }, 200);
             });
         });
 
@@ -1195,10 +1203,10 @@
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
                     infocv.scrollTo(0, 0);
-                    infomusica.scrollTo(0, 0);
-                    infohosteleria.scrollTo(0, 0);
-                    infogenealogia.scrollTo(0, 0);
-                    infodesarrollo.scrollTo(0, 0);
+                    scrollmusica.scrollTo(0, 0);
+                    scrollhosteleria.scrollTo(0, 0);
+                    scrollgenealogia.scrollTo(0, 0);
+                    scrolldesarrollo.scrollTo(0, 0);
                 }
                 // Si se está en fondo2
                 else if (estaCerca(document.querySelector('.fondo2'))) {
@@ -1229,10 +1237,10 @@
                     document.getElementById("btnhelp").classList.add("subrayado");
                     // Reinicia scrolls
                     infocv.scrollTo(0, 0);
-                    infomusica.scrollTo(0, 0);
-                    infohosteleria.scrollTo(0, 0);
-                    infogenealogia.scrollTo(0, 0);
-                    infodesarrollo.scrollTo(0, 0);
+                    scrollmusica.scrollTo(0, 0);
+                    scrollhosteleria.scrollTo(0, 0);
+                    scrollgenealogia.scrollTo(0, 0);
+                    scrolldesarrollo.scrollTo(0, 0);
                 }
             }, 10);
         });
